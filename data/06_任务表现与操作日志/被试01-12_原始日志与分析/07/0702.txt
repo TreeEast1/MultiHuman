@@ -1,0 +1,59 @@
+# 结果摘要: 任务二 | 完成率 86.67% (13/15) | 错误次数 14 | 重复次数 0 | 重复率 0.00%
+# 分析: 步骤完成度中等；错误 14 次，重复步骤 0 次，已识别步骤 13/15，多做 12 次，漏做步骤 2 次。
+# 严格缺失步骤: 步骤8: 调节功率变化速率适应后续的操作时间，小于5；步骤15: 调节功率变化速率适应后续的操作时间，小于5
+
+reset -o "Books\YuanLi\IC\261 110Mw task 2"
+Run
+19 set CLOG_3KCO015KM_XJ38.VALUE=1089    # 标注: 正确 | 步骤1: 设置目标负荷为1089MW
+41 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 正确 | 步骤2: 置功率变化速率小于5%FP/min（功率变化速率类操作按特殊规则识别，不看顺序和值）
+54 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 正确 | 步骤3: 启动负荷变化
+55 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 正确 | 步骤3: 启动负荷变化
+01:23 set YL1ACO301PO_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+01:23 set YL1ACO301PO_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+01:24 set YL1ACO301PO_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+01:24 set YL1ACO301PO_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+01:28 set YL1ACO302PO_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+01:28 set YL1ACO302PO_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+01:28 set YL1ACO302PO_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+01:28 set YL1ACO302PO_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+03:33 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 正确 | 步骤4: 停止升功率
+03:34 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 正确 | 步骤4: 停止升功率
+04:26 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 正确 | 步骤5: 启动负荷变化
+04:27 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 正确 | 步骤5: 启动负荷变化
+06:55 set YL1GSS190PO_P.OPEN=1    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+06:55 set YL1GSS190PO_P.OPEN=0    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+06:55 set YL1GSS190PO_P.EXECUTE=1    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+06:56 set YL1GSS190PO_P.EXECUTE=0    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+07:04 set YL1GSS290PO_P.OPEN=1    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+07:04 set YL1GSS290PO_P.OPEN=0    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+07:05 set YL1GSS290PO_P.EXECUTE=1    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+07:05 set YL1GSS290PO_P.EXECUTE=0    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+08:40 set YL1GPV101VL_P.CLOSE=1    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+08:40 set YL1GPV101VL_P.CLOSE=0    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+08:40 set YL1GPV101VL_P.EXECUTE=1    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+08:40 set YL1GPV101VL_P.EXECUTE=0    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+08:41 set YL1GPV111VL_P.CLOSE=1    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+08:41 set YL1GPV111VL_P.CLOSE=0    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+08:41 set YL1GPV111VL_P.EXECUTE=1    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+08:41 set YL1GPV111VL_P.EXECUTE=0    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+08:43 set YL1GPV121VL_P.CLOSE=1    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+08:43 set YL1GPV121VL_P.CLOSE=0    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+08:43 set YL1GPV121VL_P.EXECUTE=1    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+08:43 set YL1GPV121VL_P.EXECUTE=0    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+08:45 set YL1GPV131VL_P.CLOSE=1    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+08:45 set YL1GPV131VL_P.CLOSE=0    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+08:45 set YL1GPV131VL_P.EXECUTE=1    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+08:45 set YL1GPV131VL_P.EXECUTE=0    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+11:54 set YL1APA102PO_P.MANUAL=1    # 标注: 多做 | 不在该任务标准流程内
+11:54 set YL1APA102PO_P.MANUAL=0    # 标注: 多做 | 不在该任务标准流程内
+11:55 set YL1APA102PO_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+11:56 set YL1APA102PO_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+11:56 set YL1APA102PO_P.OPEN=1    # 标注: 正确 | 步骤13: 启动APA102PO
+11:56 set YL1APA102PO_P.OPEN=0    # 标注: 正确 | 步骤13: 启动APA102PO
+11:57 set YL1APA102PO_P.EXECUTE=1    # 标注: 正确 | 步骤13: 启动APA102PO
+11:57 set YL1APA102PO_P.EXECUTE=0    # 标注: 正确 | 步骤13: 启动APA102PO
+12:07 set YL1APA101RR_P.AUTO=1    # 标注: 正确 | 步骤14: 将APA101RR置自动
+12:07 set YL1APA101RR_P.AUTO=0    # 标注: 正确 | 步骤14: 将APA101RR置自动
+12:08 set YL1APA101RR_P.EXECUTE=1    # 标注: 正确 | 步骤14: 将APA101RR置自动
+12:08 set YL1APA101RR_P.EXECUTE=0    # 标注: 正确 | 步骤14: 将APA101RR置自动
+13:05 Freeze

@@ -1,0 +1,3 @@
+﻿source,destination,reason
+01_数据_按模态/任务表现与日志/第二次测试（415）/05/05_06.txt,01_数据_按模态/任务表现与日志/第二次测试（415）/_mapping_fix_quarantine_invalid_filenames/05__05_06.txt,invalid bare task filename inside subject directory; may be picked by build_log_window_features fallback
+01_数据_按模态/任务表现与日志/第二次测试（415）/06/05_06.txt,01_数据_按模态/任务表现与日志/第二次测试（415）/_mapping_fix_quarantine_invalid_filenames/06__05_06.txt,invalid bare task filename inside subject directory; may be picked by build_log_window_features fallback

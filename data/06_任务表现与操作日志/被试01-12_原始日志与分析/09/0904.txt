@@ -1,0 +1,57 @@
+# 结果摘要: 任务四 | 完成率 88.89% (16/18) | 错误次数 2 | 重复次数 0 | 重复率 0.00%
+# 分析: 步骤完成度中等；错误 2 次，重复步骤 0 次，已识别步骤 16/18，漏做步骤 2 次。
+# 严格缺失步骤: 步骤17: 将RCV030VP置自动；步骤18: 将RCV030VP开度控制置自动
+
+18:03 reset -o "Books\YuanLi\IC\234"
+Run
+02:26 set YL1RCV030VP_P.MANUAL=1    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+02:27 set YL1RCV030VP_P.MANUAL=0    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+02:28 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+02:28 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+02:31 set YL1RCV030VP_P.CLOSE=1    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+02:31 set YL1RCV030VP_P.CLOSE=0    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+02:32 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+02:32 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+02:33 set YL1RCV401RC_P.MANUAL=1    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+02:34 set YL1RCV401RC_P.MANUAL=0    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+02:34 set YL1RCV401RC_P.EXECUTE=1    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+02:34 set YL1RCV401RC_P.EXECUTE=0    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+02:39 set YL1RCV401RC_P.SV=100    # 标注: 正确 | 步骤4: 将RCV030VP开度调至100%
+02:39 set YL1RCV401RC_P.EXECUTE=1    # 标注: 正确 | 步骤4: 将RCV030VP开度调至100%
+02:39 set YL1RCV401RC_P.EXECUTE=0    # 标注: 正确 | 步骤4: 将RCV030VP开度调至100%
+02:57 set YL1REA015KG_P.Input4_i4=1    # 标注: 正确 | 步骤5: 将REA015KG按下停止键
+02:57 set YL1REA015KG_P.Input4_i4=0    # 标注: 正确 | 步骤5: 将REA015KG按下停止键
+03:02 set YL1REA018VB_P.MANUAL=1    # 标注: 正确 | 步骤6: 将REA018VB置手动
+03:02 set YL1REA018VB_P.MANUAL=0    # 标注: 正确 | 步骤6: 将REA018VB置手动
+03:04 set YL1REA018VB_P.EXECUTE=1    # 标注: 正确 | 步骤6: 将REA018VB置手动
+03:04 set YL1REA018VB_P.EXECUTE=0    # 标注: 正确 | 步骤6: 将REA018VB置手动
+03:06 set YL1REA018VB_P.OPEN=1    # 标注: 正确 | 步骤7: 手动开启REA018VB
+03:06 set YL1REA018VB_P.OPEN=0    # 标注: 正确 | 步骤7: 手动开启REA018VB
+03:07 set YL1REA018VB_P.EXECUTE=1    # 标注: 正确 | 步骤7: 手动开启REA018VB
+03:07 set YL1REA018VB_P.EXECUTE=0    # 标注: 正确 | 步骤7: 手动开启REA018VB
+03:13 set YL1REA021KG_P.Input4_i4=1    # 标注: 正确 | 步骤8: 选择手动补给REA021KG
+03:13 set YL1REA021KG_P.Input4_i4=0    # 标注: 正确 | 步骤8: 选择手动补给REA021KG
+03:16 set YL1REA016KG_P.Input4_i4=1    # 标注: 正确 | 步骤9: 启动手动补给REA016KG
+03:16 set YL1REA016KG_P.Input4_i4=0    # 标注: 正确 | 步骤9: 启动手动补给REA016KG
+06:04 set YL1REA016KG_P.Input4_i4=1    # 标注: 正确 | 步骤10: 再次启动REA016KG补水
+06:04 set YL1REA016KG_P.Input4_i4=0    # 标注: 正确 | 步骤10: 再次启动REA016KG补水
+08:21 set YL1REA015KG_P.Input4_i4=1    # 标注: 正确 | 步骤11: 停止REA015KG
+08:21 set YL1REA015KG_P.Input4_i4=0    # 标注: 正确 | 步骤11: 停止REA015KG
+08:29 set YL1REA019KG_P.Input4_i4=1    # 标注: 正确 | 步骤12: 将REA019KG置自动
+08:29 set YL1REA019KG_P.Input4_i4=0    # 标注: 正确 | 步骤12: 将REA019KG置自动
+08:39 set YL1REA018VB_P.CLOSE=1    # 标注: 正确 | 步骤13: 关闭REA018VB
+08:39 set YL1REA018VB_P.CLOSE=0    # 标注: 正确 | 步骤13: 关闭REA018VB
+08:41 set YL1REA018VB_P.EXECUTE=1    # 标注: 正确 | 步骤13: 关闭REA018VB
+08:41 set YL1REA018VB_P.EXECUTE=0    # 标注: 正确 | 步骤13: 关闭REA018VB
+08:42 set YL1REA018VB_P.AUTO=1    # 标注: 正确 | 步骤14: 将REA018VB置自动
+08:42 set YL1REA018VB_P.AUTO=0    # 标注: 正确 | 步骤14: 将REA018VB置自动
+08:43 set YL1REA018VB_P.EXECUTE=1    # 标注: 正确 | 步骤14: 将REA018VB置自动
+08:43 set YL1REA018VB_P.EXECUTE=0    # 标注: 正确 | 步骤14: 将REA018VB置自动
+08:58 set YL1REA016KG_P.Input4_i4=1    # 标注: 正确 | 步骤15: 启动REA016KG
+08:58 set YL1REA016KG_P.Input4_i4=0    # 标注: 正确 | 步骤15: 启动REA016KG
+10:33 set YL1RCV030VP_P.OPEN=1    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+10:33 set YL1RCV030VP_P.OPEN=0    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+10:34 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+10:34 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+Load Books\YuanLi\YuanLi.proj
+Freeze

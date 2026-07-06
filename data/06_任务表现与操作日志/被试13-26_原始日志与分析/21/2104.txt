@@ -1,0 +1,70 @@
+# 结果摘要: 任务四 | 完成率 66.67% (12/18) | 异常步骤 7/18 (38.89%) | 异常动作 22/61 (36.07%) | 错误动作数 18 | 重复次数 1 | 重复率 7.69%
+# 分析: 步骤完成度中等；异常动作总数 22 次，异常动作比例 36.07%，已发生错误动作 18 次，重复步骤 1 次，正确完成步骤 12/18，异常步骤 7 个，异常步骤比例 38.89%，错误步骤 5 个，漏做步骤 6 次，缺失动作 2 次，步骤内错误动作 18 次。
+# 问题统计: 异常动作总数 22 | 总动作数 61 | 日志动作行数 59 | 已发生错误动作数 18 | 多做动作数 0 | 步骤内错误动作数 18 | 缺失动作数 2 | 重复动作行数 2 | 异常步骤数 7 | 总步骤数 18 | 错误步骤数 5 | 缺失步骤数 6
+# 问题比例: 异常步骤比例 38.89% (7/18) | 异常动作比例 36.07% (22/61)
+# 异常步骤: 步骤11: 停止REA015KG；步骤12: 将REA019KG置自动；步骤13: 关闭REA018VB；步骤14: 将REA018VB置自动；步骤18: 将RCV030VP开度控制置自动；步骤15: 启动REA016KG；步骤5: 将REA015KG按下停止键
+# 错误步骤: 步骤11: 停止REA015KG；步骤12: 将REA019KG置自动；步骤13: 关闭REA018VB；步骤14: 将REA018VB置自动；步骤18: 将RCV030VP开度控制置自动
+# 缺失步骤: 步骤11: 停止REA015KG；步骤12: 将REA019KG置自动；步骤13: 关闭REA018VB；步骤14: 将REA018VB置自动；步骤15: 启动REA016KG；步骤18: 将RCV030VP开度控制置自动
+# 缺失动作: 步骤15: 缺失动作 set YL1REA016KG_P.Input4_i4=1；步骤15: 缺失动作 set YL1REA016KG_P.Input4_i4=0
+
+Run
+03:00 set YL1RCV030VP_P.MANUAL=1    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+03:00 set YL1RCV030VP_P.MANUAL=0    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+03:01 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+03:01 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤1: 将RCV030VP转向控制置手动
+03:05 set YL1RCV030VP_P.CLOSE=1    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+03:05 set YL1RCV030VP_P.CLOSE=0    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+03:06 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+03:06 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤2: 将RCV030VP转向RCV
+03:07 set YL1RCV401RC_P.MANUAL=1    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+03:08 set YL1RCV401RC_P.MANUAL=0    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+03:08 set YL1RCV401RC_P.EXECUTE=1    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+03:08 set YL1RCV401RC_P.EXECUTE=0    # 标注: 正确 | 步骤3: 将RCV030VP开度控制置手动
+03:14 set YL1RCV401RC_P.SV=100    # 标注: 正确 | 步骤4: 将RCV030VP开度调至100%
+03:15 set YL1RCV401RC_P.EXECUTE=1    # 标注: 正确 | 步骤4: 将RCV030VP开度调至100%
+03:15 set YL1RCV401RC_P.EXECUTE=0    # 标注: 正确 | 步骤4: 将RCV030VP开度调至100%
+03:52 set YL1REA015KG_P.Input4_i4=1    # 标注: 正确 | 步骤5: 将REA015KG按下停止键
+03:52 set YL1REA015KG_P.Input4_i4=0    # 标注: 正确 | 步骤5: 将REA015KG按下停止键
+04:01 set YL1REA015KG_P.Input4_i4=1    # 标注: 重复步骤 | 步骤5: 将REA015KG按下停止键
+04:01 set YL1REA015KG_P.Input4_i4=0    # 标注: 重复步骤 | 步骤5: 将REA015KG按下停止键
+04:47 set YL1REA018VB_P.MANUAL=1    # 标注: 正确 | 步骤6: 将REA018VB置手动
+04:47 set YL1REA018VB_P.MANUAL=0    # 标注: 正确 | 步骤6: 将REA018VB置手动
+04:47 set YL1REA018VB_P.EXECUTE=1    # 标注: 正确 | 步骤6: 将REA018VB置手动
+04:48 set YL1REA018VB_P.EXECUTE=0    # 标注: 正确 | 步骤6: 将REA018VB置手动
+04:51 set YL1REA018VB_P.OPEN=1    # 标注: 正确 | 步骤7: 手动开启REA018VB
+04:51 set YL1REA018VB_P.OPEN=0    # 标注: 正确 | 步骤7: 手动开启REA018VB
+04:51 set YL1REA018VB_P.EXECUTE=1    # 标注: 正确 | 步骤7: 手动开启REA018VB
+04:51 set YL1REA018VB_P.EXECUTE=0    # 标注: 正确 | 步骤7: 手动开启REA018VB
+05:21 set YL1REA021KG_P.Input4_i4=1    # 标注: 正确 | 步骤8: 选择手动补给REA021KG
+05:21 set YL1REA021KG_P.Input4_i4=0    # 标注: 正确 | 步骤8: 选择手动补给REA021KG
+05:30 set YL1REA016KG_P.Input4_i4=1    # 标注: 正确 | 步骤9: 启动手动补给REA016KG
+05:30 set YL1REA016KG_P.Input4_i4=0    # 标注: 正确 | 步骤9: 启动手动补给REA016KG
+08:06 set YL1REA015KG_P.Input4_i4=1    # 标注: 错误 | 属于步骤11: 停止REA015KG，但未按标准顺序形成完整步骤
+08:06 set YL1REA015KG_P.Input4_i4=0    # 标注: 错误 | 属于步骤11: 停止REA015KG，但未按标准顺序形成完整步骤
+08:32 set YL1REA019KG_P.Input4_i4=1    # 标注: 错误 | 属于步骤12: 将REA019KG置自动，但未按标准顺序形成完整步骤
+08:32 set YL1REA019KG_P.Input4_i4=0    # 标注: 错误 | 属于步骤12: 将REA019KG置自动，但未按标准顺序形成完整步骤
+08:42 set YL1REA018VB_P.CLOSE=1    # 标注: 错误 | 属于步骤13: 关闭REA018VB，但未按标准顺序形成完整步骤
+08:42 set YL1REA018VB_P.CLOSE=0    # 标注: 错误 | 属于步骤13: 关闭REA018VB，但未按标准顺序形成完整步骤
+08:43 set YL1REA018VB_P.EXECUTE=1    # 标注: 错误 | 属于步骤13: 关闭REA018VB，但未按标准顺序形成完整步骤
+08:43 set YL1REA018VB_P.EXECUTE=0    # 标注: 错误 | 属于步骤13: 关闭REA018VB，但未按标准顺序形成完整步骤
+08:48 set YL1REA018VB_P.AUTO=1    # 标注: 错误 | 属于步骤14: 将REA018VB置自动，但未按标准顺序形成完整步骤
+08:48 set YL1REA018VB_P.AUTO=0    # 标注: 错误 | 属于步骤14: 将REA018VB置自动，但未按标准顺序形成完整步骤
+08:49 set YL1REA018VB_P.AUTO=1    # 标注: 错误 | 属于步骤14: 将REA018VB置自动，但未按标准顺序形成完整步骤
+08:49 set YL1REA018VB_P.AUTO=0    # 标注: 错误 | 属于步骤14: 将REA018VB置自动，但未按标准顺序形成完整步骤
+08:50 set YL1REA018VB_P.EXECUTE=1    # 标注: 错误 | 属于步骤14: 将REA018VB置自动，但未按标准顺序形成完整步骤
+08:50 set YL1REA018VB_P.EXECUTE=0    # 标注: 错误 | 属于步骤14: 将REA018VB置自动，但未按标准顺序形成完整步骤
+08:54 set YL1REA016KG_P.Input4_i4=1    # 标注: 正确 | 步骤10: 再次启动REA016KG补水
+08:54 set YL1REA016KG_P.Input4_i4=0    # 标注: 正确 | 步骤10: 再次启动REA016KG补水
+09:39 set YL1RCV030VP_P.OPEN=1    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+09:39 set YL1RCV030VP_P.OPEN=0    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+09:39 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+09:40 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤16: 控制RCV030VP转向TEP
+11:23 set YL1RCV401RC_P.AUTO=1    # 标注: 错误 | 属于步骤18: 将RCV030VP开度控制置自动，但未按标准顺序形成完整步骤
+11:23 set YL1RCV401RC_P.AUTO=0    # 标注: 错误 | 属于步骤18: 将RCV030VP开度控制置自动，但未按标准顺序形成完整步骤
+11:25 set YL1RCV401RC_P.EXECUTE=1    # 标注: 错误 | 属于步骤18: 将RCV030VP开度控制置自动，但未按标准顺序形成完整步骤
+11:25 set YL1RCV401RC_P.EXECUTE=0    # 标注: 错误 | 属于步骤18: 将RCV030VP开度控制置自动，但未按标准顺序形成完整步骤
+11:31 set YL1RCV030VP_P.AUTO=1    # 标注: 正确 | 步骤17: 将RCV030VP置自动
+11:31 set YL1RCV030VP_P.AUTO=0    # 标注: 正确 | 步骤17: 将RCV030VP置自动
+11:31 set YL1RCV030VP_P.EXECUTE=1    # 标注: 正确 | 步骤17: 将RCV030VP置自动
+11:32 set YL1RCV030VP_P.EXECUTE=0    # 标注: 正确 | 步骤17: 将RCV030VP置自动
+11:38 Freeze

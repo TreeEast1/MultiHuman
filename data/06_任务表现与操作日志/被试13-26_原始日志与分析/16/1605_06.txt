@@ -1,0 +1,129 @@
+# 结果摘要: 任务五/六（05_06） | 完成率 91.67% (11/12) | 异常步骤 7/12 (58.33%) | 异常动作 71/124 (57.26%) | 错误动作数 59 | 重复次数 2 | 重复率 15.38%
+# 分析: 步骤完成度较高；异常动作总数 71 次，异常动作比例 57.26%，已发生错误动作 59 次，重复步骤 2 次，正确完成步骤 11/12，异常步骤 7 个，异常步骤比例 58.33%，错误步骤 5 个，多做 24 次，漏做步骤 1 次，缺失动作 6 次，步骤内错误动作 35 次。
+# 问题统计: 异常动作总数 71 | 总动作数 124 | 日志动作行数 118 | 已发生错误动作数 59 | 多做动作数 24 | 步骤内错误动作数 35 | 缺失动作数 6 | 重复动作行数 6 | 异常步骤数 7 | 总步骤数 12 | 错误步骤数 5 | 缺失步骤数 1
+# 问题比例: 异常步骤比例 58.33% (7/12) | 异常动作比例 57.26% (71/124)
+# 异常步骤: 步骤1: 步骤一；步骤8: 步骤八；步骤9: 步骤九；步骤11: 步骤十一；步骤3: 步骤三；步骤2: 步骤二；步骤7: 步骤七
+# 错误步骤: 步骤1: 步骤一；步骤8: 步骤八；步骤9: 步骤九；步骤11: 步骤十一；步骤3: 步骤三
+# 缺失步骤: 步骤8: 步骤八
+# 缺失动作: 步骤8: 缺失动作 set YL1RCV046VP_P.SV=50；步骤8: 缺失动作 set YL1RCV046VP_P.EXECUTE=1；步骤8: 缺失动作 set YL1RCV046VP_P.EXECUTE=0；步骤8: 缺失动作 set YL1RCV046VP_P.SV=55
+
+Run
+45 set YL1RCV033VP_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+45 set YL1RCV033VP_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+46 set YL1RCV033VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+46 set YL1RCV033VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+49 set YL1RCV034VP_P.OPEN=1    # 标注: 正确 | 步骤1: 步骤一
+49 set YL1RCV034VP_P.OPEN=0    # 标注: 正确 | 步骤1: 步骤一
+49 set YL1RCV034VP_P.EXECUTE=1    # 标注: 正确 | 步骤1: 步骤一
+50 set YL1RCV034VP_P.EXECUTE=0    # 标注: 正确 | 步骤1: 步骤一
+53 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+53 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+55 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+55 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+56 set YL1RCV034VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+56 set YL1RCV034VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+01:29 set YL1RCV222VP_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+01:29 set YL1RCV222VP_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+01:30 set YL1RCV222VP_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+01:30 set YL1RCV222VP_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+01:31 set YL1RCV222VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+01:31 set YL1RCV222VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+01:34 set YL1RCV223VP_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+01:34 set YL1RCV223VP_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+01:34 set YL1RCV223VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+01:34 set YL1RCV223VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+01:37 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+01:38 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+01:39 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+01:39 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+01:46 set YL1RCV033VP_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+01:46 set YL1RCV033VP_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+01:46 set YL1RCV033VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+01:46 set YL1RCV033VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+02:06 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+02:06 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+02:07 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+02:07 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+02:08 set YL1RCV034VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+02:08 set YL1RCV034VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤1: 步骤一，但未形成完整步骤
+02:19 DCM mov_RCV034VP    # 标注: 正确 | 步骤1: 步骤一
+02:21 set YL1RCV034VP_P.OPEN=1    # 标注: 错误 | 属于步骤1: 步骤一，但未完整复现整步，不计重复
+02:22 set YL1RCV034VP_P.OPEN=0    # 标注: 错误 | 属于步骤1: 步骤一，但未完整复现整步，不计重复
+02:22 set YL1RCV034VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤1: 步骤一，但未完整复现整步，不计重复
+02:22 set YL1RCV034VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤1: 步骤一，但未完整复现整步，不计重复
+02:43 set YL1RCV046VP_P.MANUAL=1    # 标注: 多做 | 不在该任务标准流程内
+02:43 set YL1RCV046VP_P.MANUAL=0    # 标注: 多做 | 不在该任务标准流程内
+02:45 set YL1RCV046VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+02:45 set YL1RCV046VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+02:51 set YL1RCV046VP_P.SV=0    # 标注: 正确 | 步骤2: 步骤二
+02:51 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤2: 步骤二
+02:51 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤2: 步骤二
+03:01 set YL1RCV061VP_P.SV=0    # 标注: 正确 | 步骤3: 步骤三
+03:02 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤3: 步骤三
+03:02 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤3: 步骤三
+03:08 set YL1RCV003PO_P.OPEN=1    # 标注: 正确 | 步骤4: 步骤四
+03:08 set YL1RCV003PO_P.OPEN=0    # 标注: 正确 | 步骤4: 步骤四
+03:09 set YL1RCV003PO_P.EXECUTE=1    # 标注: 正确 | 步骤4: 步骤四
+03:09 set YL1RCV003PO_P.EXECUTE=0    # 标注: 正确 | 步骤4: 步骤四
+03:21 set YL1RCV061VP_P.SV=60    # 标注: 正确 | 步骤5: 步骤五
+03:22 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤5: 步骤五
+03:22 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤5: 步骤五
+03:33 set YL1RCV009VP_P.OPEN=1    # 标注: 正确 | 步骤6: 步骤六
+03:33 set YL1RCV009VP_P.OPEN=0    # 标注: 正确 | 步骤6: 步骤六
+03:34 set YL1RCV009VP_P.EXECUTE=1    # 标注: 正确 | 步骤6: 步骤六
+03:34 set YL1RCV009VP_P.EXECUTE=0    # 标注: 正确 | 步骤6: 步骤六
+03:43 set YL1RCV046VP_P.SV=55    # 标注: 正确 | 步骤7: 步骤七
+03:44 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤7: 步骤七
+03:44 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤7: 步骤七
+04:25 DCM tr_RCV018MD    # 标注: 错误 | 属于步骤8: 步骤八，但未形成完整步骤
+05:00 set YL1RCV076VP_P.OPEN=1    # 标注: 正确 | 步骤9: 步骤九
+05:00 set YL1RCV076VP_P.OPEN=0    # 标注: 正确 | 步骤9: 步骤九
+05:01 set YL1RCV076VP_P.EXECUTE=1    # 标注: 正确 | 步骤9: 步骤九
+05:01 set YL1RCV076VP_P.EXECUTE=0    # 标注: 正确 | 步骤9: 步骤九
+05:13 set YL1RCV076VP_P.OPEN=1    # 标注: 错误 | 属于步骤9: 步骤九，但未形成完整步骤
+05:13 set YL1RCV076VP_P.OPEN=0    # 标注: 错误 | 属于步骤9: 步骤九，但未形成完整步骤
+05:13 set YL1RCV076VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤9: 步骤九，但未形成完整步骤
+05:13 set YL1RCV076VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤9: 步骤九，但未形成完整步骤
+05:16 set YL1RCV077VP_P.OPEN=1    # 标注: 正确 | 步骤10: 步骤十
+05:16 set YL1RCV077VP_P.OPEN=0    # 标注: 正确 | 步骤10: 步骤十
+05:16 set YL1RCV077VP_P.EXECUTE=1    # 标注: 正确 | 步骤10: 步骤十
+05:16 set YL1RCV077VP_P.EXECUTE=0    # 标注: 正确 | 步骤10: 步骤十
+05:19 set YL1RCV078VP_P.OPEN=1    # 标注: 正确 | 步骤11: 步骤十一
+05:19 set YL1RCV078VP_P.OPEN=0    # 标注: 正确 | 步骤11: 步骤十一
+05:20 set YL1RCV078VP_P.EXECUTE=1    # 标注: 正确 | 步骤11: 步骤十一
+05:20 set YL1RCV078VP_P.EXECUTE=0    # 标注: 正确 | 步骤11: 步骤十一
+05:44 set YL1RCV078VP_P.OPEN=1    # 标注: 错误 | 属于步骤11: 步骤十一，但未形成完整步骤
+05:44 set YL1RCV078VP_P.OPEN=0    # 标注: 错误 | 属于步骤11: 步骤十一，但未形成完整步骤
+05:45 set YL1RCV078VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤11: 步骤十一，但未形成完整步骤
+05:45 set YL1RCV078VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤11: 步骤十一，但未形成完整步骤
+05:52 ICM mov_RCV078VP t:5    # 标注: 多做 | 不在该任务标准流程内
+05:59 DCM mov_RCV078VP    # 标注: 正确 | 步骤11: 步骤十一
+06:04 ICM mov_RCV076VP t:5    # 标注: 多做 | 不在该任务标准流程内
+06:08 DCM mov_RCV076VP    # 标注: 正确 | 步骤9: 步骤九
+06:44 set YL1RCV061VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤3: 步骤三，但未完整复现整步，不计重复
+06:44 set YL1RCV061VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤3: 步骤三，但未完整复现整步，不计重复
+07:17 DCM pos_RCV061VP    # 标注: 正确 | 步骤5: 步骤五
+07:22 set YL1RCV061VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤3: 步骤三，但未完整复现整步，不计重复
+07:22 set YL1RCV061VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤3: 步骤三，但未完整复现整步，不计重复
+09:01 set YL1RCV061VP_P.SV=40    # 标注: 正确 | 步骤12: 步骤十二
+09:02 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤12: 步骤十二
+09:02 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤12: 步骤十二
+09:06 set YL1RCV061VP_P.SV=60    # 标注: 正确 | 步骤12: 步骤十二
+09:07 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤12: 步骤十二
+09:07 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤12: 步骤十二
+09:34 set YL1RCV046VP_P.SV=0    # 标注: 重复步骤 | 步骤2: 步骤二
+09:36 set YL1RCV046VP_P.EXECUTE=1    # 标注: 重复步骤 | 步骤2: 步骤二
+09:37 set YL1RCV046VP_P.EXECUTE=0    # 标注: 重复步骤 | 步骤2: 步骤二
+09:43 set YL1RCV061VP_P.SV=0    # 标注: 正确 | 步骤12: 步骤十二
+09:44 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤12: 步骤十二
+09:44 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤12: 步骤十二
+10:12 set YL1RCV061VP_P.SV=60    # 标注: 正确 | 步骤12: 步骤十二
+10:13 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤12: 步骤十二
+10:13 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤12: 步骤十二
+10:34 set YL1RCV046VP_P.SV=55    # 标注: 重复步骤 | 步骤7: 步骤七
+10:34 set YL1RCV046VP_P.EXECUTE=1    # 标注: 重复步骤 | 步骤7: 步骤七
+10:34 set YL1RCV046VP_P.EXECUTE=0    # 标注: 重复步骤 | 步骤7: 步骤七
+11:33 set YL1RCV076VP_P.OPEN=1    # 标注: 错误 | 属于步骤9: 步骤九，但未完整复现整步，不计重复
+11:33 set YL1RCV076VP_P.OPEN=0    # 标注: 错误 | 属于步骤9: 步骤九，但未完整复现整步，不计重复
+12:43 DCM tr_RCV021MD    # 标注: 正确 | 步骤12: 步骤十二
+12:48 Freeze

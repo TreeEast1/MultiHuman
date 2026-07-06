@@ -1,0 +1,41 @@
+# 结果摘要: 任务一 | 完成率 100.00% (8/8) | 错误次数 0 | 重复次数 0 | 重复率 0.00%
+# 分析: 步骤完成度较高；错误 0 次，重复步骤 0 次，已识别步骤 8/8。
+# 严格缺失步骤: 无
+
+reset -o "Books\YuanLi\IC\262"
+Run
+13 set CLOG_3KCO015KM_XJ38.VALUE=110    # 标注: 正确 | 步骤1: 设置目标负荷为110MW
+18 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 正确 | 步骤2: 设置功率变化速率小于5%FP/min（功率变化速率类操作按特殊规则识别，不看顺序和值）
+21 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 正确 | 步骤3: 启动负荷变化
+23 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 正确 | 步骤3: 启动负荷变化
+52 set CLOG_3KCO016KM_XJ38.VALUE=1    # 标注: 正确-可选 | 步骤4: 调节功率变化速率适应后续的操作时间，小于5（可以重复操作或不操作）（功率变化速率类操作按特殊规则识别，不看顺序和值）
+01:18 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 正确-可选 | 步骤9: 调节功率变化速率适应后续的操作时间，小于5（可以重复操作或不操作）（功率变化速率类操作按特殊规则识别，不看顺序和值）
+06:05 set CLOG_3KCO016KM_XJ38.VALUE=4    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+07:08 set CLOG_3KCO016KM_XJ38.VALUE=4.5    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+08:58 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+09:18 set CLOG_3KCO016KM_XJ38.VALUE=4.5    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+10:39 set CLOG_3KCO016KM_XJ38.VALUE=5    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+13:58 set CLOG_3KCO016KM_XJ38.VALUE=4    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+15:04 set YL1APA101RR_P.MANUAL=1    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+15:04 set YL1APA101RR_P.MANUAL=0    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+15:10 set YL1APA101RR_P.EXECUTE=1    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+15:10 set YL1APA101RR_P.EXECUTE=0    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+15:13 set YL1APA101RR_P.Slow_down=1    # 标注: 正确 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+15:15 set YL1APA101RR_P.Slow_down=0    # 标注: 正确 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+15:20 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+15:21 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+15:26 set YL1APA102PO_P.MANUAL=1    # 标注: 正确 | 步骤7: 将APA102PO置手动
+15:26 set YL1APA102PO_P.MANUAL=0    # 标注: 正确 | 步骤7: 将APA102PO置手动
+15:27 set YL1APA102PO_P.EXECUTE=1    # 标注: 正确 | 步骤7: 将APA102PO置手动
+15:27 set YL1APA102PO_P.EXECUTE=0    # 标注: 正确 | 步骤7: 将APA102PO置手动
+15:32 set YL1APA102PO_P.CLOSE=1    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+15:32 set YL1APA102PO_P.CLOSE=0    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+15:35 set YL1APA102PO_P.EXECUTE=1    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+15:35 set YL1APA102PO_P.EXECUTE=0    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+15:48 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+16:53 set CLOG_3KCO016KM_XJ38.VALUE=2    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+20:41 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+22:45 set CLOG_3KCO016KM_XJ38.VALUE=4    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+23:28 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 正确 | 步骤10: 停止降功率
+23:30 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 正确 | 步骤10: 停止降功率
+23:33 Freeze

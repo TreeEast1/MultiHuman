@@ -1,0 +1,52 @@
+# ==== 历史存档，不入库 ====
+历史工作_存档_20260703/
+
+# ==== 大体积原始数据不入库（EEG .set/.fdt 与眼动 tsv 单文件动辄百MB，累计 ~2.9GB） ====
+# 但 data/ 下的 README、说明性小文件、以及各模态的小型汇总表需要保留。
+data/04_EEG/
+data/05_眼动/
+# 逐点心率原始 xlsx（~1MB，可以推）保留；如果日后原始信号变大也可以在此排除。
+
+# ==== IDE/编辑器/系统 ====
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+.agents/
+.claude/
+.codex/
+.workbuddy/
+.codebuddy/
+CodeBuddy.md
+codebuddy.md
+
+# ==== Python ====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ==== Jupyter / 临时输出 ====
+*.log
+.tmp/
+tmp/
+
+# ==== 建模产物（体积可能很大，暂时不入库） ====
+*.joblib
+*.pkl
+*.h5
+*.pt
+*.pth
+*.ckpt

@@ -1,0 +1,46 @@
+# 结果摘要: 任务一 | 完成率 100.00% (8/8) | 错误次数 2 | 重复次数 1 | 重复率 11.11%
+# 分析: 步骤完成度较高；错误 2 次，重复步骤 1 次，已识别步骤 8/8，多做 2 次。
+# 严格缺失步骤: 无
+
+09:10 reset -o "Books\YuanLi\IC\262"
+Run
+11 set CLOG_3KCO015KM_XJ38.VALUE=110    # 标注: 正确 | 步骤1: 设置目标负荷为110MW
+15 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 正确 | 步骤2: 设置功率变化速率小于5%FP/min（功率变化速率类操作按特殊规则识别，不看顺序和值）
+45 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 正确 | 步骤3: 启动负荷变化
+46 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 正确 | 步骤3: 启动负荷变化
+01:48 set CLOG_3KCO016KM_XJ38.VALUE=1    # 标注: 正确-可选 | 步骤4: 调节功率变化速率适应后续的操作时间，小于5（可以重复操作或不操作）（功率变化速率类操作按特殊规则识别，不看顺序和值）
+03:32 set CLOG_3KCO016KM_XJ38.VALUE=4    # 标注: 正确-可选 | 步骤9: 调节功率变化速率适应后续的操作时间，小于5（可以重复操作或不操作）（功率变化速率类操作按特殊规则识别，不看顺序和值）
+07:51 set CLOG_3KCO016KM_XJ38.VALUE=4.5    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+16:12 set YL1APA101RR_P.MANUAL=1    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+16:13 set YL1APA101RR_P.MANUAL=0    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+16:14 set YL1APA101RR_P.EXECUTE=1    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+16:15 set YL1APA101RR_P.EXECUTE=0    # 标注: 正确 | 步骤5: 将转速控制器APA101RR置手动
+16:20 set YL1APA101RR_P.Slow_down=1    # 标注: 正确 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:23 set YL1APA101RR_P.Slow_down=0    # 标注: 正确 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:35 set YL1APA101RR_P.Slow_up=1    # 标注: 多做 | 不在该任务标准流程内
+16:37 set YL1APA101RR_P.Slow_up=0    # 标注: 多做 | 不在该任务标准流程内
+16:42 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:43 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:45 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:46 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:48 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:50 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:51 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:53 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:58 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+16:59 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+17:03 set YL1APA101RR_P.Slow_down=1    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+17:06 set YL1APA101RR_P.Slow_down=0    # 标注: 允许重复 | 步骤6: APA101RR长按“raise/lower”控制器调节给水泵转速低于4214rpm
+17:15 set YL1APA102PO_P.MANUAL=1    # 标注: 正确 | 步骤7: 将APA102PO置手动
+17:16 set YL1APA102PO_P.MANUAL=0    # 标注: 正确 | 步骤7: 将APA102PO置手动
+17:16 set YL1APA102PO_P.EXECUTE=1    # 标注: 正确 | 步骤7: 将APA102PO置手动
+17:16 set YL1APA102PO_P.EXECUTE=0    # 标注: 正确 | 步骤7: 将APA102PO置手动
+17:37 set YL1APA102PO_P.CLOSE=1    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+17:37 set YL1APA102PO_P.CLOSE=0    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+17:38 set YL1APA102PO_P.EXECUTE=1    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+17:38 set YL1APA102PO_P.EXECUTE=0    # 标注: 正确 | 步骤8: 当APA102PO转速低于4214rpm时停运泵APA102PO
+22:30 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 正确 | 步骤10: 停止降功率
+22:33 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 正确 | 步骤10: 停止降功率
+22:33 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 重复步骤 | 步骤10: 停止降功率
+22:35 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 重复步骤 | 步骤10: 停止降功率
+22:36 Freeze

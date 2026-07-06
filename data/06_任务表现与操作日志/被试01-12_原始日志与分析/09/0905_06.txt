@@ -1,0 +1,61 @@
+# 结果摘要: 任务五（含原任务五/六） | 完成率 91.67% (11/12) | 错误次数 9 | 重复次数 3 | 重复率 21.43%
+# 分析: 步骤完成度较高；错误 9 次，重复步骤 3 次，已识别步骤 11/12，多做 8 次，漏做步骤 1 次。
+# 严格缺失步骤: 步骤11: 微调RCV061VP
+
+02:14 Run
+03:03 set YL1RCV034VP_P.OPEN=1    # 标注: 多做 | 不在该任务标准流程内
+03:04 set YL1RCV034VP_P.OPEN=0    # 标注: 多做 | 不在该任务标准流程内
+03:05 set YL1RCV034VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+03:05 set YL1RCV034VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+03:46 set YL1RCV046VP_P.MANUAL=1    # 标注: 正确 | 步骤1: 将RCV046VP切手动
+03:46 set YL1RCV046VP_P.MANUAL=0    # 标注: 正确 | 步骤1: 将RCV046VP切手动
+03:49 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤1: 将RCV046VP切手动
+03:49 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤1: 将RCV046VP切手动
+03:58 set YL1RCV046VP_P.SV=0    # 标注: 正确 | 步骤2: 关闭RCV046VP
+03:59 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤2: 关闭RCV046VP
+03:59 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤2: 关闭RCV046VP
+04:13 set YL1RCV061VP_P.SV=0    # 标注: 正确 | 步骤3: 关闭RCV061VP
+04:14 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤3: 关闭RCV061VP
+04:14 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤3: 关闭RCV061VP
+04:26 set YL1RCV002PO_P.OPEN=1    # 标注: 正确 | 步骤4: 开启任意一台上充泵
+04:26 set YL1RCV002PO_P.OPEN=0    # 标注: 正确 | 步骤4: 开启任意一台上充泵
+04:27 set YL1RCV002PO_P.EXECUTE=1    # 标注: 正确 | 步骤4: 开启任意一台上充泵
+04:27 set YL1RCV002PO_P.EXECUTE=0    # 标注: 正确 | 步骤4: 开启任意一台上充泵
+04:42 set YL1RCV061VP_P.SV=60    # 标注: 正确 | 步骤5: 调节RCV061VP至60%
+04:44 set YL1RCV061VP_P.EXECUTE=1    # 标注: 正确 | 步骤5: 调节RCV061VP至60%
+04:44 set YL1RCV061VP_P.EXECUTE=0    # 标注: 正确 | 步骤5: 调节RCV061VP至60%
+05:03 set YL1RCV008VP_P.OPEN=1    # 标注: 正确 | 步骤6: 开启RCV009VP
+05:03 set YL1RCV008VP_P.OPEN=0    # 标注: 正确 | 步骤6: 开启RCV009VP
+05:04 set YL1RCV008VP_P.EXECUTE=1    # 标注: 正确 | 步骤6: 开启RCV009VP
+05:04 set YL1RCV008VP_P.EXECUTE=0    # 标注: 正确 | 步骤6: 开启RCV009VP
+05:17 set YL1RCV046VP_P.SV=55    # 标注: 正确 | 步骤7: 调节RCV046VP开度为55%
+05:18 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤7: 调节RCV046VP开度为55%
+05:18 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤7: 调节RCV046VP开度为55%
+05:53 set YL1RCV046VP_P.SV=50    # 标注: 正确 | 步骤8: 微调RCV046VP
+05:54 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤8: 微调RCV046VP
+05:54 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤8: 微调RCV046VP
+06:02 set YL1RCV046VP_P.SV=55    # 标注: 正确 | 步骤8: 微调RCV046VP
+06:03 set YL1RCV046VP_P.EXECUTE=1    # 标注: 正确 | 步骤8: 微调RCV046VP
+06:03 set YL1RCV046VP_P.EXECUTE=0    # 标注: 正确 | 步骤8: 微调RCV046VP
+06:10 DCM tr_RCV018MD    # 标注: 正确 | 步骤9: RCV018MD仪表故障修复
+06:41 set YL1RCV076VP_P.OPEN=1    # 标注: 正确 | 步骤10: 打开RCV077VP
+06:42 set YL1RCV076VP_P.OPEN=0    # 标注: 正确 | 步骤10: 打开RCV077VP
+06:43 set YL1RCV076VP_P.EXECUTE=1    # 标注: 正确 | 步骤10: 打开RCV077VP
+06:43 set YL1RCV076VP_P.EXECUTE=0    # 标注: 正确 | 步骤10: 打开RCV077VP
+06:47 set YL1RCV077VP_P.OPEN=1    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:47 set YL1RCV077VP_P.OPEN=0    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:48 set YL1RCV077VP_P.EXECUTE=1    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:48 set YL1RCV077VP_P.EXECUTE=0    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:54 set YL1RCV078VP_P.OPEN=1    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:54 set YL1RCV078VP_P.OPEN=0    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:54 set YL1RCV078VP_P.EXECUTE=1    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+06:54 set YL1RCV078VP_P.EXECUTE=0    # 标注: 重复步骤 | 步骤10: 打开RCV077VP
+07:23 set YL1RCV061VP_P.SV=50    # 标注: 多做 | 不在该任务标准流程内
+07:24 set YL1RCV061VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+07:24 set YL1RCV061VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+07:34 set YL1RCV061VP_P.SV=60    # 标注: 重复步骤 | 步骤5: 调节RCV061VP至60%
+07:35 set YL1RCV061VP_P.EXECUTE=1    # 标注: 重复步骤 | 步骤5: 调节RCV061VP至60%
+07:35 set YL1RCV061VP_P.EXECUTE=0    # 标注: 重复步骤 | 步骤5: 调节RCV061VP至60%
+07:45 DCM tr_RCV021MD    # 标注: 正确 | 步骤12: 仪表故障并修复故障
+07:52 DCM tr_RCV023MD    # 标注: 多做 | 不在该任务标准流程内
+08:04 Freeze

@@ -1,0 +1,61 @@
+# 结果摘要: 任务二 | 完成率 100.00% (15/15) | 错误次数 2 | 重复次数 3 | 重复率 16.67%
+# 分析: 步骤完成度较高；错误 2 次，重复步骤 3 次，已识别步骤 15/15，步骤错误 2 次。
+# 严格缺失步骤: 无
+
+reset -o "Books\YuanLi\IC\261 110Mw task 2"
+Run
+23 set CLOG_3KCO015KM_XJ38.VALUE=1089    # 标注: 正确 | 步骤1: 设置目标负荷为1089MW
+47 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 正确 | 步骤3: 启动负荷变化
+49 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 正确 | 步骤3: 启动负荷变化
+03:17 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 正确 | 步骤4: 停止升功率
+03:20 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 正确 | 步骤4: 停止升功率
+03:23 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 重复步骤 | 步骤4: 停止升功率
+03:25 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 重复步骤 | 步骤4: 停止升功率
+03:35 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 正确 | 步骤5: 启动负荷变化
+03:37 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 正确 | 步骤5: 启动负荷变化
+03:41 set CLOG_3KCO016KM_XJ38.VALUE=0    # 标注: 正确 | 步骤2: 置功率变化速率小于5%FP/min（功率变化速率类操作按特殊规则识别，不看顺序和值）
+04:06 set CLOG_3KCO126SY_XD12.VALUE=1    # 标注: 重复步骤 | 步骤4: 停止升功率
+04:10 set CLOG_3KCO126SY_XD12.VALUE=0    # 标注: 重复步骤 | 步骤4: 停止升功率
+06:59 set CLOG_3KCO016KM_XJ38.VALUE=2    # 标注: 正确 | 步骤8: 调节功率变化速率适应后续的操作时间，小于5（功率变化速率类操作按特殊规则识别，不看顺序和值）
+08:31 set CLOG_3KCO126SY_XD11.VALUE=1    # 标注: 重复步骤 | 步骤3: 启动负荷变化
+08:33 set CLOG_3KCO126SY_XD11.VALUE=0    # 标注: 重复步骤 | 步骤3: 启动负荷变化
+10:13 set YL1GSS190PO_P.OPEN=1    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+10:13 set YL1GSS190PO_P.OPEN=0    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+10:17 set YL1GSS190PO_P.EXECUTE=1    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+10:18 set YL1GSS190PO_P.EXECUTE=0    # 标注: 正确 | 步骤6: 启动疏水泵GSS190PO
+10:26 set YL1GSS290PO_P.OPEN=1    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+10:27 set YL1GSS290PO_P.OPEN=0    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+10:27 set YL1GSS290PO_P.EXECUTE=1    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+10:27 set YL1GSS290PO_P.EXECUTE=0    # 标注: 正确 | 步骤7: 启动疏水泵GSS290PO
+11:45 set CLOG_3KCO016KM_XJ38.VALUE=4    # 标注: 正确 | 步骤15: 调节功率变化速率适应后续的操作时间，小于5（功率变化速率类操作按特殊规则识别，不看顺序和值）
+13:05 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+13:22 set YL1GPV101VL_P.CLOSE=1    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+13:22 set YL1GPV101VL_P.CLOSE=0    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+13:23 set YL1GPV101VL_P.EXECUTE=1    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+13:23 set YL1GPV101VL_P.EXECUTE=0    # 标注: 正确 | 步骤9: 关闭疏水阀GPV101VL
+13:29 set YL1GPV111VL_P.CLOSE=1    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+13:29 set YL1GPV111VL_P.CLOSE=0    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+13:30 set YL1GPV111VL_P.EXECUTE=1    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+13:30 set YL1GPV111VL_P.EXECUTE=0    # 标注: 正确 | 步骤10: 关闭疏水阀GPV111VL
+13:33 set YL1GPV121VL_P.CLOSE=1    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+13:33 set YL1GPV121VL_P.CLOSE=0    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+13:33 set YL1GPV121VL_P.EXECUTE=1    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+13:33 set YL1GPV121VL_P.EXECUTE=0    # 标注: 正确 | 步骤11: 关闭疏水阀GPV121VL
+13:36 set YL1GPV131VL_P.CLOSE=1    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+13:37 set YL1GPV131VL_P.CLOSE=0    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+13:37 set YL1GPV131VL_P.EXECUTE=1    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+13:37 set YL1GPV131VL_P.EXECUTE=0    # 标注: 正确 | 步骤12: 关闭疏水阀GPV131VL
+13:37 set YL1GPV131VL_P.EXECUTE=1    # 标注: 错误 | 属于步骤12: 关闭疏水阀GPV131VL，但未完整复现整步，不计重复
+13:37 set YL1GPV131VL_P.EXECUTE=0    # 标注: 错误 | 属于步骤12: 关闭疏水阀GPV131VL，但未完整复现整步，不计重复
+15:26 set CLOG_3KCO016KM_XJ38.VALUE=1    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+17:10 set CLOG_3KCO016KM_XJ38.VALUE=3    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+19:05 set YL1APA102PO_P.OPEN=1    # 标注: 正确 | 步骤13: 启动APA102PO
+19:05 set YL1APA102PO_P.OPEN=0    # 标注: 正确 | 步骤13: 启动APA102PO
+19:10 set YL1APA102PO_P.EXECUTE=1    # 标注: 正确 | 步骤13: 启动APA102PO
+19:10 set YL1APA102PO_P.EXECUTE=0    # 标注: 正确 | 步骤13: 启动APA102PO
+20:09 set YL1APA101RR_P.AUTO=1    # 标注: 正确 | 步骤14: 将APA101RR置自动
+20:09 set YL1APA101RR_P.AUTO=0    # 标注: 正确 | 步骤14: 将APA101RR置自动
+20:10 set YL1APA101RR_P.EXECUTE=1    # 标注: 正确 | 步骤14: 将APA101RR置自动
+20:10 set YL1APA101RR_P.EXECUTE=0    # 标注: 正确 | 步骤14: 将APA101RR置自动
+21:35 set CLOG_3KCO016KM_XJ38.VALUE=4.5    # 标注: 允许重复 | 功率变化速率类操作可重复，不计重复、不计错误
+34:59 Freeze

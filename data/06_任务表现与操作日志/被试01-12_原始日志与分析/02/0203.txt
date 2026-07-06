@@ -1,0 +1,52 @@
+# 结果摘要: 任务三 | 完成率 85.71% (6/7) | 错误次数 16 | 重复次数 1 | 重复率 14.29%
+# 分析: 步骤完成度中等；错误 16 次，重复步骤 1 次，已识别步骤 6/7，多做 4 次，漏做步骤 1 次，步骤错误 11 次。
+# 严格缺失步骤: 步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态
+
+29:15 reset -o "Books\YuanLi\IC\243"
+Run
+04:05 set YL1RCP016KG.MANUAL=1    # 标注: 错误 | 属于步骤3: RCP016KG置手动，但未按标准顺序形成完整步骤
+04:06 set YL1RCP016KG.MANUAL=0    # 标注: 错误 | 属于步骤3: RCP016KG置手动，但未按标准顺序形成完整步骤
+04:06 set YL1RCP016KG.EXECUTE=1    # 标注: 错误 | 属于步骤3: RCP016KG置手动，但未按标准顺序形成完整步骤
+04:06 set YL1RCP016KG.EXECUTE=0    # 标注: 错误 | 属于步骤3: RCP016KG置手动，但未按标准顺序形成完整步骤
+04:23 set YL1RCP001VP_P.MANUAL=1    # 标注: 多做 | 不在该任务标准流程内
+04:23 set YL1RCP001VP_P.MANUAL=0    # 标注: 多做 | 不在该任务标准流程内
+04:23 set YL1RCP001VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+04:24 set YL1RCP001VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+04:35 set YL1RCP001VP_P.SV=100    # 标注: 正确 | 步骤1: 手动打开RCP001VP调节开度为100%
+04:36 set YL1RCP001VP_P.EXECUTE=1    # 标注: 正确 | 步骤1: 手动打开RCP001VP调节开度为100%
+04:36 set YL1RCP001VP_P.EXECUTE=0    # 标注: 正确 | 步骤1: 手动打开RCP001VP调节开度为100%
+04:46 set YL1RCP016KG.AUTO=1    # 标注: 正确 | 步骤2: RCP016KG置自动
+04:46 set YL1RCP016KG.AUTO=0    # 标注: 正确 | 步骤2: RCP016KG置自动
+04:47 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤2: RCP016KG置自动
+04:47 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤2: RCP016KG置自动
+05:06 set YL1RCP016KG.MANUAL=1    # 标注: 正确 | 步骤3: RCP016KG置手动
+05:06 set YL1RCP016KG.MANUAL=0    # 标注: 正确 | 步骤3: RCP016KG置手动
+05:07 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤3: RCP016KG置手动
+05:07 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤3: RCP016KG置手动
+05:29 set YL1RCP002VP_P.MANUAL=1    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:30 set YL1RCP002VP_P.MANUAL=0    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:31 set YL1RCP002VP_P.EXECUTE=1    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:31 set YL1RCP002VP_P.EXECUTE=0    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:38 set YL1RCP002VP_P.SV=100    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:39 set YL1RCP002VP_P.EXECUTE=1    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:39 set YL1RCP002VP_P.EXECUTE=0    # 标注: 正确 | 步骤4: 手动打开RCP002VP调节开度为100%
+05:48 set YL1RCP016KG.AUTO=1    # 标注: 正确 | 步骤5: RCP016KG置自动
+05:49 set YL1RCP016KG.AUTO=0    # 标注: 正确 | 步骤5: RCP016KG置自动
+05:49 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤5: RCP016KG置自动
+05:50 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤5: RCP016KG置自动
+06:07 set YL1RCP016KG.MANUAL=1    # 标注: 正确 | 步骤6: RCP016KG置手动
+06:07 set YL1RCP016KG.MANUAL=0    # 标注: 正确 | 步骤6: RCP016KG置手动
+06:08 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤6: RCP016KG置手动
+06:08 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤6: RCP016KG置手动
+06:21 set YL1RCP016KG.MANUAL=1    # 标注: 重复步骤 | 步骤3: RCP016KG置手动
+06:22 set YL1RCP016KG.MANUAL=0    # 标注: 重复步骤 | 步骤3: RCP016KG置手动
+06:23 set YL1RCP016KG.EXECUTE=1    # 标注: 重复步骤 | 步骤3: RCP016KG置手动
+06:23 set YL1RCP016KG.EXECUTE=0    # 标注: 重复步骤 | 步骤3: RCP016KG置手动
+06:32 set YL1RCP001VP_P.SV=9    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:33 set YL1RCP001VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:33 set YL1RCP001VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:40 set YL1RCP002VP_P.AUTO=1    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:40 set YL1RCP002VP_P.AUTO=0    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:41 set YL1RCP002VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:41 set YL1RCP002VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态，但未按标准顺序形成完整步骤
+06:51 Freeze

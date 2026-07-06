@@ -1,0 +1,50 @@
+# 结果摘要: 任务三 | 完成率 85.71% (6/7) | 异常步骤 3/7 (42.86%) | 异常动作 17/43 (39.53%) | 错误动作数 13 | 重复次数 0 | 重复率 0.00%
+# 分析: 步骤完成度中等；异常动作总数 17 次，异常动作比例 39.53%，已发生错误动作 13 次，重复步骤 0 次，正确完成步骤 6/7，异常步骤 3 个，异常步骤比例 42.86%，错误步骤 3 个，多做 3 次，漏做步骤 1 次，缺失动作 4 次，步骤内错误动作 10 次。
+# 问题统计: 异常动作总数 17 | 总动作数 43 | 日志动作行数 39 | 已发生错误动作数 13 | 多做动作数 3 | 步骤内错误动作数 10 | 缺失动作数 4 | 重复动作行数 0 | 异常步骤数 3 | 总步骤数 7 | 错误步骤数 3 | 缺失步骤数 1
+# 问题比例: 异常步骤比例 42.86% (3/7) | 异常动作比例 39.53% (17/43)
+# 异常步骤: 步骤3: 将RCP016KG置手动；步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)；步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态（“将RCP001VP开度调至9%”与“将RCP002VP置自动”操作不分先后）
+# 错误步骤: 步骤3: 将RCP016KG置手动；步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)；步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态（“将RCP001VP开度调至9%”与“将RCP002VP置自动”操作不分先后）
+# 缺失步骤: 步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态（“将RCP001VP开度调至9%”与“将RCP002VP置自动”操作不分先后）
+# 缺失动作: 步骤7: 缺失动作 set YL1RCP002VP_P.AUTO=1；步骤7: 缺失动作 set YL1RCP002VP_P.AUTO=0；步骤7: 缺失动作 set YL1RCP002VP_P.EXECUTE=1；步骤7: 缺失动作 set YL1RCP002VP_P.EXECUTE=0
+
+Run
+03:01 set YL1RCP016KG.MANUAL=1    # 标注: 错误 | 属于步骤3: 将RCP016KG置手动，但未按标准顺序形成完整步骤
+03:01 set YL1RCP016KG.MANUAL=0    # 标注: 错误 | 属于步骤3: 将RCP016KG置手动，但未按标准顺序形成完整步骤
+03:02 set YL1RCP016KG.EXECUTE=1    # 标注: 错误 | 属于步骤3: 将RCP016KG置手动，但未按标准顺序形成完整步骤
+03:02 set YL1RCP016KG.EXECUTE=0    # 标注: 错误 | 属于步骤3: 将RCP016KG置手动，但未按标准顺序形成完整步骤
+03:32 set YL1RCP001VP_P.SV=100    # 标注: 正确 | 步骤1: 记录RCP001VP初态，手动打开RCP001VP(调节开度为100%)
+03:36 set YL1RCP001VP_P.EXECUTE=1    # 标注: 正确 | 步骤1: 记录RCP001VP初态，手动打开RCP001VP(调节开度为100%)
+03:36 set YL1RCP001VP_P.EXECUTE=0    # 标注: 正确 | 步骤1: 记录RCP001VP初态，手动打开RCP001VP(调节开度为100%)
+03:50 set YL1RCP016KG.AUTO=1    # 标注: 正确 | 步骤2: 将RCP016KG置自动
+03:50 set YL1RCP016KG.AUTO=0    # 标注: 正确 | 步骤2: 将RCP016KG置自动
+03:51 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤2: 将RCP016KG置自动
+03:51 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤2: 将RCP016KG置自动
+04:32 set YL1RCP016KG.MANUAL=1    # 标注: 正确 | 步骤3: 将RCP016KG置手动
+04:32 set YL1RCP016KG.MANUAL=0    # 标注: 正确 | 步骤3: 将RCP016KG置手动
+04:33 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤3: 将RCP016KG置手动
+04:33 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤3: 将RCP016KG置手动
+05:04 set YL1RCP002VP_P.MANUAL=1    # 标注: 错误 | 属于步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)，但未按标准顺序形成完整步骤
+05:05 set YL1RCP002VP_P.MANUAL=0    # 标注: 错误 | 属于步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)，但未按标准顺序形成完整步骤
+05:10 set YL1RCP002VP_P.SV=100    # 标注: 错误 | 属于步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)，但未按标准顺序形成完整步骤
+05:12 set YL1RCP002VP_P.MANUAL=1    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:12 set YL1RCP002VP_P.MANUAL=0    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:13 set YL1RCP002VP_P.EXECUTE=1    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:13 set YL1RCP002VP_P.EXECUTE=0    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:17 set YL1RCP002VP_P.SV=100    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:19 set YL1RCP002VP_P.EXECUTE=1    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:19 set YL1RCP002VP_P.EXECUTE=0    # 标注: 正确 | 步骤4: 记录RCP002VP初态，手动打开RCP002VP(调节开度为100%)
+05:26 set YL1RCP016KG.AUTO=1    # 标注: 正确 | 步骤5: 将RCP016KG置自动
+05:26 set YL1RCP016KG.AUTO=0    # 标注: 正确 | 步骤5: 将RCP016KG置自动
+05:27 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤5: 将RCP016KG置自动
+05:27 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤5: 将RCP016KG置自动
+05:40 set YL1RCP016KG.MANUAL=1    # 标注: 正确 | 步骤6: 将RCP016KG置手动
+05:41 set YL1RCP016KG.MANUAL=0    # 标注: 正确 | 步骤6: 将RCP016KG置手动
+05:41 set YL1RCP016KG.EXECUTE=1    # 标注: 正确 | 步骤6: 将RCP016KG置手动
+05:41 set YL1RCP016KG.EXECUTE=0    # 标注: 正确 | 步骤6: 将RCP016KG置手动
+06:03 set YL1RCP001VP_P.SV=9    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态（“将RCP001VP开度调至9%”与“将RCP002VP置自动”操作不分先后），但未按标准顺序形成完整步骤
+06:05 set YL1RCP001VP_P.EXECUTE=1    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态（“将RCP001VP开度调至9%”与“将RCP002VP置自动”操作不分先后），但未按标准顺序形成完整步骤
+06:05 set YL1RCP001VP_P.EXECUTE=0    # 标注: 错误 | 属于步骤7: 恢复RCP016KG、RCP001VP/002VP为初始状态（“将RCP001VP开度调至9%”与“将RCP002VP置自动”操作不分先后），但未按标准顺序形成完整步骤
+06:11 set YL1RCP002VP_P.SV=0    # 标注: 多做 | 不在该任务标准流程内
+06:12 set YL1RCP002VP_P.EXECUTE=1    # 标注: 多做 | 不在该任务标准流程内
+06:12 set YL1RCP002VP_P.EXECUTE=0    # 标注: 多做 | 不在该任务标准流程内
+Freeze
