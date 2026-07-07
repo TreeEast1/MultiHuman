@@ -26,7 +26,7 @@ subject_08_task_5_6,8,5_6,,5_6,高,eye,window_features_30s_step5s/subject_08_tas
 subject_09_task_1,9,1,,1,中,eye,window_features_30s_step5s/subject_09_task_1.csv,211,1,1,1,5.666666666666667
 subject_09_task_4,9,4,,4,中,eye,window_features_30s_step5s/subject_09_task_4.csv,175,1,1,1,5.2
 subject_09_task_5_6,9,5_6,,5_6,高,eye,window_features_30s_step5s/subject_09_task_5_6.csv,68,1,1,1,6.0
-subject_10_task_2,10,2,,2,中,hr_first,window_features_30s_step5s/subject_10_task_2.csv,1,1,1,1,4.4
+subject_10_task_2,10,2,,2,中,eye,window_features_30s_step5s/subject_10_task_2.csv,367,1,1,1,4.4
 subject_10_task_3,10,3,,3,低,eye,window_features_30s_step5s/subject_10_task_3.csv,105,1,1,1,4.4
 subject_10_task_5_6,10,5_6,,5_6,高,eye,window_features_30s_step5s/subject_10_task_5_6.csv,127,1,1,1,7.066666666666666
 subject_11_task_1,11,1,,1,中,eye,window_features_30s_step5s/subject_11_task_1.csv,235,1,1,1,5.666666666666667

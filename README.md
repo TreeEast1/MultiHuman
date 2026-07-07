@@ -84,9 +84,9 @@ MultiHuman/
 | 版本 | 窗口 / 步长 | 样本数 | 窗口数 | 特征列 | 用途 |
 |---|---|---|---|---|---|
 | `10秒窗口_不重叠版/加入日志特征/` | 10 s / step 10 s | 84 | 6 359 | 96 | 细粒度对比版 |
-| `output_30s_step5s_final/` | 30 s / step 5 s | 84 | 12 258 | 132 | **当前主用** |
+| `output_30s_step5s_final/` | 30 s / step 5 s | 84 | 12 624 | 132 | **当前主用** |
 
-关键指标：NASA 标签 0 缺失；日志覆盖 100%（84/84）；同步质量 `good_eye_anchor` 68 / `check_large_duration_gap` 12 / `usable_hr_anchor` 4。
+关键指标：NASA 标签 0 缺失；日志覆盖 100%（84/84）；同步质量 `good_eye_anchor` 69 / `check_large_duration_gap` 11 / `usable_hr_anchor` 4。
 
 ### 4.3 特征提取（附依据，非拍脑袋）
 

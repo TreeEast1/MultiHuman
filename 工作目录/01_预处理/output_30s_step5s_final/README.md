@@ -55,7 +55,7 @@ x_z = (x - subject_mean(x)) / subject_std(x)
 | 项目 | 值 |
 |---|---|
 | 样本文件数 | 84 |
-| 总窗口数 | 12258 |
+| 总窗口数 | 12624（2026-07-07 修正 1002 EEG 时长错误后重算，原为 12258，详见 `../DATA_FIX_AUDIT.md`） |
 | 每窗特征列数 | 132 |
 | 元信息列 | 14（sample_id/subject/task/window_id等） |
 | 心率特征 | 5 |
