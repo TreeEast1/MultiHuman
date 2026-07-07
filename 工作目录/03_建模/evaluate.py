@@ -88,14 +88,28 @@ def group_kfold_evaluate(
     n_splits: int = 5,
     fit_kwargs: dict | None = None,
     preprocessor: Callable | None = None,
+    task_groups: np.ndarray | None = None,
 ) -> EvalResult:
     """执行 GroupKFold 评估。
 
-    preprocessor: 可选的预处理函数，签名为
-        (X_train, X_test) -> (X_train_prep, X_test_prep)
-        用于折内做缺失值填充等（fit 只用训练折统计量）。
+    参数
+    ----
+    groups : 用于划分折的分组（例如 sample_id 或 subject）
+    task_groups : 用于任务级聚合的分组（默认与 groups 相同）
+        - 窗口级建模场景：groups=sample_id, task_groups=sample_id
+        - 任务级建模按被试划分：groups=subject, task_groups=sample_id
+          （避免"任务级"其实聚合到被试级）
+    preprocessor: 折内预处理函数，(X_train, X_test) -> (X_train_prep, X_test_prep)
+
+    评估口径
+    -------
+    - 窗口级指标：直接在所有测试点上算
+    - 任务级指标：按 task_groups 分组，每组预测取中位数后再算
+      当每行数据本身就是一个任务（84 行任务级表）时，任务级 = 窗口级
     """
     fit_kwargs = fit_kwargs or {}
+    if task_groups is None:
+        task_groups = groups
     gkf = GroupKFold(n_splits=n_splits)
 
     fold_results: list[FoldResult] = []
@@ -104,6 +118,7 @@ def group_kfold_evaluate(
         X_tr, X_te = X[train_idx], X[test_idx]
         y_tr, y_te = y[train_idx], y[test_idx]
         g_tr, g_te = groups[train_idx], groups[test_idx]
+        tg_te = task_groups[test_idx]
 
         # 折内预处理（避免测试集信息泄漏到训练）
         if preprocessor is not None:
@@ -115,10 +130,10 @@ def group_kfold_evaluate(
 
         # 窗口级指标
         mae_win = mean_absolute_error(y_te, y_pred_win)
-        r2_win = r2_score(y_te, y_pred_win)
+        r2_win = r2_score(y_te, y_pred_win) if len(y_te) > 1 else float("nan")
 
-        # 任务级聚合
-        y_true_task, y_pred_task = _aggregate_task_level(y_te, y_pred_win, g_te)
+        # 任务级聚合（用 task_groups 而非划分 groups）
+        y_true_task, y_pred_task = _aggregate_task_level(y_te, y_pred_win, tg_te)
         mae_task = mean_absolute_error(y_true_task, y_pred_task)
         r2_task = r2_score(y_true_task, y_pred_task) if len(y_true_task) > 1 else float("nan")
 
