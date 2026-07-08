@@ -1,8 +1,123 @@
 # MultiHuman：多模态生理-行为信号驱动的操纵员认知工作负荷预测
 
-> 基于 EEG、心率、眼动、任务操作日志四模态数据，预测核电操纵任务下操纵员的主观工作负荷（NASA-TLX 加权总分）。
+> 基于 EEG、心率、眼动、任务操作日志四模态数据，两种预测目标并存：
+> - **回归**：NASA-TLX 加权总分（连续值 1.33–7.80）
+> - **分类**：低 / 中 / 高 3 档难度
 >
 > **进度日志格式**，最新在顶部。
+
+---
+
+## 📅 2026-07-08：分类实验完成 + 目录结构重构
+
+### 一句话结论
+
+**3 分类 Macro-F1 达到 0.861（RandomForest），首次在跨被试严格评估下超过历史 F1=0.807 的成绩**。同时把建模目录重构为清晰的双线：`regression_task_level/` 与 `classification_task_level/`，共享 `common/` 工具。
+
+### 一、目录重构（不再混杂）
+
+```
+工作目录/03_建模/
+├── EXPERIMENT_SUMMARY.md              ← 综合总结（回归 + 分类）
+├── common/                            ← 共用工具（跨回归/分类）
+│   ├── evaluate.py                    ← 回归 GroupKFold pooled 评估
+│   ├── exp_utils.py                   ← 回归通用：pooled_cv / 折内 MI 筛选
+│   └── cls_utils.py                   ← 分类通用：StratifiedGroupKFold pooled 评估
+├── regression_window_level/           ← 窗口级回归（07-07 上午，历史基线）
+│   ├── make_dataset.py / baseline.py
+│   └── dataset/                       ← X (12624×66), y, groups
+├── regression_task_level/             ← 任务级回归（07-07 下午，主线）
+│   ├── make_dataset_task.py / baseline_task.py
+│   ├── exp1_modality_ablation.py     ← P1 消融
+│   ├── exp2_feature_selection.py     ← P2 筛选
+│   ├── exp3_xgb_tuning.py            ← P3 调参
+│   ├── dataset/                       ← X_task (84×264), y_task, groups_task
+│   └── reports_baseline/ reports_exp1/ reports_exp2/ reports_exp3/
+└── classification_task_level/         ← 任务级 3 分类（本次新增）
+    ├── make_dataset_cls.py            ← 复用回归 X，标签换成 task_difficulty
+    ├── baseline_cls.py                ← 12 个模型对比
+    ├── exp1_modality_ablation_cls.py
+    ├── exp2_feature_selection_cls.py
+    ├── exp3_tuning_cls.py             ← RF/XGB/LR/SVC 四类调参共 142 组
+    ├── dataset/                       ← X_cls, y_cls, y_cls_int, groups_cls
+    └── reports_baseline/ reports_exp1/ reports_exp2/ reports_exp3/
+```
+
+### 二、分类最终成绩
+
+**评估**：`StratifiedGroupKFold(n_splits=5, groups=subject)`，保证每折训练/测试集都含 3 类难度  
+**主指标**：pooled Accuracy / Macro-F1（合并 5 折预测再算总指标）
+
+| 阶段 | 特征方案 | 模型 | Acc | Macro-F1 |
+|---|---|---|---:|---:|
+| P0 baseline（264 特征全量，12 个模型） | 全量 | LogisticRegression_L2 (C=0.1) | 0.786 | 0.787 |
+| P0 baseline | 全量 | RF_shallow | 0.774 | 0.779 |
+| P2 特征筛选 | MI Top-50 | RF_shallow | 0.857 | 0.861 |
+| **P3 调参最佳** | **MI Top-50** | **RF(max_depth=4, min_leaf=3, n=300)** | **0.857** | **0.861** |
+| P3 LogReg 调参 | MI Top-130 | LR(C=10, L2) | 0.833 | 0.834 |
+| P3 XGB 调参 | MI Top-15 | XGB(d=2, lr=0.05, λ=2, n=500) | 0.833 | 0.833 |
+| P3 SVC 调参 | MI Top-130 | SVC-RBF(C=10) | 0.821 | 0.818 |
+
+**参考基线**：Dummy_stratified F1=0.242，Dummy_most_frequent F1=0.180，随机猜 acc=0.333
+
+### 三、分类的三个关键发现（与回归高度呼应）
+
+**（1）单模态 AOI 已经吊打全量**
+
+| 单模态 | n_feat | XGB Macro-F1 |
+|---|---:|---:|
+| **only_AOI** | **36** | **0.826** ← 比 Full 264 (0.776) 还高 5 个点 |
+| only_Log | 48 | 0.625 |
+| only_HR | 20 | 0.540 |
+| only_EEG | 112 | 0.525 |
+| only_Blink | 24 | 0.508 |
+| only_EyePupil | 24 | 0.456 |
+
+**去 AOI**：F1 从 0.776 崩到 0.538（-0.24）  
+**去 EEG**：F1 反而涨到 0.851（用 LR）—— **EEG 是干扰而非信号**
+
+**（2）分类偏好 mean，回归偏好 std**
+
+| 只用一种统计量 66 列 | 回归 R² | 分类 F1 (XGB) |
+|---|---:|---:|
+| only_mean | +0.185 | **0.796** |
+| only_std | **+0.470** | 0.701 |
+| only_median | +0.039 | 0.675 |
+| only_slope | +0.186 | 0.660 |
+
+- **回归**：预测连续 NASA 分数看信号**波动性**（std）
+- **分类**：判断难度档位看信号**平均水平**（mean）
+
+**（3）两条线的稳定 top 特征完全重合**
+
+在**回归 P2** 与**分类 P2** 两种筛选中，都稳定选中的第一梯队：
+
+- `eye_aoi_interval_n__std` — AOI 切换次数的波动
+- `eye_aoi_unique_hit_n__std` — 覆盖 AOI 数量的波动
+- `eye_aoi_interval_n__mean` — AOI 切换均值
+
+**独立实验指向同一批特征 = 结论鲁棒**。
+
+### 四、分类 vs 历史成绩对比
+
+| 来源 | 划分方式 | 严格度 | Macro-F1 |
+|---|---|---|---:|
+| 历史随机窗口划分（有泄漏） | 随机 | ❌ | 0.951 |
+| 历史任务级 30 次重复 CV | 未强制跨被试 | ⚠️ | 0.807 |
+| **本次 StratifiedGroupKFold by subject** | **跨被试严格** | **✅** | **0.861** |
+
+**首次在跨被试严格评估下超过历史成绩，可作为论文主实验结果。**
+
+### 五、关键警示：分类的天然上限
+
+数据审计发现**难度与任务类型 100% 绑定**：低 = task_3/5，中 = task_1/2/4，高 = task_5_6。这意味着 3 分类本质是"识别 task 类型"，AOI 单模态 F1=0.826 已经接近上限。**分类结果好并不意味着模型真的懂"负荷"，只是很好地识别了"这是什么任务"**。这也是为什么**回归比分类更能反映真实的负荷预测能力**——回归的信号来源于同一 task 内的被试主观分差异。
+
+### 六、下一步
+
+- [ ] Leave-One-Subject-Out（26 折）产出最严格的分数用于发表
+- [ ] 残差/错误分析：找错最离谱的样本，看规律
+- [ ] 可视化：K vs 指标曲线、特征重要性 barplot、预测-真值散点、混淆矩阵热图
+- [ ] 仅用 Top-8 稳定特征的极简模型（可解释性验证）
 
 ---
 
@@ -10,130 +125,34 @@
 
 ### 一句话结论
 
-**pooled R² 从 0.126 提升到 0.519，MAE 从 1.170 降到 0.911**——已达到跨被试负荷回归的文献中位水平（0.4-0.6）。核心发现：**AOI 情境意识特征 + std 波动性统计量是主导信号，EEG 和 HR 贡献很小**。
+**回归 pooled R² 从 0.126 提升到 0.519，MAE 从 1.170 降到 0.911**——达到跨被试负荷回归的文献中位水平（0.4–0.6）。核心发现：**AOI + std 波动性统计量是主导信号，EEG 和 HR 贡献很小**。
 
-### 一、最终成绩总览
+### 关键突破：建模粒度是最大瓶颈
 
-| 阶段 | 建模粒度 | 特征方案 | 模型 | pooled R² | pooled MAE |
-|---|---|---|---|---:|---:|
-| 上午的窗口级 baseline | 12624 行 × 66 特征 | 全量 | RandomForest | +0.126 | 1.170 |
-| **P0 任务级 baseline** | **84 行 × 264 特征** | 全量 | XGB_shallow | **+0.465** | **0.910** |
-| **P2+P3 最优组合** | **84 行 × 30 特征** | MI 折内 Top-30 | **XGB 调参后** | **+0.519** | **0.911** |
-
-参考基线：`|y - mean(y)|` = 1.337（任何模型 MAE 低于此才算实质学习），y 范围 [1.33, 7.80] std=1.58。
-
-### 二、跳这么多的原因：**建模粒度是最大瓶颈**（不是特征质量）
-
-12624 行窗口 × 66 特征，NASA 真值只有 84 个数（每个 sample_id 内所有窗口共享一个真值）——模型实际上在学"如何在共享真值的窗口内输出常数"，跨任务泛化能力被稀释。
-
-**改成任务级建模（每个 sample_id 聚合成 1 行 × 264 特征，统计量 = mean/std/median/slope）**，模型直接面对 84 个不同真值，泛化能力立刻显现：
+窗口级建模（12624 行 × 66 特征）在跨被试评估下 R² 仅 0.126——因为 NASA 真值只有 84 个，窗口级模型实际在学"在共享真值的窗口内输出常数"。改成**任务级建模（每 sample_id 聚合成 1 行 × 264 特征，统计量 = mean/std/median/slope）**：
 
 - R² 从 0.126 → 0.465（3.7×）
 - MAE 从 1.170 → 0.910（-22%）
 
 **这一步几乎不涉及新特征工程，只是聚合粒度的正确选择。**
 
-### 三、P1 模态消融的三大发现
+### 回归三大发现
 
-**（1）AOI 是绝对核心，其他模态贡献很小**
+**（1）AOI 是绝对核心**：单模态 R²=0.344 一枝独秀，去掉 AOI 直接崩到 R²=0.042  
+**（2）波动性（std）比均值更强**：only_std 66 列 R²=0.470 追平 Full 264  
+**（3）EEG 在跨被试回归中弱**：单独 R²=0.000，去掉损失仅 0.018
 
-| 单独用一个模态跑 XGB | 特征数 | R² |
-|---|---:|---:|
-| **AOI**（注意力分布代理） | 36 | **+0.344** ← 一枝独秀 |
-| Log_win（操作日志） | 48 | +0.001 |
-| EEG（脑电 z-score） | 112 | +0.000 |
-| HR（心率） | 20 | -0.032 |
-| Blink（眨眼） | 24 | -0.112 |
-| EyePupil（瞳孔/注视比例） | 24 | -0.317 |
+### P2 + P3 最优回归配置
 
-**从 Full 里去掉某一模态，损失最大的也是 AOI**：去 AOI → R² 从 +0.465 崩到 +0.042；去 HR 反而 R² 微升到 +0.470（HR 是纯噪声）。
-
-**（2）波动性（std）比平均水平更能预测负荷**
-
-| 只用某一统计量的 66 列 | R² |
-|---|---:|
-| **only_std** | **+0.470** ← 追平 Full |
-| only_slope（趋势） | +0.186 |
-| only_mean | +0.185 |
-| only_median | +0.039 |
-
-**"任务过程中生理/行为信号的波动"比"平均水平"更能反映负荷**——这是可直接写进 discussion 的机理解释。
-
-**（3）EEG 在跨被试回归中意外弱**
-
-EEG 单独 R²=0.000、去掉 EEG 只损失 0.018。这与文献里"EEG 在被试内任务分类效果好，跨被试回归很弱"的经验完全一致（个体差异掩盖了负荷信号，即使做了 z-score 也无法完全消除）。
-
-### 四、P2 特征筛选：从 264 降到 30 反而更好
-
-**做法**：MI / RF importance / Permutation 三种排序器 × K∈{5,10,15,20,30,50,80,130} × 3 个模型 = 72 次实验，**每种都在训练折内单独筛选**（防止泄漏）。
-
-**XGB_shallow 的 K vs R² 曲线关键点**：
-
-| K | 5 | 10 | 20 | **30** | 50 | 264(Full) |
-|---:|---:|---:|---:|---:|---:|---:|
-| MI R² | +0.331 | +0.395 | +0.403 | **+0.470** | +0.430 | +0.465 |
-| Permutation R² | +0.260 | +0.392 | +0.435 | +0.442 | **+0.489** | +0.465 |
-
-**Ridge 从 R²=-0.948（Full 264d）跳到 +0.382（MI Top-30）**——强正则线性模型对筛选极敏感，可作可解释性备份。
-
-**5 折稳定选中的核心特征**（在所有筛选方案里 100% 稳定）：
-
-- 第一梯队（AOI）：`eye_aoi_interval_n__std`、`eye_aoi_unique_hit_n__std`、`eye_aoi_interval_n__mean`
-- 第二梯队：`eeg_frontal_gamma_power__std`、`eeg_parietal_beta_alpha__slope`、`log_unique_step_count_win__std`、`blink_duration_mean_ms__slope`、`log_action_density_win__mean`
-
-**这批特征跨 9 种筛选方案指向同一批列，与 P1 消融的"AOI + std"结论完全对齐，可信度极高。**
-
-### 五、P3 XGBoost 调参：R² 从 0.470 提到 0.519
-
-在 MI Top-30 特征子集上跑 81 组 XGB 网格 + 24 组 RF 网格：
-
-| 配置 | R² | MAE |
-|---|---:|---:|
-| **XGB max_depth=2, lr=0.02, reg_λ=2, n=500** | **+0.519** | 0.911 |
-| XGB Top-10 全部 max_depth=2 | +0.51x | — |
-| RF 调参最佳（max_depth=4, min_leaf=2） | +0.468 | 0.933 |
-
-**观察**：XGB 前 10 名清一色 `max_depth=2`——**84 样本上，浅树+强正则+高迭代**是最优配方。RF 从筛选和调参中获益很小（它已隐式做了特征选择）。
-
-### 六、最终推荐方案（可复现）
-
-```
-数据      : 84 sample × 264 任务级特征（30s 窗口 × mean/std/median/slope）
-划分      : 5×GroupKFold by subject（26 名被试）
-筛选      : 折内 MI 排名 → 每折训练集独立选 Top-30
-模型      : XGBRegressor(max_depth=2, learning_rate=0.02, reg_lambda=2.0,
-                        n_estimators=500, subsample=0.8, colsample_bytree=0.8,
-                        tree_method="hist", random_state=0)
-最终指标  : pooled MAE = 0.911, pooled R² = +0.519
+```python
+# 折内 MI 筛选 Top-30 + XGBoost
+XGBRegressor(max_depth=2, learning_rate=0.02, reg_lambda=2.0,
+             n_estimators=500, subsample=0.8, colsample_bytree=0.8,
+             tree_method="hist", random_state=0)
+# → pooled R² = +0.519, pooled MAE = 0.911
 ```
 
-### 七、本次新增的代码与产物
-
-```
-工作目录/03_建模/
-├── EXPERIMENT_SUMMARY.md              ← 综合总结（含详细数据表）
-├── make_dataset_task_level.py         ← 生成 84×264 任务级建模表
-├── baseline_task_level.py             ← P0 任务级 baseline（9 个模型）
-├── exp_utils.py                       ← 共用 pooled CV / 折内筛选工具
-├── exp1_modality_ablation.py          ← P1 消融（17 个特征子集 × 3 模型 = 51 实验）
-├── exp2_feature_selection.py          ← P2 筛选（3 排序器 × 8 K × 3 模型 = 72 实验）
-├── exp3_xgb_tuning.py                 ← P3 调参（81 XGB + 24 RF 网格）
-├── dataset_task/                      ← 任务级数据集 + 审计
-├── baseline_reports_task/report.md    ← P0 报告
-├── exp1_modality_ablation/report.md   ← P1 报告
-├── exp2_feature_selection/report.md   ← P2 报告（含各筛选方案 Top-20 特征清单）
-└── exp3_xgb_tuning/report.md          ← P3 报告
-```
-
-同时 `evaluate.py` 引入 `task_groups` 参数，解耦"划分分组（subject）"与"任务级聚合分组（sample_id）"，避免早先误把任务级 R² 聚合到被试级导致失真。
-
-### 八、下一步
-
-- [ ] Leave-One-Subject-Out（26 折）产出最严格的分数
-- [ ] Only AOI+Log 双模态验证（极简可解释方案）
-- [ ] 残差分析：找错得最离谱的样本，看是否有系统规律
-- [ ] 分类版本（低/中/高 3 分类）与回归对照
-- [ ] 报告用的可视化图（K-R² 曲线、特征重要性 bar、预测-真值散点）
+XGB Top-10 全部为 `max_depth=2` —— 84 样本上浅树+强正则+高迭代最优。
 
 ---
 
@@ -141,17 +160,15 @@ EEG 单独 R²=0.000、去掉 EEG 只损失 0.018。这与文献里"EEG 在被�
 
 ### 核心成果
 
-1. **修复 EEG 时长错误**：1002 号 EEG 原始文件时间截断（旧版 24 秒 → 新版 31 分钟完整），全量重跑，数据集从 12 258 → 12 624 窗口。详见 `工作目录/01_预处理/DATA_FIX_AUDIT.md`。
-2. **确定特征方案**：66 列建模输入 = 28 EEG（被试内 z-score）+ 5 HR + 15 眼动（瞳孔+AOI）+ 6 眨眼 + 12 日志(win)。
-3. **搭建评估框架**：`工作目录/03_建模/` 下 `make_dataset.py` + `evaluate.py` + `baseline.py`，评估协议 GroupKFold by sample_id，杜绝历史窗口级随机划分泄漏。
-4. **窗口级诚实基线**：见下表——**R²=+0.126 是没有数据泄漏的真实成绩**，比历史 R²=0.955（有泄漏）低很多，但方法正确。
+1. **修复 EEG 时长错误**：1002 号 EEG 原始文件时间截断（旧版 24 秒 → 新版 31 分钟），全量重跑，数据集从 12 258 → 12 624 窗口。详见 `工作目录/01_预处理/DATA_FIX_AUDIT.md`。
+2. **确定 66 列建模特征**：28 EEG（被试内 z-score）+ 5 HR + 15 眼动（瞳孔+AOI）+ 6 眨眼 + 12 日志(win)
+3. **搭建评估框架**：GroupKFold by sample_id，杜绝历史窗口级随机划分泄漏
 
 ### 窗口级 baseline 结果（5 折 GroupKFold）
 
 | 模型 | 任务级 MAE | 任务级 R² |
 |---|---:|---:|
 | MeanPredictor（零信息下限） | 1.325 | -0.093 |
-| Linear_Single | 1.320 | -0.078 |
 | Linear_AllFeatures | 1.267 | -0.027 |
 | **RandomForest_default** | **1.170** | **+0.126** |
 | XGBoost_default | 1.219 | +0.019 |
@@ -165,11 +182,7 @@ EEG 单独 R²=0.000、去掉 EEG 只损失 0.018。这与文献里"EEG 在被�
 | 随机窗口划分（有泄漏） | 0.998 |
 | 按 sample_id 划分（正确） | 0.287 |
 
-**F1 从 0.998 塌到 0.287**——这就是数据泄漏的量级。任何论文引用"XGB R²=0.955"必须警惕这个陷阱。
-
-### 下午的下一步（已完成，见顶部）
-
-→ 任务级建模 + 消融 + 特征筛选 + 调参。
+**F1 从 0.998 塌到 0.287** —— 这就是数据泄漏的量级。
 
 ---
 
@@ -177,11 +190,11 @@ EEG 单独 R²=0.000、去掉 EEG 只损失 0.018。这与文献里"EEG 在被�
 
 ### 核心成果
 
-1. **唯一权威原始数据源**（`data/`）：26 被试 × 5 类任务，82+2 有效样本。
-2. **推翻旧 S 指标**，改用 NASA-TLX 加权总分作为目标。
-3. **多模态时间对齐 + 切窗**：产出 10 s / 30 s 两版窗口化数据集。
-4. **附文献依据的特征工程**：EEG 被试内 z-score（修复历史遗漏）+ 眨眼代理特征（补足历史缺口）。
-5. **可复现 pipeline**：3 个脚本（`step1/step2/step3`）+ 每步 README。
+1. **唯一权威原始数据源**（`data/`）：26 被试 × 5 类任务，82+2 有效样本
+2. **推翻旧 S 指标**，改用 NASA-TLX 加权总分作为回归目标
+3. **多模态时间对齐 + 切窗**：产出 10 s / 30 s 两版窗口化数据集
+4. **附文献依据的特征工程**：EEG 被试内 z-score（修复历史遗漏）+ 眨眼代理特征（补足历史缺口）
+5. **可复现 pipeline**：3 个脚本（`step1/step2/step3`）+ 每步 README
 
 ### 数据规格
 
@@ -192,15 +205,15 @@ EEG 单独 R²=0.000、去掉 EEG 只损失 0.018。这与文献里"EEG 在被�
 | 有效样本 | 82 NASA/SART，84 组对齐可用 |
 | EEG | 30 通道 256 Hz EEGLAB `.set` |
 | 心率 | 4.6 s 采样一次（无法做经典 HRV） |
-| 眼动 | Tobii 100 Hz（瞳孔/注视/扫视/AOI/EyesNotFound） |
+| 眼动 | Tobii 100 Hz |
 | 主用数据集 | `output_30s_step5s_final/` 12624 窗口 × 132 列 |
 
 ### 特征工程要点
 
 - **EEG（28 原始 + 28 z-score）**：修复历史仅算绝对功率的漏洞，被试内 z-score 把 `frontal_alpha` 个体间方差占比从 69.7% 压到 0.0%
-- **眼动（21 列）**：补全眨眼代理（用 `EyesNotFound` 段 50-500ms 过滤），眨眼频率中位数 10 次/分钟符合文献
-- **心率（5 列）**：4.6 s 采样限制，只能做基础统计量，不做经典 HRV
-- **日志（32 列 = 16 win + 16 cum）**：先都存下，后续消融决定取舍（当前建模只用 win）
+- **眼动（21 列）**：补全眨眼代理（`EyesNotFound` 段 50-500ms 过滤），频率中位数 10 次/分钟符合文献
+- **心率（5 列）**：4.6 s 采样限制，只能做基础统计量
+- **日志（32 列 = 16 win + 16 cum）**：先都存，后续消融决定取舍（当前建模只用 win）
 
 详细依据见 `工作目录/02_特征数据集/特征提取方案调研报告.md`。
 
@@ -212,7 +225,7 @@ EEG 单独 R²=0.000、去掉 EEG 只损失 0.018。这与文献里"EEG 在被�
 MultiHuman/
 ├── README.md                        ← 进度日志（本文件）
 ├── data/                            ← 唯一权威原始数据源
-│   ├── 01_NASA_TLX/                 ← 预测标签
+│   ├── 01_NASA_TLX/                 ← 回归目标
 │   ├── 03_心率/、04_EEG/、05_眼动/    ← 原始信号（EEG/眼动不入库）
 │   └── 06_任务表现与操作日志/
 │
@@ -222,14 +235,12 @@ MultiHuman/
 │   │   ├── DATA_FIX_AUDIT.md
 │   │   └── output_30s_step5s_final/ ← 主用窗口特征表
 │   ├── 02_特征数据集/                ← 特征方案调研 + 决策文档
-│   └── 03_建模/                      ← 建模评估框架 + 4 组实验产物
-│       ├── EXPERIMENT_SUMMARY.md    ← 07-07 综合实验总结
-│       ├── make_dataset.py / baseline.py                    ← 窗口级
-│       ├── make_dataset_task_level.py / baseline_task_level.py ← 任务级
-│       ├── exp_utils.py / evaluate.py
-│       ├── exp1_modality_ablation.py / exp1_modality_ablation/
-│       ├── exp2_feature_selection.py / exp2_feature_selection/
-│       └── exp3_xgb_tuning.py / exp3_xgb_tuning/
+│   └── 03_建模/                      ← 建模评估框架（回归 + 分类双线）
+│       ├── EXPERIMENT_SUMMARY.md    ← 综合总结
+│       ├── common/                  ← 共用工具（evaluate/exp_utils/cls_utils）
+│       ├── regression_window_level/ ← 窗口级回归（历史基线）
+│       ├── regression_task_level/   ← 任务级回归（主线）
+│       └── classification_task_level/ ← 任务级 3 分类
 │
 └── 历史工作_存档_20260703/           ← 不入库；历史脚本与产物封存
 ```
@@ -257,20 +268,33 @@ python3 step3_blink_and_eeg_zscore.py \
     --blink-min-ms 50 --blink-max-ms 500
 ```
 
-### 复现建模
+### 复现回归建模
 
 ```bash
 cd 工作目录/03_建模
 
-# 窗口级
-python3 make_dataset.py && python3 baseline.py
+# 窗口级 baseline（历史对照）
+cd regression_window_level && python3 make_dataset.py && python3 baseline.py && cd ..
 
-# 任务级（本次新增，主推荐）
-python3 make_dataset_task_level.py
-python3 baseline_task_level.py         # P0 baseline
-python3 exp1_modality_ablation.py      # P1 消融
-python3 exp2_feature_selection.py      # P2 筛选（约 10 分钟）
-python3 exp3_xgb_tuning.py             # P3 调参（依赖 exp2 结果）
+# 任务级建模（主推荐）
+cd regression_task_level
+python3 make_dataset_task.py       # 生成 84×264 任务级表
+python3 baseline_task.py           # P0 baseline
+python3 exp1_modality_ablation.py  # P1 消融
+python3 exp2_feature_selection.py  # P2 筛选（约 10 分钟）
+python3 exp3_xgb_tuning.py         # P3 调参（依赖 exp2）
+```
+
+### 复现分类建模
+
+```bash
+cd 工作目录/03_建模/classification_task_level
+
+python3 make_dataset_cls.py            # 生成 84×264 分类数据集
+python3 baseline_cls.py                # 12 个模型对比
+python3 exp1_modality_ablation_cls.py  # 分类模态消融
+python3 exp2_feature_selection_cls.py  # 分类特征筛选（约 15 分钟）
+python3 exp3_tuning_cls.py             # RF/XGB/LR/SVC 四类调参
 ```
 
 ---
@@ -279,10 +303,13 @@ python3 exp3_xgb_tuning.py             # P3 调参（依赖 exp2 结果）
 
 1. **数据源单一**：所有处理只从 `data/` 读取，不引用 `历史工作_存档_20260703/` 中间产物或结论
 2. **每步留三样**：脚本 + 输出 + README；任何特征筛选决策必须交代依据
-3. **评估协议**：任何模型评估必须 GroupKFold 分组，窗口级建模按 sample_id 分组，任务级建模按 subject 分组
+3. **评估协议**：
+   - 回归窗口级：GroupKFold by sample_id
+   - 回归任务级：GroupKFold by subject
+   - 分类任务级：**StratifiedGroupKFold** by subject（保证每折含 3 类）
 4. **筛选防泄漏**：特征筛选必须在每折训练集内单独做，禁止全数据先筛后 CV
-5. **小样本主指标用 pooled**：84 样本 5 折的 fold R² 波动大（±0.2），pooled 口径（合并 5 折预测再算总 R²）是稳健主指标
-6. **弱标签如实标注**：不掩盖 NASA 是任务级一次性问卷、窗口级 R² 天然偏负的事实
+5. **小样本主指标用 pooled**：84 样本 5 折的 fold R²/F1 波动大（±0.15），pooled 口径（合并 5 折预测再算总指标）是稳健主指标
+6. **弱标签如实标注**：不掩盖 NASA 是任务级一次性问卷、难度与 task 100% 绑定等事实
 7. **进度追加而非覆盖**：新进度在顶部，旧进度精简保留
 
 ---

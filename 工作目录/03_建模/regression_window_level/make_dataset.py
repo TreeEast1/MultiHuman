@@ -27,7 +27,7 @@ import pandas as pd
 
 
 HERE = Path(__file__).resolve().parent
-DATA_DIR = HERE.parent / "01_预处理" / "output_30s_step5s_final"
+DATA_DIR = HERE.parent.parent / "01_预处理" / "output_30s_step5s_final"
 OUT_DIR = HERE / "dataset"
 
 

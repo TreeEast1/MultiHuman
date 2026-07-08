@@ -15,6 +15,7 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -25,12 +26,12 @@ from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.model_selection import GroupKFold
 
-from evaluate import group_kfold_evaluate, result_to_dict
-
-
 HERE = Path(__file__).resolve().parent
-DATASET_DIR = HERE / "dataset_task"
-REPORT_DIR = HERE / "baseline_reports_task"
+sys.path.insert(0, str(HERE.parent / "common"))
+from evaluate import group_kfold_evaluate, result_to_dict  # noqa: E402
+
+DATASET_DIR = HERE / "dataset"
+REPORT_DIR = HERE / "reports_baseline"
 RANDOM_STATE = 0
 N_SPLITS = 5
 

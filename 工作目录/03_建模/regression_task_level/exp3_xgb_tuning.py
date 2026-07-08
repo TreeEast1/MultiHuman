@@ -20,20 +20,21 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 
-from exp_utils import (
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parent / "common"))
+from exp_utils import (  # noqa: E402
     RANDOM_STATE, RANKERS, median_impute_fold, pooled_cv_with_selection,
 )
 
-
-HERE = Path(__file__).resolve().parent
-DATA_DIR = HERE / "dataset_task"
-REPORT_DIR = HERE / "exp3_xgb_tuning"
-EXP2_JSON = HERE / "exp2_feature_selection" / "results.json"
+DATA_DIR = HERE / "dataset"
+REPORT_DIR = HERE / "reports_exp3"
+EXP2_JSON = HERE / "reports_exp2" / "results.json"
 N_SPLITS = 5
 
 

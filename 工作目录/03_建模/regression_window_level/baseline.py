@@ -18,6 +18,7 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -26,12 +27,12 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.impute import SimpleImputer
 
-from evaluate import group_kfold_evaluate, result_to_dict
-
-
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parent / "common"))
+from evaluate import group_kfold_evaluate, result_to_dict  # noqa: E402
+
 DATASET_DIR = HERE / "dataset"
-REPORT_DIR = HERE / "baseline_reports"
+REPORT_DIR = HERE / "reports"
 RANDOM_STATE = 0
 N_SPLITS = 5
 

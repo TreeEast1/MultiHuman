@@ -18,6 +18,7 @@
 from __future__ import annotations
 
 import json
+import sys
 from collections import Counter
 from pathlib import Path
 
@@ -25,15 +26,15 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import Ridge
 
-from exp_utils import (
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parent / "common"))
+from exp_utils import (  # noqa: E402
     RANDOM_STATE, RANKERS, median_impute_fold, median_impute_and_scale,
     pooled_cv, pooled_cv_with_selection,
 )
 
-
-HERE = Path(__file__).resolve().parent
-DATA_DIR = HERE / "dataset_task"
-REPORT_DIR = HERE / "exp2_feature_selection"
+DATA_DIR = HERE / "dataset"
+REPORT_DIR = HERE / "reports_exp2"
 N_SPLITS = 5
 
 TOP_KS = [5, 10, 15, 20, 30, 50, 80, 130]
