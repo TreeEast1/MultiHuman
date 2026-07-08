@@ -8,6 +8,114 @@
 
 ---
 
+## 📅 2026-07-08（续）：NASA-TLX 三分位分档分类实验
+
+### 一句话结论
+
+针对原 `task_difficulty` 标签与 task 类型 100% 绑定（分类等价于"识别 task 类型"）的泄漏隐患，新建 `classification_task_level_nasa/` 工作区，改用 **NASA-TLX 加权总分按三分位数分档**。297 组实验中最高 Macro-F1=**0.809**（去 EEG + XGB），AOI 仍为最关键模态，EEG 在 NASA 标签下确认为噪声。
+
+### 动机：原标签的泄漏隐患
+
+原 `classification_task_level/` 的标签 `task_difficulty` 来自预处理脚本硬编码查表（`step1_build_window_samples.py`）：
+
+```python
+TASK_DIFFICULTY = {"1":"中", "2":"中", "4":"中", "3":"低", "5":"低", "5_6":"高"}
+```
+
+每个 task 编号被预先指定一个难度等级，与 NASA 评分无关 → **task 与难度 100% 绑定**（低=task_3/5，中=task_1/2/4，高=task_5_6）。3 分类本质是"识别 task 类型"，存在标签泄漏隐患。
+
+### 标签设计：NASA 三分位分档
+
+| 项 | 值 |
+|---|---|
+| 原始字段 | `y_nasa`（连续值 1.333–7.800，均值 4.971，标准差 1.581） |
+| 分档阈值（33%/67% 分位数） | 低 ≤ 4.267，中 (4.267, 5.733]，高 > 5.733 |
+| 类别分布 | 低 29 / 中 28 / 高 27（均衡度 max/min=1.07） |
+| 与原 task_difficulty 一致率 | 84.5%（13 个样本被 NASA 重新分档） |
+
+**解耦验证**：6 个 task 中 5 个横跨 ≥2 档（仅 task_2 完全在中档），分类不再等价于区分 task 类型：
+
+| task | 低 | 中 | 高 | | task | 低 | 中 | 高 |
+|---|---:|---:|---:|---|---|---:|---:|---:|
+| 1 | 1 | 5 | 0 | | 4 | 2 | 9 | 1 |
+| 2 | 0 | 6 | 0 | | 5 | 10 | 0 | 1 |
+| 3 | 16 | 4 | 0 | | 5_6 | 0 | 4 | 25 |
+
+### 四组实验（共 297 组）
+
+评估：`StratifiedGroupKFold(n_splits=5, groups=subject)`，主指标 pooled Macro-F1，特征矩阵复用回归版 84×264。
+
+#### P0 Baseline（12 模型对比）
+
+| 模型 | pooled Acc | Macro-F1 | fold F1 (μ±σ) |
+|---|---:|---:|---:|
+| **XGB_shallow** | **0.750** | **0.750** | 0.749±0.098 |
+| XGB_default | 0.726 | 0.729 | 0.723±0.102 |
+| RF_shallow | 0.714 | 0.715 | 0.713±0.168 |
+| RF_default | 0.702 | 0.703 | 0.704±0.116 |
+| LR_L2_strong | 0.631 | 0.632 | 0.603±0.087 |
+| SVC_RBF | 0.619 | 0.611 | 0.594±0.098 |
+| Dummy_stratified（随机基线） | 0.321 | 0.308 | — |
+| Dummy_most_frequent（多数类） | 0.286 | 0.190 | — |
+
+最佳模型 XGB_shallow 混淆矩阵（pooled）：高档 F1=0.815 最易识别，中档 F1=0.691 最易混淆。
+
+#### P1 模态消融（68 组，XGB Macro-F1）
+
+| 实验 | n_feat | XGB F1 | vs Full |
+|---|---:|---:|---:|
+| **minus_EEG**（去 EEG） | 152 | **0.809** | **+0.059** ← 全局最高 |
+| minus_EyePupil | 240 | 0.763 | +0.013 |
+| Full（264 全量） | 264 | 0.750 | — |
+| minus_HR | 244 | 0.750 | 0.000 |
+| minus_Log | 216 | 0.725 | −0.025 |
+| **minus_AOI**（去 AOI） | 228 | **0.593** | **−0.157** ← 崩塌 |
+
+单模态：AOI 0.677 > Log 0.595 > HR 0.508 > Blink 0.473 > EyePupil 0.430 > EEG 0.419。统计量：std 0.691 > slope 0.592 > mean 0.572 ≈ median 0.572。
+
+#### P2 特征选择（75 组：3 排序法 × 8 个 K × 3 模型 + baseline）
+
+| 排序方法 | 模型 | best K | Macro-F1 |
+|---|---|---:|---:|
+| RF_importance | XGB_shallow | 30 | **0.776** |
+| MI | XGB_shallow | 50 | 0.751 |
+| Permutation | XGB_shallow | 130 | 0.762 |
+
+→ RF_importance + XGB @ K=30 用 30 个特征达到 0.776，比 Full(0.750) 提升 0.026。
+
+#### P3 调参（142 组：XGB 81 + RF 24 + LR 21 + SVC 16）
+
+| 模型 | 最佳配置 | Macro-F1 | fold F1 (μ±σ) |
+|---|---|---:|---:|
+| **XGBoost** | depth=2, lr=0.02, λ=5.0, n=300, MI K=50 | **0.775** | 0.771±0.072 |
+| RandomForest | depth=4, msl=3, n=500, MI K=30 | 0.737 | 0.732±0.076 |
+| LogisticRegression | C=0.03, l2, lbfgs, MI K=80 | 0.715 | 0.700±0.078 |
+| SVC-RBF | C=1.0, gamma=0.01, MI K=80 | 0.655 | 0.646±0.120 |
+
+XGB 偏好浅树(depth=2)+慢学习(lr=0.02)+强正则(λ=5)，且方差最小(±0.072)，跨被试泛化最稳。
+
+### NASA 版 vs 原 task_difficulty 版对比
+
+| 指标 | task_difficulty 版 | NASA 三分位版 |
+|---|---:|---:|
+| 类别分布 | 低31/中24/高29 | 低29/中28/高27（更均衡） |
+| Baseline 最佳 Macro-F1 | 0.787 (LR) | 0.750 (XGB) |
+| 调参后最佳 Macro-F1 | 0.861 (RF) | 0.775 (XGB) |
+| 全局最高 | 0.861 | 0.809 (minus_EEG+XGB) |
+| task 与难度绑定 | 100% 绑定（泄漏隐患） | 解耦（5/6 task 横跨多档） |
+
+NASA 版整体 F1 比原版低约 0.03–0.08，**这是预期内的**——NASA 标签解耦了 task 类型，难度更高更真实，不再有"分类=区分 task"的捷径。NASA 版结论更适合作为论文主实验结果。
+
+### 关键发现
+
+1. **AOI 仍是最关键模态**——去掉后 F1 暴跌 0.157，单用 0.677（与原版一致，结论鲁棒）
+2. **EEG 在 NASA 标签下确认为噪声**——去掉 EEG 后 F1 反升到 0.809（全局最高）
+3. **最优配置**：去 EEG + XGB_shallow，pooled Macro-F1 = **0.809**
+4. 模态贡献排序：AOI >> Log > HR ≈ Blink > EyePupil > EEG（EEG 为负贡献）
+5. 两条标签线（task_difficulty / NASA）独立实验均指向 AOI 核心 + EEG 噪声 → **结论鲁棒**
+
+---
+
 ## 📅 2026-07-08：分类实验完成 + 目录结构重构
 
 ### 一句话结论
@@ -33,7 +141,8 @@
 │   ├── exp3_xgb_tuning.py            ← P3 调参
 │   ├── dataset/                       ← X_task (84×264), y_task, groups_task
 │   └── reports_baseline/ reports_exp1/ reports_exp2/ reports_exp3/
-└── classification_task_level/         ← 任务级 3 分类（本次新增）
+├── classification_task_level/         ← 任务级 3 分类（task_difficulty 标签）
+└── classification_task_level_nasa/    ← 任务级 3 分类（NASA 三分位分档，本次新增）
     ├── make_dataset_cls.py            ← 复用回归 X，标签换成 task_difficulty
     ├── baseline_cls.py                ← 12 个模型对比
     ├── exp1_modality_ablation_cls.py
@@ -240,7 +349,8 @@ MultiHuman/
 │       ├── common/                  ← 共用工具（evaluate/exp_utils/cls_utils）
 │       ├── regression_window_level/ ← 窗口级回归（历史基线）
 │       ├── regression_task_level/   ← 任务级回归（主线）
-│       └── classification_task_level/ ← 任务级 3 分类
+│       ├── classification_task_level/         ← 任务级 3 分类（task_difficulty 标签）
+│       └── classification_task_level_nasa/    ← 任务级 3 分类（NASA 三分位分档）
 │
 └── 历史工作_存档_20260703/           ← 不入库；历史脚本与产物封存
 ```
@@ -294,6 +404,18 @@ python3 make_dataset_cls.py            # 生成 84×264 分类数据集
 python3 baseline_cls.py                # 12 个模型对比
 python3 exp1_modality_ablation_cls.py  # 分类模态消融
 python3 exp2_feature_selection_cls.py  # 分类特征筛选（约 15 分钟）
+python3 exp3_tuning_cls.py             # RF/XGB/LR/SVC 四类调参
+```
+
+### 复现 NASA 三分位分档分类（07-08 续）
+
+```bash
+cd 工作目录/03_建模/classification_task_level_nasa
+
+python3 make_dataset_cls_nasa.py       # NASA 三分位分档数据集（低29/中28/高27）
+python3 baseline_cls.py                # 12 个模型对比
+python3 exp1_modality_ablation_cls.py  # 分类模态消融
+python3 exp2_feature_selection_cls.py  # 分类特征筛选
 python3 exp3_tuning_cls.py             # RF/XGB/LR/SVC 四类调参
 ```
 
