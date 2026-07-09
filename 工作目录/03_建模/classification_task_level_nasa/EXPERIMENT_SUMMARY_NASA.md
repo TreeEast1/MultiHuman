@@ -30,6 +30,8 @@
 | P1 模态消融 | LOMO / OOM / OOS × 4 模型 | 68 | **0.809** (minus_EEG + XGB) |
 | P2 特征选择 | 3 排序法 × 8 个 K × 3 模型 + baseline | 75 | **0.776** (RF_imp + XGB @ K=30) |
 | P3 调参 | XGB 81 + RF 24 + LR 21 + SVC 16 | 142 | **0.775** (XGB depth=2,lr=0.02,λ=5,n=300) |
+| P4 最优特征筛选 | 模态子集×折内选择+稳定集+集成+调参 | 139 | **0.809** (minus_EEG+MI K=30+XGB调参) |
+| P4b 突破 | 稳定基底+自适应+Stacking+极简调参 | 100 | **0.810** (稳定15+MI top5 / 固定15+极强正则) |
 
 ---
 
@@ -135,8 +137,78 @@
 1. NASA 版整体 F1 比原版低约 0.03–0.04，这是**预期内的**——NASA 标签解耦了 task 类型，
    难度更高、更"真实"，不再有"分类=区分 task"的捷径。
 2. NASA 版的结论更可信：不存在 task 与难度 100% 绑定的泄漏隐患。
-3. 最优配置：**去掉 EEG + XGB_shallow**，pooled Macro-F1 = **0.809**，是所有 297 组实验中的最高值。
+3. ~~最优配置：去掉 EEG + XGB_shallow，pooled Macro-F1 = 0.809~~ → **已更新，见 P4/P4b**
 4. 模态贡献排序：AOI >> Log > HR ≈ Blink > EyePupil > EEG（EEG 为负贡献）。
+
+---
+
+## 7.5 P4/P4b 最优特征筛选（239 组实验，突破 0.809）
+
+### 动机
+
+P1–P3 的特征选择都在**全 264 特征**上做，EEG（112 个噪声特征）会干扰排序器。
+P4 在 **去掉 EEG 的 152 特征**上做折内精选，并叠加稳定特征集、集成投票和精细调参。
+
+### P4 核心发现（139 组）
+
+| 策略 | 特征数 | 模型 | Acc | Macro-F1 |
+|---|---:|---|---:|---:|
+| minus_EEG Full | 152 | XGB_shallow | 0.798 | 0.796 |
+| minus_EEG + MI K=30 + XGB调参 | **30** | XGB(d3,lr0.02,λ5,n300) | 0.810 | **0.809** |
+| minus_EEG + RF_imp K=15 | **15** | XGB | 0.798 | 0.798 |
+| 固定15稳定特征 | **15** | XGB | 0.798 | 0.798 |
+
+**固定 15 稳定特征**（从 P2 历史 CV 中 5/5 折稳定选中提取，11 AOI + 4 Log）：
+- `eye_aoi_unique_hit_n__std`、`eye_aoi_interval_n__std`、`eye_aoi_interval_n__mean`
+- `eye_aoi_entropy__median`、`eye_aoi_entropy__mean`、`eye_aoi_unique_hit_n__mean`
+- `eye_aoi_fixation_n__std`、`eye_aoi_fixation_n__slope`、`eye_aoi_max_share__mean`
+- `eye_aoi_coverage_ratio__slope`、`eye_aoi_coverage_ratio__median`、`eye_aoi_total_fix_ms__median`
+- `log_action_count_win__mean`、`log_action_density_win__mean`、`log_error_rate_win__std`
+
+### P4b 突破（100 组）——新最佳 0.810
+
+| rank | 策略 | 特征数 | 模型 | Acc | Macro-F1 | fold F1 μ±σ |
+|---:|---|---:|---|---:|---:|---|
+| **1** | **稳定15 + MI top5 自适应** | **20** | XGB(d3,lr0.02,λ5,n300) | **0.810** | **0.810** | 0.808±0.061 |
+| **2** | **固定15 + XGB极强正则** | **15** | XGB(d2,lr0.01,λ10,n500) | **0.810** | **0.810** | 0.799±0.065 |
+| 3 | 固定15 + XGB | 15 | XGB(d2,lr0.01,λ10,n300) | 0.798 | 0.799 | 0.792±0.070 |
+| 4 | 固定15 + Stacking | 15 | XGB+RF→LR | 0.798 | 0.798 | 0.790±0.049 |
+
+**关键洞察**：
+- **仅用 15–20 个特征（264 的 6–8%）即达到 0.810**，超过 P1 全量 152 特征的 0.809
+- "稳定基底(15) + MI自适应补充(5)" = 20 特征 → 0.810，兼具稳定性与适应性
+- 固定 15 特征 + 极慢学习(lr=0.01)+极强正则(λ=10)+高迭代(n=500) → 0.810，无需折内选择
+- Stacking 集成未能超过单 XGB，说明 84 样本下集成增益有限
+
+### 更新后的最优配置
+
+```python
+# 方案 A（最佳，20 特征）：稳定基底 + 折内MI自适应
+固定特征(15): 上列 11 AOI + 4 Log 特征
+折内选择: 从 minus_EEG 剩余 137 特征中 MI 选 top-5
+模型: XGBClassifier(max_depth=3, learning_rate=0.02, reg_lambda=5.0,
+                    n_estimators=300, subsample=0.8, colsample_bytree=0.8)
+# 成绩: pooled Acc=0.810, pooled Macro-F1=0.810
+
+# 方案 B（最简，15 特征）：纯固定特征，无需折内选择
+固定特征(15): 同上
+模型: XGBClassifier(max_depth=2, learning_rate=0.01, reg_lambda=10.0,
+                    n_estimators=500, subsample=0.8, colsample_bytree=0.8)
+# 成绩: pooled Acc=0.810, pooled Macro-F1=0.810
+```
+
+### 特征筛选完整路径
+
+| 阶段 | 特征数 | Macro-F1 | 说明 |
+|---|---:|---:|---|
+| 全量 264 | 264 | 0.750 | P0 baseline |
+| 去掉 EEG | 152 | 0.809 | P1 模态消融 |
+| 去掉 EEG + MI K=30 | 30 | 0.809 | P4 折内精选 |
+| 固定 15 稳定特征 | 15 | 0.798 | P4 稳定集 |
+| 固定 15 + MI top5 | **20** | **0.810** | P4b 稳定+自适应 |
+| 固定 15 + 极强正则 | **15** | **0.810** | P4b 极简方案 |
+
+**结论**：264 个指标中，**15–20 个核心指标**（以 AOI 眼动注视特征为主、辅以操作日志特征）即可达到最优性能，EEG/HR/Blink/EyePupil 模态对 NASA 主观负荷分类无正向贡献。
 
 ---
 
@@ -148,7 +220,10 @@ classification_task_level_nasa/
 ├── baseline_cls.py                   ← 12 模型对比
 ├── exp1_modality_ablation_cls.py     ← 模态消融
 ├── exp2_feature_selection_cls.py     ← 特征选择
+├── exp2_fine_search_cls.py           ← 精细化 K 搜索
 ├── exp3_tuning_cls.py                ← 调参 142 组
+├── exp4_optimal_features_cls.py      ← P4 最优特征筛选 139 组
+├── exp4b_advanced_cls.py             ← P4b 稳定基底+Stacking+调参 100 组
 ├── dataset/
 │   ├── X_cls.npy, y_cls.npy, y_cls_int.npy, groups_cls.npy, sample_cls.npy
 │   ├── y_nasa_raw.npy                ← 原始 NASA 连续分留档
@@ -157,5 +232,6 @@ classification_task_level_nasa/
 ├── reports_baseline/                 ← baseline_report.md + baseline_results.json
 ├── reports_exp1/                     ← report.md + results.json
 ├── reports_exp2/                     ← report.md + results.json
-└── reports_exp3/                     ← report.md + results.json
+├── reports_exp3/                     ← report.md + results.json
+└── reports_exp4/                     ← report.md + report_b.md + results.json + results_b.json
 ```

@@ -1,0 +1,2873 @@
+{
+  "stage1_mi_profile": {
+    "眼动": {
+      "n_total": 84,
+      "max_mi": 0.322963446155942,
+      "median_mi": 0.05470047656470134,
+      "mi_75": 0.10090942550565377,
+      "knee_k": 4,
+      "above_floor_k": 75,
+      "above_median_k": 40,
+      "top_25pct_k": 21,
+      "top_50pct_k": 42,
+      "stat_test_k": 53
+    },
+    "脑电": {
+      "n_total": 112,
+      "max_mi": 0.29014515301244337,
+      "median_mi": 0.04301222906772302,
+      "mi_75": 0.08513101243046924,
+      "knee_k": 7,
+      "above_floor_k": 90,
+      "above_median_k": 44,
+      "top_25pct_k": 28,
+      "top_50pct_k": 56,
+      "stat_test_k": 55
+    },
+    "心率": {
+      "n_total": 20,
+      "max_mi": 0.20428746335263126,
+      "median_mi": 0.010507258297070953,
+      "mi_75": 0.05154358281707487,
+      "knee_k": 6,
+      "above_floor_k": 10,
+      "above_median_k": 5,
+      "top_25pct_k": 5,
+      "top_50pct_k": 10,
+      "stat_test_k": 7
+    },
+    "行为": {
+      "n_total": 48,
+      "max_mi": 0.22537171791580674,
+      "median_mi": 0.07990895243718085,
+      "mi_75": 0.12967140689323392,
+      "knee_k": 1,
+      "above_floor_k": 48,
+      "above_median_k": 34,
+      "top_25pct_k": 12,
+      "top_50pct_k": 24,
+      "stat_test_k": 36
+    }
+  },
+  "stage1_mi_derived_k": {
+    "眼动": 21,
+    "脑电": 28,
+    "心率": 6,
+    "行为": 12
+  },
+  "stage2_results": [
+    {
+      "name": "stage2_眼动_k2",
+      "n_features": 48,
+      "k_per_modality": {
+        "眼动": 2,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7142857142857143,
+      "pooled_macro_f1": 0.7151404151404152,
+      "pooled_weighted_f1": 0.7147130647130647,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6428571428571429,
+        "2": 0.7692307692307693
+      },
+      "fold_acc_mean": 0.712156862745098,
+      "fold_acc_std": 0.10359475062369644,
+      "fold_f1_mean": 0.7110367410367411,
+      "fold_f1_std": 0.10714959140369129,
+      "target_mod": "眼动",
+      "k_target": 2
+    },
+    {
+      "name": "stage2_眼动_k4",
+      "n_features": 50,
+      "k_per_modality": {
+        "眼动": 4,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7142857142857143,
+      "pooled_macro_f1": 0.714655993901277,
+      "pooled_weighted_f1": 0.7139521903672847,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6181818181818182,
+        "2": 0.7924528301886793
+      },
+      "fold_acc_mean": 0.712156862745098,
+      "fold_acc_std": 0.09462607769007482,
+      "fold_f1_mean": 0.7054101454101454,
+      "fold_f1_std": 0.09721497878089645,
+      "target_mod": "眼动",
+      "k_target": 4
+    },
+    {
+      "name": "stage2_眼动_k5",
+      "n_features": 51,
+      "k_per_modality": {
+        "眼动": 5,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7401294387562922,
+      "pooled_weighted_f1": 0.7392774388802194,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.631578947368421,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.7372549019607844,
+      "fold_acc_std": 0.07854893150465432,
+      "fold_f1_mean": 0.7366788766788768,
+      "fold_f1_std": 0.08013969125187098,
+      "target_mod": "眼动",
+      "k_target": 5
+    },
+    {
+      "name": "stage2_眼动_k6",
+      "n_features": 52,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7518253451890408,
+      "pooled_weighted_f1": 0.7509733453129679,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6666666666666666,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.7505882352941177,
+      "fold_acc_std": 0.08231932086840425,
+      "fold_f1_mean": 0.7498257298257298,
+      "fold_f1_std": 0.08390582756913466,
+      "target_mod": "眼动",
+      "k_target": 6
+    },
+    {
+      "name": "stage2_眼动_k8",
+      "n_features": 54,
+      "k_per_modality": {
+        "眼动": 8,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7404951370468611,
+      "pooled_weighted_f1": 0.7399109511178477,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6551724137931034,
+        "2": 0.8076923076923077
+      },
+      "fold_acc_mean": 0.7388235294117648,
+      "fold_acc_std": 0.08365359451591142,
+      "fold_f1_mean": 0.7373004773004773,
+      "fold_f1_std": 0.0871992321515618,
+      "target_mod": "眼动",
+      "k_target": 8
+    },
+    {
+      "name": "stage2_眼动_k21",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.748002738002738,
+      "fold_f1_std": 0.08400323870285933,
+      "target_mod": "眼动",
+      "k_target": 21
+    },
+    {
+      "name": "stage2_脑电_k5",
+      "n_features": 44,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 5,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7857142857142857,
+      "pooled_macro_f1": 0.784239494009609,
+      "pooled_weighted_f1": 0.7841661888254663,
+      "per_class_f1": {
+        "0": 0.8214285714285714,
+        "1": 0.7037037037037037,
+        "2": 0.8275862068965517
+      },
+      "fold_acc_mean": 0.7841176470588235,
+      "fold_acc_std": 0.13298165847865617,
+      "fold_f1_mean": 0.7833555333555334,
+      "fold_f1_std": 0.13157130459373376,
+      "target_mod": "脑电",
+      "k_target": 5
+    },
+    {
+      "name": "stage2_脑电_k7",
+      "n_features": 46,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 7,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.746684350132626,
+      "pooled_weighted_f1": 0.746684350132626,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6538461538461539,
+        "2": 0.7931034482758621
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.104522862738558,
+      "fold_f1_mean": 0.7435268435268435,
+      "fold_f1_std": 0.10537809312848147,
+      "target_mod": "脑电",
+      "k_target": 7
+    },
+    {
+      "name": "stage2_脑电_k8",
+      "n_features": 47,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 8,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7602339181286549,
+      "pooled_weighted_f1": 0.7602339181286549,
+      "per_class_f1": {
+        "0": 0.8070175438596491,
+        "1": 0.6666666666666666,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7623529411764706,
+      "fold_acc_std": 0.08753447170700364,
+      "fold_f1_mean": 0.7607610907610908,
+      "fold_f1_std": 0.08693476968280528,
+      "target_mod": "脑电",
+      "k_target": 8
+    },
+    {
+      "name": "stage2_脑电_k9",
+      "n_features": 48,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 9,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7602339181286549,
+      "pooled_weighted_f1": 0.7602339181286549,
+      "per_class_f1": {
+        "0": 0.8070175438596491,
+        "1": 0.6666666666666666,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7623529411764706,
+      "fold_acc_std": 0.09715997897695326,
+      "fold_f1_mean": 0.760999370999371,
+      "fold_f1_std": 0.0960406357443171,
+      "target_mod": "脑电",
+      "k_target": 9
+    },
+    {
+      "name": "stage2_脑电_k28",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.748002738002738,
+      "fold_f1_std": 0.08400323870285933,
+      "target_mod": "脑电",
+      "k_target": 28
+    },
+    {
+      "name": "stage2_心率_k4",
+      "n_features": 65,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.104522862738558,
+      "fold_f1_mean": 0.7484474784474785,
+      "fold_f1_std": 0.10447833682363254,
+      "target_mod": "心率",
+      "k_target": 4
+    },
+    {
+      "name": "stage2_心率_k5",
+      "n_features": 66,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7338638373121132,
+      "pooled_weighted_f1": 0.7338638373121132,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6153846153846154,
+        "2": 0.7931034482758621
+      },
+      "fold_acc_mean": 0.735686274509804,
+      "fold_acc_std": 0.09218939767789876,
+      "fold_f1_mean": 0.733969363969364,
+      "fold_f1_std": 0.08949451548789006,
+      "target_mod": "心率",
+      "k_target": 5
+    },
+    {
+      "name": "stage2_心率_k6",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.748002738002738,
+      "fold_f1_std": 0.08400323870285933,
+      "target_mod": "心率",
+      "k_target": 6
+    },
+    {
+      "name": "stage2_心率_k8",
+      "n_features": 69,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 8,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.104522862738558,
+      "fold_f1_mean": 0.7484474784474785,
+      "fold_f1_std": 0.10447833682363254,
+      "target_mod": "心率",
+      "k_target": 8
+    },
+    {
+      "name": "stage2_行为_k2",
+      "n_features": 57,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 2
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6772049137640535,
+      "pooled_weighted_f1": 0.6774116962289005,
+      "per_class_f1": {
+        "0": 0.7096774193548387,
+        "1": 0.6296296296296297,
+        "2": 0.6923076923076923
+      },
+      "fold_acc_mean": 0.6770588235294117,
+      "fold_acc_std": 0.05896584092507742,
+      "fold_f1_mean": 0.6692799357505239,
+      "fold_f1_std": 0.06597190909832638,
+      "target_mod": "行为",
+      "k_target": 2
+    },
+    {
+      "name": "stage2_行为_k3",
+      "n_features": 58,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 3
+      },
+      "pooled_acc": 0.7023809523809523,
+      "pooled_macro_f1": 0.6987789987789988,
+      "pooled_weighted_f1": 0.6994025815454388,
+      "per_class_f1": {
+        "0": 0.7666666666666667,
+        "1": 0.6153846153846154,
+        "2": 0.7142857142857143
+      },
+      "fold_acc_mean": 0.6972549019607843,
+      "fold_acc_std": 0.07597729278941073,
+      "fold_f1_mean": 0.6864224664224664,
+      "fold_f1_std": 0.0755112237317785,
+      "target_mod": "行为",
+      "k_target": 3
+    },
+    {
+      "name": "stage2_行为_k5",
+      "n_features": 60,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 5
+      },
+      "pooled_acc": 0.7261904761904762,
+      "pooled_macro_f1": 0.721910895665494,
+      "pooled_weighted_f1": 0.7221613757523271,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6274509803921569,
+        "2": 0.7586206896551724
+      },
+      "fold_acc_mean": 0.7239215686274509,
+      "fold_acc_std": 0.08358002701024139,
+      "fold_f1_mean": 0.7161194361194361,
+      "fold_f1_std": 0.08459492892716113,
+      "target_mod": "行为",
+      "k_target": 5
+    },
+    {
+      "name": "stage2_行为_k8",
+      "n_features": 63,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 8
+      },
+      "pooled_acc": 0.7142857142857143,
+      "pooled_macro_f1": 0.7111448672849376,
+      "pooled_weighted_f1": 0.7114979746295704,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6037735849056604,
+        "2": 0.75
+      },
+      "fold_acc_mean": 0.712156862745098,
+      "fold_acc_std": 0.08111487669865348,
+      "fold_f1_mean": 0.7056360306360306,
+      "fold_f1_std": 0.0864791499252118,
+      "target_mod": "行为",
+      "k_target": 8
+    },
+    {
+      "name": "stage2_行为_k12",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.748002738002738,
+      "fold_f1_std": 0.08400323870285933,
+      "target_mod": "行为",
+      "k_target": 12
+    }
+  ],
+  "stage2_best_k_per_mod": {
+    "眼动": 6,
+    "脑电": 5,
+    "心率": 4,
+    "行为": 12
+  },
+  "stage3_best_algo": {
+    "model": "XGB_shallow",
+    "k_set_name": "stage2_empirical",
+    "k": {
+      "眼动": 6,
+      "脑电": 5,
+      "心率": 4,
+      "行为": 12
+    },
+    "pooled_acc": 0.7738095238095238,
+    "pooled_macro_f1": 0.7741406532366986
+  },
+  "stage3_all_algo_results": [
+    {
+      "name": "algo_mi_derived_XGB_shallow",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7472101420325917,
+      "pooled_weighted_f1": 0.7470444980375467,
+      "per_class_f1": {
+        "0": 0.7931034482758621,
+        "1": 0.6415094339622641,
+        "2": 0.8070175438596491
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.748002738002738,
+      "fold_f1_std": 0.08400323870285933,
+      "k_set_name": "mi_derived",
+      "model": "XGB_shallow"
+    },
+    {
+      "name": "algo_mi_derived_XGB_default",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7501670843776106,
+      "pooled_weighted_f1": 0.7498329156223893,
+      "per_class_f1": {
+        "0": 0.7719298245614035,
+        "1": 0.6785714285714286,
+        "2": 0.8
+      },
+      "fold_acc_mean": 0.7488235294117648,
+      "fold_acc_std": 0.09285178128176773,
+      "fold_f1_mean": 0.7488829688829689,
+      "fold_f1_std": 0.09770082681434777,
+      "k_set_name": "mi_derived",
+      "model": "XGB_default"
+    },
+    {
+      "name": "algo_mi_derived_RF_shallow",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6904761904761905,
+      "pooled_macro_f1": 0.6918006663769375,
+      "pooled_weighted_f1": 0.6924292750563936,
+      "per_class_f1": {
+        "0": 0.7307692307692307,
+        "1": 0.6666666666666666,
+        "2": 0.6779661016949152
+      },
+      "fold_acc_mean": 0.6901960784313725,
+      "fold_acc_std": 0.1264911064067352,
+      "fold_f1_mean": 0.6877877677877678,
+      "fold_f1_std": 0.127913331450971,
+      "k_set_name": "mi_derived",
+      "model": "RF_shallow"
+    },
+    {
+      "name": "algo_mi_derived_RF_default",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6904761904761905,
+      "pooled_macro_f1": 0.6911009903853106,
+      "pooled_weighted_f1": 0.691426299428902,
+      "per_class_f1": {
+        "0": 0.7169811320754716,
+        "1": 0.6666666666666666,
+        "2": 0.6896551724137931
+      },
+      "fold_acc_mean": 0.691764705882353,
+      "fold_acc_std": 0.14399367750655176,
+      "fold_f1_mean": 0.6848603248603249,
+      "fold_f1_std": 0.15079678058753682,
+      "k_set_name": "mi_derived",
+      "model": "RF_default"
+    },
+    {
+      "name": "algo_mi_derived_ExtraTrees",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6904761904761905,
+      "pooled_macro_f1": 0.6921599240789211,
+      "pooled_weighted_f1": 0.6928334175200135,
+      "per_class_f1": {
+        "0": 0.7450980392156863,
+        "1": 0.6428571428571429,
+        "2": 0.6885245901639344
+      },
+      "fold_acc_mean": 0.6901960784313725,
+      "fold_acc_std": 0.1264911064067352,
+      "fold_f1_mean": 0.6877877677877678,
+      "fold_f1_std": 0.127913331450971,
+      "k_set_name": "mi_derived",
+      "model": "ExtraTrees"
+    },
+    {
+      "name": "algo_mi_derived_GBM",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7023809523809523,
+      "pooled_macro_f1": 0.7024041585445094,
+      "pooled_weighted_f1": 0.7027986633249791,
+      "per_class_f1": {
+        "0": 0.7368421052631579,
+        "1": 0.6666666666666666,
+        "2": 0.7037037037037037
+      },
+      "fold_acc_mean": 0.6974509803921569,
+      "fold_acc_std": 0.08435384362467459,
+      "fold_f1_mean": 0.6884348984348984,
+      "fold_f1_std": 0.08427279387096923,
+      "k_set_name": "mi_derived",
+      "model": "GBM"
+    },
+    {
+      "name": "algo_mi_derived_LR_L2_strong",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6904761904761905,
+      "pooled_macro_f1": 0.6908993368261251,
+      "pooled_weighted_f1": 0.6909845368137324,
+      "per_class_f1": {
+        "0": 0.7241379310344828,
+        "1": 0.631578947368421,
+        "2": 0.7169811320754716
+      },
+      "fold_acc_mean": 0.6872549019607843,
+      "fold_acc_std": 0.055921898632252366,
+      "fold_f1_mean": 0.6655705514529044,
+      "fold_f1_std": 0.07312054121414263,
+      "k_set_name": "mi_derived",
+      "model": "LR_L2_strong"
+    },
+    {
+      "name": "algo_mi_derived_LR_L1",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6796238244514107,
+      "pooled_weighted_f1": 0.6800567248843111,
+      "per_class_f1": {
+        "0": 0.7272727272727273,
+        "1": 0.6206896551724138,
+        "2": 0.6909090909090909
+      },
+      "fold_acc_mean": 0.6770588235294117,
+      "fold_acc_std": 0.05896584092507742,
+      "fold_f1_mean": 0.6534460093283623,
+      "fold_f1_std": 0.08412832812896172,
+      "k_set_name": "mi_derived",
+      "model": "LR_L1"
+    },
+    {
+      "name": "algo_mi_derived_LDA",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7023809523809523,
+      "pooled_macro_f1": 0.7040270882078792,
+      "pooled_weighted_f1": 0.704187421701546,
+      "per_class_f1": {
+        "0": 0.7407407407407407,
+        "1": 0.6440677966101694,
+        "2": 0.7272727272727273
+      },
+      "fold_acc_mean": 0.702156862745098,
+      "fold_acc_std": 0.058693974980077265,
+      "fold_f1_mean": 0.6784297184297186,
+      "fold_f1_std": 0.0691879609631148,
+      "k_set_name": "mi_derived",
+      "model": "LDA"
+    },
+    {
+      "name": "algo_mi_derived_KNN_k5",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.5833333333333334,
+      "pooled_macro_f1": 0.5845096932053453,
+      "pooled_weighted_f1": 0.5835854104487646,
+      "per_class_f1": {
+        "0": 0.5652173913043478,
+        "1": 0.5454545454545454,
+        "2": 0.6428571428571429
+      },
+      "fold_acc_mean": 0.5850980392156864,
+      "fold_acc_std": 0.09053304489730558,
+      "fold_f1_mean": 0.572898212898213,
+      "fold_f1_std": 0.08169194485021568,
+      "k_set_name": "mi_derived",
+      "model": "KNN_k5"
+    },
+    {
+      "name": "algo_mi_derived_GaussianNB",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6428571428571429,
+      "pooled_macro_f1": 0.6419901293850874,
+      "pooled_weighted_f1": 0.6413422511861887,
+      "per_class_f1": {
+        "0": 0.6122448979591837,
+        "1": 0.6470588235294118,
+        "2": 0.6666666666666666
+      },
+      "fold_acc_mean": 0.648235294117647,
+      "fold_acc_std": 0.17569152653214143,
+      "fold_f1_mean": 0.632086247086247,
+      "fold_f1_std": 0.17824668573994742,
+      "k_set_name": "mi_derived",
+      "model": "GaussianNB"
+    },
+    {
+      "name": "algo_mi_derived_MLP_small",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.40476190476190477,
+      "pooled_macro_f1": 0.39530090000414747,
+      "pooled_weighted_f1": 0.39639391030768406,
+      "per_class_f1": {
+        "0": 0.4473684210526316,
+        "1": 0.3829787234042553,
+        "2": 0.35555555555555557
+      },
+      "fold_acc_mean": 0.4025490196078431,
+      "fold_acc_std": 0.13595971540777782,
+      "fold_f1_mean": 0.37879597984861146,
+      "fold_f1_std": 0.13888091696462618,
+      "k_set_name": "mi_derived",
+      "model": "MLP_small"
+    },
+    {
+      "name": "algo_mi_derived_SVC_RBF",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.6190476190476191,
+      "pooled_macro_f1": 0.6205654292184176,
+      "pooled_weighted_f1": 0.620300343427016,
+      "per_class_f1": {
+        "0": 0.631578947368421,
+        "1": 0.576271186440678,
+        "2": 0.6538461538461539
+      },
+      "fold_acc_mean": 0.6184313725490197,
+      "fold_acc_std": 0.11199220053031919,
+      "fold_f1_mean": 0.611905501905502,
+      "fold_f1_std": 0.11484290178696023,
+      "k_set_name": "mi_derived",
+      "model": "SVC_RBF"
+    },
+    {
+      "name": "algo_mi_derived_SVC_linear",
+      "n_features": 67,
+      "k_per_modality": {
+        "眼动": 21,
+        "脑电": 28,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.5476190476190477,
+      "pooled_macro_f1": 0.5449198851532834,
+      "pooled_weighted_f1": 0.5462314267190622,
+      "per_class_f1": {
+        "0": 0.6101694915254238,
+        "1": 0.5245901639344263,
+        "2": 0.5
+      },
+      "fold_acc_mean": 0.5537254901960784,
+      "fold_acc_std": 0.09993154134984195,
+      "fold_f1_mean": 0.5281200281200281,
+      "fold_f1_std": 0.1045411220480126,
+      "k_set_name": "mi_derived",
+      "model": "SVC_linear"
+    },
+    {
+      "name": "algo_stage2_empirical_XGB_shallow",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7738095238095238,
+      "pooled_macro_f1": 0.7741406532366986,
+      "pooled_weighted_f1": 0.7732812385354758,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6909090909090909,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.7756862745098039,
+      "fold_acc_std": 0.09683654484110213,
+      "fold_f1_mean": 0.7773267473267473,
+      "fold_f1_std": 0.09904645368666039,
+      "k_set_name": "stage2_empirical",
+      "model": "XGB_shallow"
+    },
+    {
+      "name": "algo_stage2_empirical_XGB_default",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.750976800976801,
+      "pooled_weighted_f1": 0.7504884004884005,
+      "per_class_f1": {
+        "0": 0.7666666666666667,
+        "1": 0.6785714285714286,
+        "2": 0.8076923076923077
+      },
+      "fold_acc_mean": 0.753921568627451,
+      "fold_acc_std": 0.09210678656168043,
+      "fold_f1_mean": 0.7566077930783813,
+      "fold_f1_std": 0.0957914084958846,
+      "k_set_name": "stage2_empirical",
+      "model": "XGB_default"
+    },
+    {
+      "name": "algo_stage2_empirical_RF_shallow",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7261904761904762,
+      "pooled_macro_f1": 0.7272730731621943,
+      "pooled_weighted_f1": 0.7274779879649242,
+      "per_class_f1": {
+        "0": 0.7719298245614035,
+        "1": 0.6551724137931034,
+        "2": 0.7547169811320755
+      },
+      "fold_acc_mean": 0.7288235294117648,
+      "fold_acc_std": 0.08917495299379528,
+      "fold_f1_mean": 0.7277333777333778,
+      "fold_f1_std": 0.09403157035744751,
+      "k_set_name": "stage2_empirical",
+      "model": "RF_shallow"
+    },
+    {
+      "name": "algo_stage2_empirical_RF_default",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7023809523809523,
+      "pooled_macro_f1": 0.7032392894461861,
+      "pooled_weighted_f1": 0.703239289446186,
+      "per_class_f1": {
+        "0": 0.7272727272727273,
+        "1": 0.6551724137931034,
+        "2": 0.7272727272727273
+      },
+      "fold_acc_mean": 0.7037254901960786,
+      "fold_acc_std": 0.07594186246355109,
+      "fold_f1_mean": 0.7011318311318312,
+      "fold_f1_std": 0.0767173708932319,
+      "k_set_name": "stage2_empirical",
+      "model": "RF_default"
+    },
+    {
+      "name": "algo_stage2_empirical_ExtraTrees",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7261904761904762,
+      "pooled_macro_f1": 0.7283400038117019,
+      "pooled_weighted_f1": 0.7282338206866508,
+      "per_class_f1": {
+        "0": 0.7547169811320755,
+        "1": 0.6666666666666666,
+        "2": 0.7636363636363637
+      },
+      "fold_acc_mean": 0.7272549019607844,
+      "fold_acc_std": 0.05046648977067024,
+      "fold_f1_mean": 0.7260113960113961,
+      "fold_f1_std": 0.052393753587461976,
+      "k_set_name": "stage2_empirical",
+      "model": "ExtraTrees"
+    },
+    {
+      "name": "algo_stage2_empirical_GBM",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6785836821519249,
+      "pooled_weighted_f1": 0.678816500181353,
+      "per_class_f1": {
+        "0": 0.711864406779661,
+        "1": 0.631578947368421,
+        "2": 0.6923076923076923
+      },
+      "fold_acc_mean": 0.6768627450980393,
+      "fold_acc_std": 0.10956837480847263,
+      "fold_f1_mean": 0.6756917156917157,
+      "fold_f1_std": 0.11434239857213309,
+      "k_set_name": "stage2_empirical",
+      "model": "GBM"
+    },
+    {
+      "name": "algo_stage2_empirical_LR_L2_strong",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6799702000851426,
+      "pooled_weighted_f1": 0.6805213464696223,
+      "per_class_f1": {
+        "0": 0.75,
+        "1": 0.5862068965517241,
+        "2": 0.7037037037037037
+      },
+      "fold_acc_mean": 0.6788235294117648,
+      "fold_acc_std": 0.07782510780489992,
+      "fold_f1_mean": 0.6745576645576646,
+      "fold_f1_std": 0.07713367168029192,
+      "k_set_name": "stage2_empirical",
+      "model": "LR_L2_strong"
+    },
+    {
+      "name": "algo_stage2_empirical_LR_L1",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6801444457182163,
+      "pooled_weighted_f1": 0.6814514720252426,
+      "per_class_f1": {
+        "0": 0.7636363636363637,
+        "1": 0.6229508196721312,
+        "2": 0.6538461538461539
+      },
+      "fold_acc_mean": 0.6788235294117648,
+      "fold_acc_std": 0.11475128982262206,
+      "fold_f1_mean": 0.6659706959706959,
+      "fold_f1_std": 0.11781725578537394,
+      "k_set_name": "stage2_empirical",
+      "model": "LR_L1"
+    },
+    {
+      "name": "algo_stage2_empirical_LDA",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6547619047619048,
+      "pooled_macro_f1": 0.6561606762756188,
+      "pooled_weighted_f1": 0.6564598700271935,
+      "per_class_f1": {
+        "0": 0.7037037037037037,
+        "1": 0.5862068965517241,
+        "2": 0.6785714285714286
+      },
+      "fold_acc_mean": 0.6570588235294117,
+      "fold_acc_std": 0.04646851985137902,
+      "fold_f1_mean": 0.6515022015022016,
+      "fold_f1_std": 0.051279359832469285,
+      "k_set_name": "stage2_empirical",
+      "model": "LDA"
+    },
+    {
+      "name": "algo_stage2_empirical_KNN_k5",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.5833333333333334,
+      "pooled_macro_f1": 0.5816499103733146,
+      "pooled_weighted_f1": 0.5810076321854437,
+      "per_class_f1": {
+        "0": 0.5531914893617021,
+        "1": 0.5846153846153846,
+        "2": 0.6071428571428571
+      },
+      "fold_acc_mean": 0.588235294117647,
+      "fold_acc_std": 0.12861310297785847,
+      "fold_f1_mean": 0.5814635364635363,
+      "fold_f1_std": 0.1309698781006243,
+      "k_set_name": "stage2_empirical",
+      "model": "KNN_k5"
+    },
+    {
+      "name": "algo_stage2_empirical_GaussianNB",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.5833333333333334,
+      "pooled_macro_f1": 0.5698950287185581,
+      "pooled_weighted_f1": 0.5719633307868602,
+      "per_class_f1": {
+        "0": 0.6181818181818182,
+        "1": 0.6470588235294118,
+        "2": 0.4444444444444444
+      },
+      "fold_acc_mean": 0.5852941176470589,
+      "fold_acc_std": 0.05916892063221398,
+      "fold_f1_mean": 0.5615427165427165,
+      "fold_f1_std": 0.051945876416276335,
+      "k_set_name": "stage2_empirical",
+      "model": "GaussianNB"
+    },
+    {
+      "name": "algo_stage2_empirical_MLP_small",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.42857142857142855,
+      "pooled_macro_f1": 0.354204107830552,
+      "pooled_weighted_f1": 0.3510464423253255,
+      "per_class_f1": {
+        "0": 0.125,
+        "1": 0.5473684210526316,
+        "2": 0.3902439024390244
+      },
+      "fold_acc_mean": 0.4280392156862745,
+      "fold_acc_std": 0.09874179626618672,
+      "fold_f1_mean": 0.3410892203771461,
+      "fold_f1_std": 0.11131792881590288,
+      "k_set_name": "stage2_empirical",
+      "model": "MLP_small"
+    },
+    {
+      "name": "algo_stage2_empirical_SVC_RBF",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6071428571428571,
+      "pooled_macro_f1": 0.6053537799300511,
+      "pooled_weighted_f1": 0.6066220838617932,
+      "per_class_f1": {
+        "0": 0.6779661016949152,
+        "1": 0.5666666666666667,
+        "2": 0.5714285714285714
+      },
+      "fold_acc_mean": 0.6086274509803922,
+      "fold_acc_std": 0.04747528141308723,
+      "fold_f1_mean": 0.596008806008806,
+      "fold_f1_std": 0.05520709107776973,
+      "k_set_name": "stage2_empirical",
+      "model": "SVC_RBF"
+    },
+    {
+      "name": "algo_stage2_empirical_SVC_linear",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6547619047619048,
+      "pooled_macro_f1": 0.6518045006548975,
+      "pooled_weighted_f1": 0.6527545249578449,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.5925925925925926,
+        "2": 0.6415094339622641
+      },
+      "fold_acc_mean": 0.6535294117647059,
+      "fold_acc_std": 0.13330391832396704,
+      "fold_f1_mean": 0.640946460946461,
+      "fold_f1_std": 0.1339816399428456,
+      "k_set_name": "stage2_empirical",
+      "model": "SVC_linear"
+    }
+  ],
+  "stage4_ablation_results": [
+    {
+      "name": "ablation_4mod",
+      "n_features": 27,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7738095238095238,
+      "pooled_macro_f1": 0.7741406532366986,
+      "pooled_weighted_f1": 0.7732812385354758,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6909090909090909,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.7756862745098039,
+      "fold_acc_std": 0.09683654484110213,
+      "fold_f1_mean": 0.7773267473267473,
+      "fold_f1_std": 0.09904645368666039,
+      "modalities": [
+        "眼动",
+        "脑电",
+        "心率",
+        "行为"
+      ],
+      "n_modalities": 4
+    },
+    {
+      "name": "ablation_1mod_眼动",
+      "n_features": 6,
+      "k_per_modality": {
+        "眼动": 6
+      },
+      "pooled_acc": 0.7023809523809523,
+      "pooled_macro_f1": 0.6991438191438192,
+      "pooled_weighted_f1": 0.6991781763210335,
+      "per_class_f1": {
+        "0": 0.7301587301587301,
+        "1": 0.64,
+        "2": 0.7272727272727273
+      },
+      "fold_acc_mean": 0.6956862745098039,
+      "fold_acc_std": 0.09876126267417847,
+      "fold_f1_mean": 0.6874963924963924,
+      "fold_f1_std": 0.09580591693348779,
+      "modalities": [
+        "眼动"
+      ],
+      "n_modalities": 1
+    },
+    {
+      "name": "ablation_1mod_脑电",
+      "n_features": 5,
+      "k_per_modality": {
+        "脑电": 5
+      },
+      "pooled_acc": 0.4166666666666667,
+      "pooled_macro_f1": 0.41274402481299033,
+      "pooled_weighted_f1": 0.41562573305184136,
+      "per_class_f1": {
+        "0": 0.4642857142857143,
+        "1": 0.5517241379310345,
+        "2": 0.2222222222222222
+      },
+      "fold_acc_mean": 0.4129411764705882,
+      "fold_acc_std": 0.047990771892637965,
+      "fold_f1_mean": 0.4019151219151219,
+      "fold_f1_std": 0.049187657012164994,
+      "modalities": [
+        "脑电"
+      ],
+      "n_modalities": 1
+    },
+    {
+      "name": "ablation_1mod_心率",
+      "n_features": 4,
+      "k_per_modality": {
+        "心率": 4
+      },
+      "pooled_acc": 0.5357142857142857,
+      "pooled_macro_f1": 0.530290049705165,
+      "pooled_weighted_f1": 0.5318594616229376,
+      "per_class_f1": {
+        "0": 0.5901639344262295,
+        "1": 0.5423728813559322,
+        "2": 0.4583333333333333
+      },
+      "fold_acc_mean": 0.5401960784313726,
+      "fold_acc_std": 0.05325975316493254,
+      "fold_f1_mean": 0.5163288563288564,
+      "fold_f1_std": 0.0496707165259783,
+      "modalities": [
+        "心率"
+      ],
+      "n_modalities": 1
+    },
+    {
+      "name": "ablation_1mod_行为",
+      "n_features": 12,
+      "k_per_modality": {
+        "行为": 12
+      },
+      "pooled_acc": 0.5476190476190477,
+      "pooled_macro_f1": 0.5457496449584095,
+      "pooled_weighted_f1": 0.5448511723618236,
+      "per_class_f1": {
+        "0": 0.49056603773584906,
+        "1": 0.5806451612903226,
+        "2": 0.5660377358490566
+      },
+      "fold_acc_mean": 0.5468627450980392,
+      "fold_acc_std": 0.04749957000149367,
+      "fold_f1_mean": 0.5360898360898361,
+      "fold_f1_std": 0.04810382628159523,
+      "modalities": [
+        "行为"
+      ],
+      "n_modalities": 1
+    },
+    {
+      "name": "ablation_2mod_眼动+脑电",
+      "n_features": 11,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6796067375117473,
+      "pooled_weighted_f1": 0.6788709194369572,
+      "per_class_f1": {
+        "0": 0.6551724137931034,
+        "1": 0.6666666666666666,
+        "2": 0.7169811320754716
+      },
+      "fold_acc_mean": 0.6854901960784313,
+      "fold_acc_std": 0.07164352782223836,
+      "fold_f1_mean": 0.6828438228438228,
+      "fold_f1_std": 0.06936404178311105,
+      "modalities": [
+        "眼动",
+        "脑电"
+      ],
+      "n_modalities": 2
+    },
+    {
+      "name": "ablation_2mod_眼动+心率",
+      "n_features": 10,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 4
+      },
+      "pooled_acc": 0.7023809523809523,
+      "pooled_macro_f1": 0.7012345679012345,
+      "pooled_weighted_f1": 0.7011463844797179,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6296296296296297,
+        "2": 0.7407407407407407
+      },
+      "fold_acc_mean": 0.7056862745098039,
+      "fold_acc_std": 0.11568361578865743,
+      "fold_f1_mean": 0.6916342481048364,
+      "fold_f1_std": 0.11182998397103996,
+      "modalities": [
+        "眼动",
+        "心率"
+      ],
+      "n_modalities": 2
+    },
+    {
+      "name": "ablation_2mod_眼动+行为",
+      "n_features": 18,
+      "k_per_modality": {
+        "眼动": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7400909681611436,
+      "pooled_weighted_f1": 0.7387218045112782,
+      "per_class_f1": {
+        "0": 0.7368421052631579,
+        "1": 0.631578947368421,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.735686274509804,
+      "fold_acc_std": 0.05068390406714827,
+      "fold_f1_mean": 0.7388000888000887,
+      "fold_f1_std": 0.04947972577492804,
+      "modalities": [
+        "眼动",
+        "行为"
+      ],
+      "n_modalities": 2
+    },
+    {
+      "name": "ablation_2mod_脑电+心率",
+      "n_features": 9,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4
+      },
+      "pooled_acc": 0.4880952380952381,
+      "pooled_macro_f1": 0.4866190900981267,
+      "pooled_weighted_f1": 0.49052716537105473,
+      "per_class_f1": {
+        "0": 0.6440677966101694,
+        "1": 0.5,
+        "2": 0.3157894736842105
+      },
+      "fold_acc_mean": 0.48509803921568634,
+      "fold_acc_std": 0.06107583477311933,
+      "fold_f1_mean": 0.48542457542457546,
+      "fold_f1_std": 0.06756027153289436,
+      "modalities": [
+        "脑电",
+        "心率"
+      ],
+      "n_modalities": 2
+    },
+    {
+      "name": "ablation_2mod_脑电+行为",
+      "n_features": 17,
+      "k_per_modality": {
+        "脑电": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.5595238095238095,
+      "pooled_macro_f1": 0.5572257414065324,
+      "pooled_weighted_f1": 0.557337974852099,
+      "per_class_f1": {
+        "0": 0.5185185185185185,
+        "1": 0.6440677966101694,
+        "2": 0.509090909090909
+      },
+      "fold_acc_mean": 0.5666666666666667,
+      "fold_acc_std": 0.09889819774838032,
+      "fold_f1_mean": 0.5501270951270951,
+      "fold_f1_std": 0.11896427210657,
+      "modalities": [
+        "脑电",
+        "行为"
+      ],
+      "n_modalities": 2
+    },
+    {
+      "name": "ablation_2mod_心率+行为",
+      "n_features": 16,
+      "k_per_modality": {
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6190476190476191,
+      "pooled_macro_f1": 0.616045197740113,
+      "pooled_weighted_f1": 0.6174495560936238,
+      "per_class_f1": {
+        "0": 0.6779661016949152,
+        "1": 0.6101694915254238,
+        "2": 0.56
+      },
+      "fold_acc_mean": 0.6170588235294117,
+      "fold_acc_std": 0.049571791906933144,
+      "fold_f1_mean": 0.6050290014995897,
+      "fold_f1_std": 0.05141034344173529,
+      "modalities": [
+        "心率",
+        "行为"
+      ],
+      "n_modalities": 2
+    },
+    {
+      "name": "ablation_3mod_眼动+脑电+心率",
+      "n_features": 15,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 4
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6758683939011808,
+      "pooled_weighted_f1": 0.6762303270499992,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.6153846153846154,
+        "2": 0.6909090909090909
+      },
+      "fold_acc_mean": 0.6837254901960784,
+      "fold_acc_std": 0.07427103124554046,
+      "fold_f1_mean": 0.673262619733208,
+      "fold_f1_std": 0.07312245187824438,
+      "modalities": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "n_modalities": 3
+    },
+    {
+      "name": "ablation_3mod_眼动+脑电+行为",
+      "n_features": 23,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7414188252851508,
+      "pooled_weighted_f1": 0.7404641981512784,
+      "per_class_f1": {
+        "0": 0.75,
+        "1": 0.6440677966101694,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.7388235294117648,
+      "fold_acc_std": 0.08365359451591142,
+      "fold_f1_mean": 0.7415436415436416,
+      "fold_f1_std": 0.08568664299911767,
+      "modalities": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "n_modalities": 3
+    },
+    {
+      "name": "ablation_3mod_眼动+心率+行为",
+      "n_features": 22,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7630455498380027,
+      "pooled_weighted_f1": 0.7618400991042501,
+      "per_class_f1": {
+        "0": 0.7666666666666667,
+        "1": 0.6545454545454545,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7607843137254902,
+      "fold_acc_std": 0.06434241349645077,
+      "fold_f1_mean": 0.764011544011544,
+      "fold_f1_std": 0.06528941953640682,
+      "modalities": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "n_modalities": 3
+    },
+    {
+      "name": "ablation_3mod_脑电+心率+行为",
+      "n_features": 21,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.6190476190476191,
+      "pooled_macro_f1": 0.614119327840234,
+      "pooled_weighted_f1": 0.615439396097422,
+      "per_class_f1": {
+        "0": 0.6206896551724138,
+        "1": 0.711864406779661,
+        "2": 0.5098039215686274
+      },
+      "fold_acc_mean": 0.6150980392156863,
+      "fold_acc_std": 0.09240184376130313,
+      "fold_f1_mean": 0.5966148666148665,
+      "fold_f1_std": 0.11219879788479693,
+      "modalities": [
+        "脑电",
+        "心率",
+        "行为"
+      ],
+      "n_modalities": 3
+    }
+  ],
+  "stage5_fine_tune_results": [
+    {
+      "name": "stage5_眼动+脑电+行为_眼动Δ-2",
+      "n_features": 21,
+      "k_per_modality": {
+        "眼动": 4,
+        "脑电": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.7738095238095238,
+      "pooled_macro_f1": 0.7757404366599768,
+      "pooled_weighted_f1": 0.7749530846821487,
+      "per_class_f1": {
+        "0": 0.7857142857142857,
+        "1": 0.6896551724137931,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.775686274509804,
+      "fold_acc_std": 0.07228462687055033,
+      "fold_f1_mean": 0.7752987752987754,
+      "fold_f1_std": 0.07260191316117176,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": -2,
+      "new_k": 4
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_眼动Δ-1",
+      "n_features": 22,
+      "k_per_modality": {
+        "眼动": 5,
+        "脑电": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7646230222181613,
+      "pooled_weighted_f1": 0.7640935651523161,
+      "per_class_f1": {
+        "0": 0.7857142857142857,
+        "1": 0.6779661016949152,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.763921568627451,
+      "fold_acc_std": 0.07769853710466199,
+      "fold_f1_mean": 0.7627735227735228,
+      "fold_f1_std": 0.08045289700624342,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": -1,
+      "new_k": 5
+    },
+    {
+      "name": "stage5_眼动+心率+行为_心率Δ-1",
+      "n_features": 21,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 3,
+        "行为": 12
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7630455498380027,
+      "pooled_weighted_f1": 0.7618400991042501,
+      "per_class_f1": {
+        "0": 0.7666666666666667,
+        "1": 0.6545454545454545,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7607843137254902,
+      "fold_acc_std": 0.06434241349645077,
+      "fold_f1_mean": 0.764011544011544,
+      "fold_f1_std": 0.06528941953640682,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "心率",
+      "delta": -1,
+      "new_k": 3
+    },
+    {
+      "name": "stage5_眼动+心率+行为_行为Δ-1",
+      "n_features": 21,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 4,
+        "行为": 11
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7630455498380027,
+      "pooled_weighted_f1": 0.7618400991042501,
+      "per_class_f1": {
+        "0": 0.7666666666666667,
+        "1": 0.6545454545454545,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7607843137254902,
+      "fold_acc_std": 0.06434241349645077,
+      "fold_f1_mean": 0.764011544011544,
+      "fold_f1_std": 0.06528941953640682,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": -1,
+      "new_k": 11
+    },
+    {
+      "name": "stage5_眼动+心率+行为_行为Δ+1",
+      "n_features": 23,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 4,
+        "行为": 13
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7630455498380027,
+      "pooled_weighted_f1": 0.7618400991042501,
+      "per_class_f1": {
+        "0": 0.7666666666666667,
+        "1": 0.6545454545454545,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7607843137254902,
+      "fold_acc_std": 0.06434241349645077,
+      "fold_f1_mean": 0.764011544011544,
+      "fold_f1_std": 0.06528941953640682,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": 1,
+      "new_k": 13
+    },
+    {
+      "name": "stage5_眼动+心率+行为_行为Δ+2",
+      "n_features": 24,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 4,
+        "行为": 14
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7620194411154863,
+      "pooled_weighted_f1": 0.7611600264142637,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6545454545454545,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.7607843137254902,
+      "fold_acc_std": 0.06434241349645077,
+      "fold_f1_mean": 0.7622166722166723,
+      "fold_f1_std": 0.06423754519989615,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": 2,
+      "new_k": 14
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_行为Δ-2",
+      "n_features": 21,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "行为": 10
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7619644723092999,
+      "pooled_weighted_f1": 0.761038961038961,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6909090909090909,
+        "2": 0.8363636363636363
+      },
+      "fold_acc_mean": 0.763921568627451,
+      "fold_acc_std": 0.09383618043254922,
+      "fold_f1_mean": 0.7634084434084436,
+      "fold_f1_std": 0.09506042356047452,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": -2,
+      "new_k": 10
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_行为Δ+1",
+      "n_features": 24,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "行为": 13
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7619047619047619,
+      "pooled_weighted_f1": 0.7606292517006802,
+      "per_class_f1": {
+        "0": 0.75,
+        "1": 0.6785714285714286,
+        "2": 0.8571428571428571
+      },
+      "fold_acc_mean": 0.763921568627451,
+      "fold_acc_std": 0.09383618043254922,
+      "fold_f1_mean": 0.7641854441854443,
+      "fold_f1_std": 0.09500892404611194,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": 1,
+      "new_k": 13
+    },
+    {
+      "name": "stage5_眼动+心率+行为_心率Δ-2",
+      "n_features": 20,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 2,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7536019536019536,
+      "pooled_weighted_f1": 0.7518009768009768,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6428571428571429,
+        "2": 0.8846153846153846
+      },
+      "fold_acc_mean": 0.7474509803921568,
+      "fold_acc_std": 0.061687159536425666,
+      "fold_f1_mean": 0.7514862914862915,
+      "fold_f1_std": 0.059441091679044954,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "心率",
+      "delta": -2,
+      "new_k": 2
+    },
+    {
+      "name": "stage5_眼动+心率+行为_眼动Δ+2",
+      "n_features": 24,
+      "k_per_modality": {
+        "眼动": 8,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.753315649867374,
+      "pooled_weighted_f1": 0.7522735884804851,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6551724137931034,
+        "2": 0.8461538461538461
+      },
+      "fold_acc_mean": 0.7474509803921568,
+      "fold_acc_std": 0.061687159536425666,
+      "fold_f1_mean": 0.7495815295815296,
+      "fold_f1_std": 0.059432767841426086,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": 2,
+      "new_k": 8
+    },
+    {
+      "name": "stage5_眼动+心率+行为_眼动Δ+1",
+      "n_features": 23,
+      "k_per_modality": {
+        "眼动": 7,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7521814610078122,
+      "pooled_weighted_f1": 0.7507271536692708,
+      "per_class_f1": {
+        "0": 0.7457627118644068,
+        "1": 0.6428571428571429,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7474509803921568,
+      "fold_acc_std": 0.061687159536425666,
+      "fold_f1_mean": 0.7514862914862915,
+      "fold_f1_std": 0.05944109167904492,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": 1,
+      "new_k": 7
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_眼动Δ+2",
+      "n_features": 25,
+      "k_per_modality": {
+        "眼动": 8,
+        "脑电": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.751010101010101,
+      "pooled_weighted_f1": 0.7499819624819625,
+      "per_class_f1": {
+        "0": 0.75,
+        "1": 0.6666666666666666,
+        "2": 0.8363636363636363
+      },
+      "fold_acc_mean": 0.7521568627450981,
+      "fold_acc_std": 0.09664578384783915,
+      "fold_f1_mean": 0.7532763532763533,
+      "fold_f1_std": 0.0980114965926004,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": 2,
+      "new_k": 8
+    },
+    {
+      "name": "stage5_眼动+心率+行为_心率Δ+1",
+      "n_features": 23,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7505508395290846,
+      "pooled_weighted_f1": 0.7491957661047257,
+      "per_class_f1": {
+        "0": 0.7540983606557377,
+        "1": 0.6296296296296297,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.7502741702741702,
+      "fold_f1_std": 0.09081377306743238,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "心率",
+      "delta": 1,
+      "new_k": 5
+    },
+    {
+      "name": "stage5_眼动+心率+行为_心率Δ+2",
+      "n_features": 24,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7505508395290846,
+      "pooled_weighted_f1": 0.7491957661047257,
+      "per_class_f1": {
+        "0": 0.7540983606557377,
+        "1": 0.6296296296296297,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.7502741702741702,
+      "fold_f1_std": 0.09081377306743238,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "心率",
+      "delta": 2,
+      "new_k": 6
+    },
+    {
+      "name": "stage5_眼动+心率+行为_眼动Δ-2",
+      "n_features": 20,
+      "k_per_modality": {
+        "眼动": 4,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7504564820450396,
+      "pooled_weighted_f1": 0.7489566124684811,
+      "per_class_f1": {
+        "0": 0.7419354838709677,
+        "1": 0.6415094339622641,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.7498183298183297,
+      "fold_f1_std": 0.09168006440443097,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": -2,
+      "new_k": 4
+    },
+    {
+      "name": "stage5_眼动+心率+行为_眼动Δ-1",
+      "n_features": 21,
+      "k_per_modality": {
+        "眼动": 5,
+        "心率": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7504564820450396,
+      "pooled_weighted_f1": 0.7489566124684811,
+      "per_class_f1": {
+        "0": 0.7419354838709677,
+        "1": 0.6415094339622641,
+        "2": 0.8679245283018868
+      },
+      "fold_acc_mean": 0.7490196078431373,
+      "fold_acc_std": 0.08584563634517413,
+      "fold_f1_mean": 0.7498183298183297,
+      "fold_f1_std": 0.09168006440443097,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": -1,
+      "new_k": 5
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_眼动Δ+1",
+      "n_features": 24,
+      "k_per_modality": {
+        "眼动": 7,
+        "脑电": 5,
+        "行为": 12
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7503607503607505,
+      "pooled_weighted_f1": 0.7488146773861059,
+      "per_class_f1": {
+        "0": 0.7272727272727273,
+        "1": 0.6666666666666666,
+        "2": 0.8571428571428571
+      },
+      "fold_acc_mean": 0.753921568627451,
+      "fold_acc_std": 0.09210678656168042,
+      "fold_f1_mean": 0.7550523550523551,
+      "fold_f1_std": 0.09364081550544018,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "眼动",
+      "delta": 1,
+      "new_k": 7
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_行为Δ+2",
+      "n_features": 25,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "行为": 14
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7414188252851508,
+      "pooled_weighted_f1": 0.7404641981512784,
+      "per_class_f1": {
+        "0": 0.75,
+        "1": 0.6440677966101694,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.7388235294117648,
+      "fold_acc_std": 0.08365359451591142,
+      "fold_f1_mean": 0.7415436415436416,
+      "fold_f1_std": 0.08568664299911767,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": 2,
+      "new_k": 14
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_行为Δ-1",
+      "n_features": 22,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "行为": 11
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7394411955815464,
+      "pooled_weighted_f1": 0.7385129490392648,
+      "per_class_f1": {
+        "0": 0.7368421052631579,
+        "1": 0.6666666666666666,
+        "2": 0.8148148148148148
+      },
+      "fold_acc_mean": 0.7403921568627452,
+      "fold_acc_std": 0.10479910662282725,
+      "fold_f1_mean": 0.7407244607244609,
+      "fold_f1_std": 0.10700937320288376,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": -1,
+      "new_k": 11
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_脑电Δ+1",
+      "n_features": 24,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 6,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7386876281613124,
+      "pooled_weighted_f1": 0.7375028480291638,
+      "per_class_f1": {
+        "0": 0.7368421052631579,
+        "1": 0.6428571428571429,
+        "2": 0.8363636363636363
+      },
+      "fold_acc_mean": 0.7388235294117648,
+      "fold_acc_std": 0.0936787150488856,
+      "fold_f1_mean": 0.7419943019943022,
+      "fold_f1_std": 0.09376095788516697,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "脑电",
+      "delta": 1,
+      "new_k": 6
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_脑电Δ+2",
+      "n_features": 25,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 7,
+        "行为": 12
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7386876281613124,
+      "pooled_weighted_f1": 0.7375028480291638,
+      "per_class_f1": {
+        "0": 0.7368421052631579,
+        "1": 0.6428571428571429,
+        "2": 0.8363636363636363
+      },
+      "fold_acc_mean": 0.7388235294117648,
+      "fold_acc_std": 0.0936787150488856,
+      "fold_f1_mean": 0.7419943019943022,
+      "fold_f1_std": 0.09376095788516697,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "脑电",
+      "delta": 2,
+      "new_k": 7
+    },
+    {
+      "name": "stage5_眼动+心率+行为_行为Δ-2",
+      "n_features": 20,
+      "k_per_modality": {
+        "眼动": 6,
+        "心率": 4,
+        "行为": 10
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.7382716049382716,
+      "pooled_weighted_f1": 0.7368606701940036,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6296296296296297,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.7372549019607844,
+      "fold_acc_std": 0.10819550277369977,
+      "fold_f1_mean": 0.7387745587745588,
+      "fold_f1_std": 0.1128866184935005,
+      "base_combo": [
+        "眼动",
+        "心率",
+        "行为"
+      ],
+      "delta_target": "行为",
+      "delta": -2,
+      "new_k": 10
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_脑电Δ-2",
+      "n_features": 21,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 3,
+        "行为": 12
+      },
+      "pooled_acc": 0.7261904761904762,
+      "pooled_macro_f1": 0.7271929824561404,
+      "pooled_weighted_f1": 0.7265977443609023,
+      "per_class_f1": {
+        "0": 0.75,
+        "1": 0.631578947368421,
+        "2": 0.8
+      },
+      "fold_acc_mean": 0.7239215686274509,
+      "fold_acc_std": 0.08358002701024139,
+      "fold_f1_mean": 0.7244233544233546,
+      "fold_f1_std": 0.08374975305216646,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "脑电",
+      "delta": -2,
+      "new_k": 3
+    },
+    {
+      "name": "stage5_眼动+脑电+行为_脑电Δ-1",
+      "n_features": 22,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 4,
+        "行为": 12
+      },
+      "pooled_acc": 0.7261904761904762,
+      "pooled_macro_f1": 0.7267600820232399,
+      "pooled_weighted_f1": 0.7256391791166227,
+      "per_class_f1": {
+        "0": 0.7272727272727273,
+        "1": 0.631578947368421,
+        "2": 0.8214285714285714
+      },
+      "fold_acc_mean": 0.7254901960784315,
+      "fold_acc_std": 0.07795936401436347,
+      "fold_f1_mean": 0.7256332556332558,
+      "fold_f1_std": 0.08019431155026135,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "行为"
+      ],
+      "delta_target": "脑电",
+      "delta": -1,
+      "new_k": 4
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_心率Δ-2",
+      "n_features": 13,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 2
+      },
+      "pooled_acc": 0.6904761904761905,
+      "pooled_macro_f1": 0.6890757589682321,
+      "pooled_weighted_f1": 0.6891468746307455,
+      "per_class_f1": {
+        "0": 0.7096774193548387,
+        "1": 0.6538461538461539,
+        "2": 0.7037037037037037
+      },
+      "fold_acc_mean": 0.693921568627451,
+      "fold_acc_std": 0.038405353336957604,
+      "fold_f1_mean": 0.6831604996310878,
+      "fold_f1_std": 0.031833407435729225,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "心率",
+      "delta": -2,
+      "new_k": 2
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_眼动Δ+1",
+      "n_features": 16,
+      "k_per_modality": {
+        "眼动": 7,
+        "脑电": 5,
+        "心率": 4
+      },
+      "pooled_acc": 0.6904761904761905,
+      "pooled_macro_f1": 0.6888415376919346,
+      "pooled_weighted_f1": 0.6890511540217695,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.6415094339622641,
+        "2": 0.7037037037037037
+      },
+      "fold_acc_mean": 0.6954901960784313,
+      "fold_acc_std": 0.07216005960522698,
+      "fold_f1_mean": 0.6884141348847231,
+      "fold_f1_std": 0.0697336937647689,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "眼动",
+      "delta": 1,
+      "new_k": 7
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_脑电Δ-2",
+      "n_features": 13,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 3,
+        "心率": 4
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6777429467084639,
+      "pooled_weighted_f1": 0.6781385281385282,
+      "per_class_f1": {
+        "0": 0.7241379310344828,
+        "1": 0.6181818181818182,
+        "2": 0.6909090909090909
+      },
+      "fold_acc_mean": 0.6854901960784314,
+      "fold_acc_std": 0.08072718330152824,
+      "fold_f1_mean": 0.6772303622303623,
+      "fold_f1_std": 0.07060659538251034,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "脑电",
+      "delta": -2,
+      "new_k": 3
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_心率Δ+2",
+      "n_features": 17,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 6
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6760053363826949,
+      "pooled_weighted_f1": 0.6765103868877453,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6037735849056604,
+        "2": 0.6909090909090909
+      },
+      "fold_acc_mean": 0.6837254901960784,
+      "fold_acc_std": 0.07427103124554046,
+      "fold_f1_mean": 0.6736329901035785,
+      "fold_f1_std": 0.07373741235039427,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "心率",
+      "delta": 2,
+      "new_k": 6
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_脑电Δ+2",
+      "n_features": 17,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 7,
+        "心率": 4
+      },
+      "pooled_acc": 0.6785714285714286,
+      "pooled_macro_f1": 0.6757631257631257,
+      "pooled_weighted_f1": 0.6764150532007676,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.6153846153846154,
+        "2": 0.6785714285714286
+      },
+      "fold_acc_mean": 0.6837254901960784,
+      "fold_acc_std": 0.07427103124554045,
+      "fold_f1_mean": 0.6733480898186781,
+      "fold_f1_std": 0.07680135000401571,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "脑电",
+      "delta": 2,
+      "new_k": 7
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_眼动Δ-1",
+      "n_features": 14,
+      "k_per_modality": {
+        "眼动": 5,
+        "脑电": 5,
+        "心率": 4
+      },
+      "pooled_acc": 0.6666666666666666,
+      "pooled_macro_f1": 0.663047881080668,
+      "pooled_weighted_f1": 0.6634098142294863,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.5769230769230769,
+        "2": 0.6909090909090909
+      },
+      "fold_acc_mean": 0.6703921568627451,
+      "fold_acc_std": 0.055916398297958296,
+      "fold_f1_mean": 0.6567994532700416,
+      "fold_f1_std": 0.05344359199199945,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "眼动",
+      "delta": -1,
+      "new_k": 5
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_脑电Δ-1",
+      "n_features": 14,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 4,
+        "心率": 4
+      },
+      "pooled_acc": 0.6666666666666666,
+      "pooled_macro_f1": 0.6629426129426129,
+      "pooled_weighted_f1": 0.6635945403802547,
+      "per_class_f1": {
+        "0": 0.7333333333333333,
+        "1": 0.5769230769230769,
+        "2": 0.6785714285714286
+      },
+      "fold_acc_mean": 0.6703921568627451,
+      "fold_acc_std": 0.055916398297958296,
+      "fold_f1_mean": 0.658248374718963,
+      "fold_f1_std": 0.05108518344003184,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "脑电",
+      "delta": -1,
+      "new_k": 4
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_脑电Δ+1",
+      "n_features": 16,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 6,
+        "心率": 4
+      },
+      "pooled_acc": 0.6666666666666666,
+      "pooled_macro_f1": 0.6627060660329706,
+      "pooled_weighted_f1": 0.6632148761143801,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.5882352941176471,
+        "2": 0.6785714285714286
+      },
+      "fold_acc_mean": 0.6703921568627451,
+      "fold_acc_std": 0.055916398297958296,
+      "fold_f1_mean": 0.6603514568220451,
+      "fold_f1_std": 0.058122902586401175,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "脑电",
+      "delta": 1,
+      "new_k": 6
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_心率Δ+1",
+      "n_features": 16,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 5
+      },
+      "pooled_acc": 0.6666666666666666,
+      "pooled_macro_f1": 0.6627060660329706,
+      "pooled_weighted_f1": 0.6632148761143801,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.5882352941176471,
+        "2": 0.6785714285714286
+      },
+      "fold_acc_mean": 0.6703921568627451,
+      "fold_acc_std": 0.055916398297958296,
+      "fold_f1_mean": 0.6570843535549419,
+      "fold_f1_std": 0.04972740212933651,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "心率",
+      "delta": 1,
+      "new_k": 5
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_心率Δ-1",
+      "n_features": 14,
+      "k_per_modality": {
+        "眼动": 6,
+        "脑电": 5,
+        "心率": 3
+      },
+      "pooled_acc": 0.6547619047619048,
+      "pooled_macro_f1": 0.6508193893393134,
+      "pooled_weighted_f1": 0.6514757222537109,
+      "per_class_f1": {
+        "0": 0.7096774193548387,
+        "1": 0.5882352941176471,
+        "2": 0.6545454545454545
+      },
+      "fold_acc_mean": 0.6570588235294117,
+      "fold_acc_std": 0.046468519851379016,
+      "fold_f1_mean": 0.6453982618688502,
+      "fold_f1_std": 0.041222266612094764,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "心率",
+      "delta": -1,
+      "new_k": 3
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_眼动Δ+2",
+      "n_features": 17,
+      "k_per_modality": {
+        "眼动": 8,
+        "脑电": 5,
+        "心率": 4
+      },
+      "pooled_acc": 0.6309523809523809,
+      "pooled_macro_f1": 0.6268802052903507,
+      "pooled_weighted_f1": 0.6282794658915909,
+      "per_class_f1": {
+        "0": 0.7213114754098361,
+        "1": 0.5555555555555556,
+        "2": 0.6037735849056604
+      },
+      "fold_acc_mean": 0.6368627450980392,
+      "fold_acc_std": 0.09248917972397135,
+      "fold_f1_mean": 0.6261697126403009,
+      "fold_f1_std": 0.09677749504052119,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "眼动",
+      "delta": 2,
+      "new_k": 8
+    },
+    {
+      "name": "stage5_眼动+脑电+心率_眼动Δ-2",
+      "n_features": 13,
+      "k_per_modality": {
+        "眼动": 4,
+        "脑电": 5,
+        "心率": 4
+      },
+      "pooled_acc": 0.6190476190476191,
+      "pooled_macro_f1": 0.6160493827160494,
+      "pooled_weighted_f1": 0.6168871252204585,
+      "per_class_f1": {
+        "0": 0.7,
+        "1": 0.5185185185185185,
+        "2": 0.6296296296296297
+      },
+      "fold_acc_mean": 0.6235294117647059,
+      "fold_acc_std": 0.07010729405517345,
+      "fold_f1_mean": 0.6023711473711474,
+      "fold_f1_std": 0.06720378398543304,
+      "base_combo": [
+        "眼动",
+        "脑电",
+        "心率"
+      ],
+      "delta_target": "眼动",
+      "delta": -2,
+      "new_k": 4
+    }
+  ],
+  "stage6_refined_4mod_result": {
+    "name": "stage6_4mod_refined",
+    "n_features": 25,
+    "k_per_modality": {
+      "眼动": 4,
+      "脑电": 5,
+      "心率": 4,
+      "行为": 12
+    },
+    "pooled_acc": 0.7619047619047619,
+    "pooled_macro_f1": 0.7630146566928175,
+    "pooled_weighted_f1": 0.7619047619047619,
+    "per_class_f1": {
+      "0": 0.7586206896551724,
+      "1": 0.6785714285714286,
+      "2": 0.8518518518518519
+    },
+    "fold_acc_mean": 0.763921568627451,
+    "fold_acc_std": 0.09383618043254922,
+    "fold_f1_mean": 0.7653453953453954,
+    "fold_f1_std": 0.09538916378798817
+  },
+  "stage6_fine_k_grid": [
+    {
+      "name": "stage6_eye_k6",
+      "n_features": 27,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 6
+      },
+      "pooled_acc": 0.7738095238095238,
+      "pooled_macro_f1": 0.7741406532366986,
+      "pooled_weighted_f1": 0.7732812385354758,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6909090909090909,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.7756862745098039,
+      "fold_acc_std": 0.09683654484110213,
+      "fold_f1_mean": 0.7773267473267473,
+      "fold_f1_std": 0.09904645368666039,
+      "k_eye": 6
+    },
+    {
+      "name": "stage6_eye_k4",
+      "n_features": 25,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 4
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7630146566928175,
+      "pooled_weighted_f1": 0.7619047619047619,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6785714285714286,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.763921568627451,
+      "fold_acc_std": 0.09383618043254922,
+      "fold_f1_mean": 0.7653453953453954,
+      "fold_f1_std": 0.09538916378798817,
+      "k_eye": 4
+    },
+    {
+      "name": "stage6_eye_k7",
+      "n_features": 28,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 7
+      },
+      "pooled_acc": 0.7619047619047619,
+      "pooled_macro_f1": 0.7630146566928175,
+      "pooled_weighted_f1": 0.7619047619047619,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6785714285714286,
+        "2": 0.8518518518518519
+      },
+      "fold_acc_mean": 0.763921568627451,
+      "fold_acc_std": 0.09383618043254922,
+      "fold_f1_mean": 0.7645683945683946,
+      "fold_f1_std": 0.09582440025800204,
+      "k_eye": 7
+    },
+    {
+      "name": "stage6_eye_k8",
+      "n_features": 29,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 8
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7518253451890408,
+      "pooled_weighted_f1": 0.7509733453129679,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6666666666666666,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.7521568627450981,
+      "fold_acc_std": 0.09664578384783915,
+      "fold_f1_mean": 0.752043142043142,
+      "fold_f1_std": 0.10057407752577413,
+      "k_eye": 8
+    },
+    {
+      "name": "stage6_eye_k5",
+      "n_features": 26,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 5
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7509022796838595,
+      "pooled_weighted_f1": 0.7503007598946199,
+      "per_class_f1": {
+        "0": 0.7796610169491526,
+        "1": 0.6428571428571429,
+        "2": 0.8301886792452831
+      },
+      "fold_acc_mean": 0.7521568627450981,
+      "fold_acc_std": 0.09664578384783915,
+      "fold_f1_mean": 0.7516546416546416,
+      "fold_f1_std": 0.10112321754439196,
+      "k_eye": 5
+    },
+    {
+      "name": "stage6_eye_k3",
+      "n_features": 24,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 3
+      },
+      "pooled_acc": 0.75,
+      "pooled_macro_f1": 0.7498432601880878,
+      "pooled_weighted_f1": 0.7489177489177489,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6545454545454545,
+        "2": 0.8363636363636363
+      },
+      "fold_acc_mean": 0.7521568627450981,
+      "fold_acc_std": 0.09664578384783915,
+      "fold_f1_mean": 0.7542942242942243,
+      "fold_f1_std": 0.1000856211235994,
+      "k_eye": 3
+    },
+    {
+      "name": "stage6_eye_k10",
+      "n_features": 31,
+      "k_per_modality": {
+        "脑电": 5,
+        "心率": 4,
+        "行为": 12,
+        "眼动": 10
+      },
+      "pooled_acc": 0.7380952380952381,
+      "pooled_macro_f1": 0.73876421577571,
+      "pooled_weighted_f1": 0.7380952380952381,
+      "per_class_f1": {
+        "0": 0.7586206896551724,
+        "1": 0.6428571428571429,
+        "2": 0.8148148148148148
+      },
+      "fold_acc_mean": 0.7372549019607844,
+      "fold_acc_std": 0.09861789997803865,
+      "fold_f1_mean": 0.7393806193806194,
+      "fold_f1_std": 0.10117419035698752,
+      "k_eye": 10
+    }
+  ],
+  "stage6_final_k_4mod": {
+    "眼动": 6,
+    "脑电": 5,
+    "心率": 4,
+    "行为": 12
+  },
+  "stage6_final_4mod_result": {
+    "name": "stage6_eye_k6",
+    "n_features": 27,
+    "k_per_modality": {
+      "脑电": 5,
+      "心率": 4,
+      "行为": 12,
+      "眼动": 6
+    },
+    "pooled_acc": 0.7738095238095238,
+    "pooled_macro_f1": 0.7741406532366986,
+    "pooled_weighted_f1": 0.7732812385354758,
+    "per_class_f1": {
+      "0": 0.7796610169491526,
+      "1": 0.6909090909090909,
+      "2": 0.8518518518518519
+    },
+    "fold_acc_mean": 0.7756862745098039,
+    "fold_acc_std": 0.09683654484110213,
+    "fold_f1_mean": 0.7773267473267473,
+    "fold_f1_std": 0.09904645368666039,
+    "k_eye": 6
+  }
+}
