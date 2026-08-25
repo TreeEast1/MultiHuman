@@ -1,29 +1,76 @@
 # MultiHuman：多模态生理-行为信号驱动的操纵员认知工作负荷预测
 
-> 基于 EEG、心率、眼动、任务操作日志四模态数据，两种预测目标并存：
-> - **回归**：NASA-TLX 加权总分（连续值 1.33–7.80）
-> - **分类**：低 / 中 / 高 3 档难度
+> 基于 EEG、心率、眼动、任务操作日志四模态数据，预测目标：
+> - **主线回归**：NASA-TLX 加权总分（连续值 1.33–7.80）
+> - **主线分类**：NASA 三分位低 / 中 / 高负荷
+> - **补充线**：XGB 折外预测 NASA 得到的预测版绩效 S
 >
 > **进度日志格式**，最新在顶部。
 
 ---
 
-## 📅 2026-08-25：在现行 NASA 84 样本上补算综合绩效 S
+## 📅 2026-08-25：XGB 折外预测 NASA，得到预测版绩效 S
 
-按历史最终公式，把自定义绩效 S 对齐到当前 NASA 实验的 84 条样本（与回归 / NASA 三分位分类同一套 `y_nasa`）。S **不是**新预测目标，只是描述性合成指标。
+用现行最佳 NASA 回归，在 84 条被试–任务上做按被试折外预测，再得到预测版 S（`S_xgb`）。主指标全部是 **pooled 折外精度**（测试折拼回 84 条再算），不是训练集拟合。
 
-```
-S = 0.40 × 关键75/非关键25 步骤表现分 + 0.60 × (1 − NASA加权总分 / 10)
-```
-
-| 项 | 值 |
+| 项 | 设置 |
 |---|---|
-| 覆盖 | 84 / 84（步骤表 `任务序列完成统计.xlsx`） |
-| S 范围 / 均值 | 0.217–0.920 / 0.567 |
-| 与 NASA Spearman ρ | −0.695（负荷越高，S 越低） |
-| 按预设难度 S 均值 | 低 0.668 > 中 0.601 > 高 0.432（单调） |
+| 样本 / 特征 | 84 × 264，与 `regression_task_level` 同一张表 |
+| 划分 | 5 折 `GroupKFold`，按被试分组 |
+| 模型 | 折内 MI Top-30 + XGB（`max_depth=2, lr=0.02, λ=2, n=500`，exp3 第 1 名） |
+| 产出 | `y_nasa_xgb` → `S_xgb` |
 
-脚本与明细：`工作目录/03_建模/s_score_from_nasa84/`。
+明细：`工作目录/03_建模/s_score_from_nasa84/output_from_xgb_nasa/s_from_xgb_nasa.csv`。
+
+### 1. NASA 预测精度（这一步是源头）
+
+| 指标 | 折外 pooled |
+|---|---:|
+| **MAE** | **0.868** |
+| **R²** | **+0.521** |
+| Spearman ρ | 0.745 |
+
+同配置在 exp3 记录为 MAE=0.911、R²=+0.519。本次复现量级一致。NASA 真值范围 1.33–7.80，MAE 0.868 约为全距的 13%。
+
+### 2. 预测版 S 精度
+
+`S_xgb` 相对真值 S（同一 84 条）：
+
+| 指标 | 折外 pooled |
+|---|---:|
+| **MAE** | **0.052** |
+| **R²** | **+0.838** |
+| Spearman ρ | 0.911 |
+| `S_xgb` 范围 / 均值 | 0.251–0.876 / 0.571 |
+
+误差关系：`ΔS = 0.06 × (NASA_XGB − NASA 真值)`，所以 NASA MAE 0.868 对应 S MAE ≈ 0.052。84 条里 |ΔS|≥0.10 的有 13 条，最大偏差 −0.162（`subject_13_task_5`：真值 NASA 2.27，XGB 估成 4.97）。
+
+### 3. 按任务的预测误差
+
+| task | n | 真值 S 均值 | 预测 S 均值 | S MAE |
+|---|---:|---:|---:|---:|
+| 1 | 6 | 0.637 | 0.661 | 0.045 |
+| 2 | 6 | 0.633 | 0.596 | 0.047 |
+| 3 | 20 | 0.692 | 0.691 | 0.053 |
+| 4 | 12 | 0.567 | 0.580 | 0.035 |
+| 5 | 11 | 0.625 | 0.545 | 0.084 |
+| 5_6 | 29 | 0.432 | 0.471 | 0.050 |
+
+任务 4 最准（S MAE=0.035）；任务 5 最差（0.084），XGB 在该任务上系统性高估负荷，预测 S 被压低。
+
+### 4. 预测 S 两端
+
+| | sample_id | 预测 NASA | 预测 S |
+|---|---|---:|---:|
+| 最高 | `subject_22_task_3` | 2.06 | **0.876** |
+| 最低 | `subject_26_task_5_6` | 6.76 | **0.251** |
+
+### 5. 复现
+
+```bash
+cd 工作目录/03_建模/s_score_from_nasa84
+uv run --with xgboost --with pandas --with numpy --with scikit-learn python compute_s_from_xgb_nasa.py
+```
 
 ---
 
@@ -369,7 +416,8 @@ MultiHuman/
 │       ├── regression_window_level/ ← 窗口级回归（历史基线）
 │       ├── regression_task_level/   ← 任务级回归（主线）
 │       ├── classification_task_level/         ← 任务级 3 分类（task_difficulty 标签）
-│       └── classification_task_level_nasa/    ← 任务级 3 分类（NASA 三分位分档）
+│       ├── classification_task_level_nasa/    ← 任务级 3 分类（NASA 三分位分档）
+│       └── s_score_from_nasa84/               ← S 回算 + 回归/三分位分类
 │
 └── 历史工作_存档_20260703/           ← 不入库；历史脚本与产物封存
 ```
@@ -436,6 +484,16 @@ python3 baseline_cls.py                # 12 个模型对比
 python3 exp1_modality_ablation_cls.py  # 分类模态消融
 python3 exp2_feature_selection_cls.py  # 分类特征筛选
 python3 exp3_tuning_cls.py             # RF/XGB/LR/SVC 四类调参
+```
+
+---
+
+### 复现 S 构造与预测（08-25）
+
+```bash
+cd 工作目录/03_建模/s_score_from_nasa84
+uv run --with pandas --with openpyxl --with numpy python compute_s.py
+uv run --with pandas --with numpy --with scikit-learn python run_s_prediction.py
 ```
 
 ---

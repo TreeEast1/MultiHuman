@@ -1,0 +1,33 @@
+{
+  "nasa_model": "MI Top-30 + XGB (exp3 best)",
+  "xgb_cfg": {
+    "max_depth": 2,
+    "learning_rate": 0.02,
+    "reg_lambda": 2.0,
+    "n_estimators": 500,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "n_jobs": -1,
+    "random_state": 0
+  },
+  "cv": "GroupKFold by subject, 5 folds, OOF",
+  "formula": "S = 0.40 * weighted_step + 0.60 * (1 - y_nasa / 10)",
+  "nasa_oof_mae": 0.8680733472581892,
+  "nasa_oof_r2": 0.5205020556092756,
+  "nasa_oof_spearman": 0.7451914018100637,
+  "S_xgb_vs_S_true_mae": 0.052084400835491367,
+  "S_xgb_vs_S_true_r2": 0.8381078440625028,
+  "S_xgb_vs_S_true_spearman": 0.9113920211460357,
+  "S_true_range": [
+    0.21714285714285714,
+    0.92
+  ],
+  "S_xgb_range": [
+    0.25144170624869205,
+    0.8763794040679931
+  ],
+  "S_true_mean": 0.5672551020408164,
+  "S_xgb_mean": 0.5711548803614922,
+  "n": 84
+}
