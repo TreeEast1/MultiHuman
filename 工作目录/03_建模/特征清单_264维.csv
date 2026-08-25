@@ -1,0 +1,265 @@
+﻿序号,列名,模态,窗口指标,窗口指标含义,统计量,统计量含义,单位,这一维在说什么
+1,eeg_frontal_delta_power_z_within_subject__mean,脑电,eeg_frontal_delta_power_z_within_subject,额区δ 功率（1–4 Hz，较慢）,mean,任务内平均,z 分数,额区（前额，和注意、控制有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+2,eeg_frontal_delta_power_z_within_subject__std,脑电,eeg_frontal_delta_power_z_within_subject,额区δ 功率（1–4 Hz，较慢）,std,任务内波动,z 分数,额区（前额，和注意、控制有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+3,eeg_frontal_delta_power_z_within_subject__median,脑电,eeg_frontal_delta_power_z_within_subject,额区δ 功率（1–4 Hz，较慢）,median,任务内中位数,z 分数,额区（前额，和注意、控制有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+4,eeg_frontal_delta_power_z_within_subject__slope,脑电,eeg_frontal_delta_power_z_within_subject,额区δ 功率（1–4 Hz，较慢）,slope,任务过程走势,z 分数,额区（前额，和注意、控制有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+5,eeg_frontal_theta_power_z_within_subject__mean,脑电,eeg_frontal_theta_power_z_within_subject,额区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,mean,任务内平均,z 分数,额区（前额，和注意、控制有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+6,eeg_frontal_theta_power_z_within_subject__std,脑电,eeg_frontal_theta_power_z_within_subject,额区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,std,任务内波动,z 分数,额区（前额，和注意、控制有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+7,eeg_frontal_theta_power_z_within_subject__median,脑电,eeg_frontal_theta_power_z_within_subject,额区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,median,任务内中位数,z 分数,额区（前额，和注意、控制有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+8,eeg_frontal_theta_power_z_within_subject__slope,脑电,eeg_frontal_theta_power_z_within_subject,额区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,slope,任务过程走势,z 分数,额区（前额，和注意、控制有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+9,eeg_frontal_alpha_power_z_within_subject__mean,脑电,eeg_frontal_alpha_power_z_within_subject,额区α 功率（8–13 Hz，放松、皮层抑制）,mean,任务内平均,z 分数,额区（前额，和注意、控制有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+10,eeg_frontal_alpha_power_z_within_subject__std,脑电,eeg_frontal_alpha_power_z_within_subject,额区α 功率（8–13 Hz，放松、皮层抑制）,std,任务内波动,z 分数,额区（前额，和注意、控制有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+11,eeg_frontal_alpha_power_z_within_subject__median,脑电,eeg_frontal_alpha_power_z_within_subject,额区α 功率（8–13 Hz，放松、皮层抑制）,median,任务内中位数,z 分数,额区（前额，和注意、控制有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+12,eeg_frontal_alpha_power_z_within_subject__slope,脑电,eeg_frontal_alpha_power_z_within_subject,额区α 功率（8–13 Hz，放松、皮层抑制）,slope,任务过程走势,z 分数,额区（前额，和注意、控制有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+13,eeg_frontal_beta_power_z_within_subject__mean,脑电,eeg_frontal_beta_power_z_within_subject,额区β 功率（13–30 Hz，警觉、认知投入）,mean,任务内平均,z 分数,额区（前额，和注意、控制有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+14,eeg_frontal_beta_power_z_within_subject__std,脑电,eeg_frontal_beta_power_z_within_subject,额区β 功率（13–30 Hz，警觉、认知投入）,std,任务内波动,z 分数,额区（前额，和注意、控制有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+15,eeg_frontal_beta_power_z_within_subject__median,脑电,eeg_frontal_beta_power_z_within_subject,额区β 功率（13–30 Hz，警觉、认知投入）,median,任务内中位数,z 分数,额区（前额，和注意、控制有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+16,eeg_frontal_beta_power_z_within_subject__slope,脑电,eeg_frontal_beta_power_z_within_subject,额区β 功率（13–30 Hz，警觉、认知投入）,slope,任务过程走势,z 分数,额区（前额，和注意、控制有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+17,eeg_frontal_gamma_power_z_within_subject__mean,脑电,eeg_frontal_gamma_power_z_within_subject,额区γ 功率（30–45 Hz，更细的信息加工）,mean,任务内平均,z 分数,额区（前额，和注意、控制有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+18,eeg_frontal_gamma_power_z_within_subject__std,脑电,eeg_frontal_gamma_power_z_within_subject,额区γ 功率（30–45 Hz，更细的信息加工）,std,任务内波动,z 分数,额区（前额，和注意、控制有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+19,eeg_frontal_gamma_power_z_within_subject__median,脑电,eeg_frontal_gamma_power_z_within_subject,额区γ 功率（30–45 Hz，更细的信息加工）,median,任务内中位数,z 分数,额区（前额，和注意、控制有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+20,eeg_frontal_gamma_power_z_within_subject__slope,脑电,eeg_frontal_gamma_power_z_within_subject,额区γ 功率（30–45 Hz，更细的信息加工）,slope,任务过程走势,z 分数,额区（前额，和注意、控制有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+21,eeg_frontal_theta_alpha_z_within_subject__mean,脑电,eeg_frontal_theta_alpha_z_within_subject,额区θ/α 比值（负荷相关常用比值）,mean,任务内平均,z 分数（比值）,额区（前额，和注意、控制有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+22,eeg_frontal_theta_alpha_z_within_subject__std,脑电,eeg_frontal_theta_alpha_z_within_subject,额区θ/α 比值（负荷相关常用比值）,std,任务内波动,z 分数（比值）,额区（前额，和注意、控制有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+23,eeg_frontal_theta_alpha_z_within_subject__median,脑电,eeg_frontal_theta_alpha_z_within_subject,额区θ/α 比值（负荷相关常用比值）,median,任务内中位数,z 分数（比值）,额区（前额，和注意、控制有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+24,eeg_frontal_theta_alpha_z_within_subject__slope,脑电,eeg_frontal_theta_alpha_z_within_subject,额区θ/α 比值（负荷相关常用比值）,slope,任务过程走势,z 分数（比值）,额区（前额，和注意、控制有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+25,eeg_frontal_beta_alpha_z_within_subject__mean,脑电,eeg_frontal_beta_alpha_z_within_subject,额区β/α 比值（激活相对放松）,mean,任务内平均,z 分数（比值）,额区（前额，和注意、控制有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+26,eeg_frontal_beta_alpha_z_within_subject__std,脑电,eeg_frontal_beta_alpha_z_within_subject,额区β/α 比值（激活相对放松）,std,任务内波动,z 分数（比值）,额区（前额，和注意、控制有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+27,eeg_frontal_beta_alpha_z_within_subject__median,脑电,eeg_frontal_beta_alpha_z_within_subject,额区β/α 比值（激活相对放松）,median,任务内中位数,z 分数（比值）,额区（前额，和注意、控制有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+28,eeg_frontal_beta_alpha_z_within_subject__slope,脑电,eeg_frontal_beta_alpha_z_within_subject,额区β/α 比值（激活相对放松）,slope,任务过程走势,z 分数（比值）,额区（前额，和注意、控制有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+29,eeg_central_delta_power_z_within_subject__mean,脑电,eeg_central_delta_power_z_within_subject,中央区δ 功率（1–4 Hz，较慢）,mean,任务内平均,z 分数,中央区的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+30,eeg_central_delta_power_z_within_subject__std,脑电,eeg_central_delta_power_z_within_subject,中央区δ 功率（1–4 Hz，较慢）,std,任务内波动,z 分数,中央区的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+31,eeg_central_delta_power_z_within_subject__median,脑电,eeg_central_delta_power_z_within_subject,中央区δ 功率（1–4 Hz，较慢）,median,任务内中位数,z 分数,中央区的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+32,eeg_central_delta_power_z_within_subject__slope,脑电,eeg_central_delta_power_z_within_subject,中央区δ 功率（1–4 Hz，较慢）,slope,任务过程走势,z 分数,中央区的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+33,eeg_central_theta_power_z_within_subject__mean,脑电,eeg_central_theta_power_z_within_subject,中央区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,mean,任务内平均,z 分数,中央区的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+34,eeg_central_theta_power_z_within_subject__std,脑电,eeg_central_theta_power_z_within_subject,中央区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,std,任务内波动,z 分数,中央区的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+35,eeg_central_theta_power_z_within_subject__median,脑电,eeg_central_theta_power_z_within_subject,中央区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,median,任务内中位数,z 分数,中央区的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+36,eeg_central_theta_power_z_within_subject__slope,脑电,eeg_central_theta_power_z_within_subject,中央区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,slope,任务过程走势,z 分数,中央区的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+37,eeg_central_alpha_power_z_within_subject__mean,脑电,eeg_central_alpha_power_z_within_subject,中央区α 功率（8–13 Hz，放松、皮层抑制）,mean,任务内平均,z 分数,中央区的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+38,eeg_central_alpha_power_z_within_subject__std,脑电,eeg_central_alpha_power_z_within_subject,中央区α 功率（8–13 Hz，放松、皮层抑制）,std,任务内波动,z 分数,中央区的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+39,eeg_central_alpha_power_z_within_subject__median,脑电,eeg_central_alpha_power_z_within_subject,中央区α 功率（8–13 Hz，放松、皮层抑制）,median,任务内中位数,z 分数,中央区的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+40,eeg_central_alpha_power_z_within_subject__slope,脑电,eeg_central_alpha_power_z_within_subject,中央区α 功率（8–13 Hz，放松、皮层抑制）,slope,任务过程走势,z 分数,中央区的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+41,eeg_central_beta_power_z_within_subject__mean,脑电,eeg_central_beta_power_z_within_subject,中央区β 功率（13–30 Hz，警觉、认知投入）,mean,任务内平均,z 分数,中央区的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+42,eeg_central_beta_power_z_within_subject__std,脑电,eeg_central_beta_power_z_within_subject,中央区β 功率（13–30 Hz，警觉、认知投入）,std,任务内波动,z 分数,中央区的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+43,eeg_central_beta_power_z_within_subject__median,脑电,eeg_central_beta_power_z_within_subject,中央区β 功率（13–30 Hz，警觉、认知投入）,median,任务内中位数,z 分数,中央区的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+44,eeg_central_beta_power_z_within_subject__slope,脑电,eeg_central_beta_power_z_within_subject,中央区β 功率（13–30 Hz，警觉、认知投入）,slope,任务过程走势,z 分数,中央区的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+45,eeg_central_gamma_power_z_within_subject__mean,脑电,eeg_central_gamma_power_z_within_subject,中央区γ 功率（30–45 Hz，更细的信息加工）,mean,任务内平均,z 分数,中央区的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+46,eeg_central_gamma_power_z_within_subject__std,脑电,eeg_central_gamma_power_z_within_subject,中央区γ 功率（30–45 Hz，更细的信息加工）,std,任务内波动,z 分数,中央区的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+47,eeg_central_gamma_power_z_within_subject__median,脑电,eeg_central_gamma_power_z_within_subject,中央区γ 功率（30–45 Hz，更细的信息加工）,median,任务内中位数,z 分数,中央区的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+48,eeg_central_gamma_power_z_within_subject__slope,脑电,eeg_central_gamma_power_z_within_subject,中央区γ 功率（30–45 Hz，更细的信息加工）,slope,任务过程走势,z 分数,中央区的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+49,eeg_central_theta_alpha_z_within_subject__mean,脑电,eeg_central_theta_alpha_z_within_subject,中央区θ/α 比值（负荷相关常用比值）,mean,任务内平均,z 分数（比值）,中央区的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+50,eeg_central_theta_alpha_z_within_subject__std,脑电,eeg_central_theta_alpha_z_within_subject,中央区θ/α 比值（负荷相关常用比值）,std,任务内波动,z 分数（比值）,中央区的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+51,eeg_central_theta_alpha_z_within_subject__median,脑电,eeg_central_theta_alpha_z_within_subject,中央区θ/α 比值（负荷相关常用比值）,median,任务内中位数,z 分数（比值）,中央区的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+52,eeg_central_theta_alpha_z_within_subject__slope,脑电,eeg_central_theta_alpha_z_within_subject,中央区θ/α 比值（负荷相关常用比值）,slope,任务过程走势,z 分数（比值）,中央区的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+53,eeg_central_beta_alpha_z_within_subject__mean,脑电,eeg_central_beta_alpha_z_within_subject,中央区β/α 比值（激活相对放松）,mean,任务内平均,z 分数（比值）,中央区的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+54,eeg_central_beta_alpha_z_within_subject__std,脑电,eeg_central_beta_alpha_z_within_subject,中央区β/α 比值（激活相对放松）,std,任务内波动,z 分数（比值）,中央区的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+55,eeg_central_beta_alpha_z_within_subject__median,脑电,eeg_central_beta_alpha_z_within_subject,中央区β/α 比值（激活相对放松）,median,任务内中位数,z 分数（比值）,中央区的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+56,eeg_central_beta_alpha_z_within_subject__slope,脑电,eeg_central_beta_alpha_z_within_subject,中央区β/α 比值（激活相对放松）,slope,任务过程走势,z 分数（比值）,中央区的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+57,eeg_parietal_delta_power_z_within_subject__mean,脑电,eeg_parietal_delta_power_z_within_subject,顶区δ 功率（1–4 Hz，较慢）,mean,任务内平均,z 分数,顶区（和空间注意、加工有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+58,eeg_parietal_delta_power_z_within_subject__std,脑电,eeg_parietal_delta_power_z_within_subject,顶区δ 功率（1–4 Hz，较慢）,std,任务内波动,z 分数,顶区（和空间注意、加工有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+59,eeg_parietal_delta_power_z_within_subject__median,脑电,eeg_parietal_delta_power_z_within_subject,顶区δ 功率（1–4 Hz，较慢）,median,任务内中位数,z 分数,顶区（和空间注意、加工有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+60,eeg_parietal_delta_power_z_within_subject__slope,脑电,eeg_parietal_delta_power_z_within_subject,顶区δ 功率（1–4 Hz，较慢）,slope,任务过程走势,z 分数,顶区（和空间注意、加工有关）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+61,eeg_parietal_theta_power_z_within_subject__mean,脑电,eeg_parietal_theta_power_z_within_subject,顶区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,mean,任务内平均,z 分数,顶区（和空间注意、加工有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+62,eeg_parietal_theta_power_z_within_subject__std,脑电,eeg_parietal_theta_power_z_within_subject,顶区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,std,任务内波动,z 分数,顶区（和空间注意、加工有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+63,eeg_parietal_theta_power_z_within_subject__median,脑电,eeg_parietal_theta_power_z_within_subject,顶区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,median,任务内中位数,z 分数,顶区（和空间注意、加工有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+64,eeg_parietal_theta_power_z_within_subject__slope,脑电,eeg_parietal_theta_power_z_within_subject,顶区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,slope,任务过程走势,z 分数,顶区（和空间注意、加工有关）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+65,eeg_parietal_alpha_power_z_within_subject__mean,脑电,eeg_parietal_alpha_power_z_within_subject,顶区α 功率（8–13 Hz，放松、皮层抑制）,mean,任务内平均,z 分数,顶区（和空间注意、加工有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+66,eeg_parietal_alpha_power_z_within_subject__std,脑电,eeg_parietal_alpha_power_z_within_subject,顶区α 功率（8–13 Hz，放松、皮层抑制）,std,任务内波动,z 分数,顶区（和空间注意、加工有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+67,eeg_parietal_alpha_power_z_within_subject__median,脑电,eeg_parietal_alpha_power_z_within_subject,顶区α 功率（8–13 Hz，放松、皮层抑制）,median,任务内中位数,z 分数,顶区（和空间注意、加工有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+68,eeg_parietal_alpha_power_z_within_subject__slope,脑电,eeg_parietal_alpha_power_z_within_subject,顶区α 功率（8–13 Hz，放松、皮层抑制）,slope,任务过程走势,z 分数,顶区（和空间注意、加工有关）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+69,eeg_parietal_beta_power_z_within_subject__mean,脑电,eeg_parietal_beta_power_z_within_subject,顶区β 功率（13–30 Hz，警觉、认知投入）,mean,任务内平均,z 分数,顶区（和空间注意、加工有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+70,eeg_parietal_beta_power_z_within_subject__std,脑电,eeg_parietal_beta_power_z_within_subject,顶区β 功率（13–30 Hz，警觉、认知投入）,std,任务内波动,z 分数,顶区（和空间注意、加工有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+71,eeg_parietal_beta_power_z_within_subject__median,脑电,eeg_parietal_beta_power_z_within_subject,顶区β 功率（13–30 Hz，警觉、认知投入）,median,任务内中位数,z 分数,顶区（和空间注意、加工有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+72,eeg_parietal_beta_power_z_within_subject__slope,脑电,eeg_parietal_beta_power_z_within_subject,顶区β 功率（13–30 Hz，警觉、认知投入）,slope,任务过程走势,z 分数,顶区（和空间注意、加工有关）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+73,eeg_parietal_gamma_power_z_within_subject__mean,脑电,eeg_parietal_gamma_power_z_within_subject,顶区γ 功率（30–45 Hz，更细的信息加工）,mean,任务内平均,z 分数,顶区（和空间注意、加工有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+74,eeg_parietal_gamma_power_z_within_subject__std,脑电,eeg_parietal_gamma_power_z_within_subject,顶区γ 功率（30–45 Hz，更细的信息加工）,std,任务内波动,z 分数,顶区（和空间注意、加工有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+75,eeg_parietal_gamma_power_z_within_subject__median,脑电,eeg_parietal_gamma_power_z_within_subject,顶区γ 功率（30–45 Hz，更细的信息加工）,median,任务内中位数,z 分数,顶区（和空间注意、加工有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+76,eeg_parietal_gamma_power_z_within_subject__slope,脑电,eeg_parietal_gamma_power_z_within_subject,顶区γ 功率（30–45 Hz，更细的信息加工）,slope,任务过程走势,z 分数,顶区（和空间注意、加工有关）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+77,eeg_parietal_theta_alpha_z_within_subject__mean,脑电,eeg_parietal_theta_alpha_z_within_subject,顶区θ/α 比值（负荷相关常用比值）,mean,任务内平均,z 分数（比值）,顶区（和空间注意、加工有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+78,eeg_parietal_theta_alpha_z_within_subject__std,脑电,eeg_parietal_theta_alpha_z_within_subject,顶区θ/α 比值（负荷相关常用比值）,std,任务内波动,z 分数（比值）,顶区（和空间注意、加工有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+79,eeg_parietal_theta_alpha_z_within_subject__median,脑电,eeg_parietal_theta_alpha_z_within_subject,顶区θ/α 比值（负荷相关常用比值）,median,任务内中位数,z 分数（比值）,顶区（和空间注意、加工有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+80,eeg_parietal_theta_alpha_z_within_subject__slope,脑电,eeg_parietal_theta_alpha_z_within_subject,顶区θ/α 比值（负荷相关常用比值）,slope,任务过程走势,z 分数（比值）,顶区（和空间注意、加工有关）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+81,eeg_parietal_beta_alpha_z_within_subject__mean,脑电,eeg_parietal_beta_alpha_z_within_subject,顶区β/α 比值（激活相对放松）,mean,任务内平均,z 分数（比值）,顶区（和空间注意、加工有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+82,eeg_parietal_beta_alpha_z_within_subject__std,脑电,eeg_parietal_beta_alpha_z_within_subject,顶区β/α 比值（激活相对放松）,std,任务内波动,z 分数（比值）,顶区（和空间注意、加工有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+83,eeg_parietal_beta_alpha_z_within_subject__median,脑电,eeg_parietal_beta_alpha_z_within_subject,顶区β/α 比值（激活相对放松）,median,任务内中位数,z 分数（比值）,顶区（和空间注意、加工有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+84,eeg_parietal_beta_alpha_z_within_subject__slope,脑电,eeg_parietal_beta_alpha_z_within_subject,顶区β/α 比值（激活相对放松）,slope,任务过程走势,z 分数（比值）,顶区（和空间注意、加工有关）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+85,eeg_occipital_delta_power_z_within_subject__mean,脑电,eeg_occipital_delta_power_z_within_subject,枕区δ 功率（1–4 Hz，较慢）,mean,任务内平均,z 分数,枕区（视觉皮层附近）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+86,eeg_occipital_delta_power_z_within_subject__std,脑电,eeg_occipital_delta_power_z_within_subject,枕区δ 功率（1–4 Hz，较慢）,std,任务内波动,z 分数,枕区（视觉皮层附近）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+87,eeg_occipital_delta_power_z_within_subject__median,脑电,eeg_occipital_delta_power_z_within_subject,枕区δ 功率（1–4 Hz，较慢）,median,任务内中位数,z 分数,枕区（视觉皮层附近）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+88,eeg_occipital_delta_power_z_within_subject__slope,脑电,eeg_occipital_delta_power_z_within_subject,枕区δ 功率（1–4 Hz，较慢）,slope,任务过程走势,z 分数,枕区（视觉皮层附近）的δ 功率（1–4 Hz，较慢），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+89,eeg_occipital_theta_power_z_within_subject__mean,脑电,eeg_occipital_theta_power_z_within_subject,枕区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,mean,任务内平均,z 分数,枕区（视觉皮层附近）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+90,eeg_occipital_theta_power_z_within_subject__std,脑电,eeg_occipital_theta_power_z_within_subject,枕区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,std,任务内波动,z 分数,枕区（视觉皮层附近）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+91,eeg_occipital_theta_power_z_within_subject__median,脑电,eeg_occipital_theta_power_z_within_subject,枕区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,median,任务内中位数,z 分数,枕区（视觉皮层附近）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+92,eeg_occipital_theta_power_z_within_subject__slope,脑电,eeg_occipital_theta_power_z_within_subject,枕区θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论）,slope,任务过程走势,z 分数,枕区（视觉皮层附近）的θ 功率（4–8 Hz，和工作记忆/困倦常一起讨论），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+93,eeg_occipital_alpha_power_z_within_subject__mean,脑电,eeg_occipital_alpha_power_z_within_subject,枕区α 功率（8–13 Hz，放松、皮层抑制）,mean,任务内平均,z 分数,枕区（视觉皮层附近）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+94,eeg_occipital_alpha_power_z_within_subject__std,脑电,eeg_occipital_alpha_power_z_within_subject,枕区α 功率（8–13 Hz，放松、皮层抑制）,std,任务内波动,z 分数,枕区（视觉皮层附近）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+95,eeg_occipital_alpha_power_z_within_subject__median,脑电,eeg_occipital_alpha_power_z_within_subject,枕区α 功率（8–13 Hz，放松、皮层抑制）,median,任务内中位数,z 分数,枕区（视觉皮层附近）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+96,eeg_occipital_alpha_power_z_within_subject__slope,脑电,eeg_occipital_alpha_power_z_within_subject,枕区α 功率（8–13 Hz，放松、皮层抑制）,slope,任务过程走势,z 分数,枕区（视觉皮层附近）的α 功率（8–13 Hz，放松、皮层抑制），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+97,eeg_occipital_beta_power_z_within_subject__mean,脑电,eeg_occipital_beta_power_z_within_subject,枕区β 功率（13–30 Hz，警觉、认知投入）,mean,任务内平均,z 分数,枕区（视觉皮层附近）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+98,eeg_occipital_beta_power_z_within_subject__std,脑电,eeg_occipital_beta_power_z_within_subject,枕区β 功率（13–30 Hz，警觉、认知投入）,std,任务内波动,z 分数,枕区（视觉皮层附近）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+99,eeg_occipital_beta_power_z_within_subject__median,脑电,eeg_occipital_beta_power_z_within_subject,枕区β 功率（13–30 Hz，警觉、认知投入）,median,任务内中位数,z 分数,枕区（视觉皮层附近）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+100,eeg_occipital_beta_power_z_within_subject__slope,脑电,eeg_occipital_beta_power_z_within_subject,枕区β 功率（13–30 Hz，警觉、认知投入）,slope,任务过程走势,z 分数,枕区（视觉皮层附近）的β 功率（13–30 Hz，警觉、认知投入），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+101,eeg_occipital_gamma_power_z_within_subject__mean,脑电,eeg_occipital_gamma_power_z_within_subject,枕区γ 功率（30–45 Hz，更细的信息加工）,mean,任务内平均,z 分数,枕区（视觉皮层附近）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+102,eeg_occipital_gamma_power_z_within_subject__std,脑电,eeg_occipital_gamma_power_z_within_subject,枕区γ 功率（30–45 Hz，更细的信息加工）,std,任务内波动,z 分数,枕区（视觉皮层附近）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+103,eeg_occipital_gamma_power_z_within_subject__median,脑电,eeg_occipital_gamma_power_z_within_subject,枕区γ 功率（30–45 Hz，更细的信息加工）,median,任务内中位数,z 分数,枕区（视觉皮层附近）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+104,eeg_occipital_gamma_power_z_within_subject__slope,脑电,eeg_occipital_gamma_power_z_within_subject,枕区γ 功率（30–45 Hz，更细的信息加工）,slope,任务过程走势,z 分数,枕区（视觉皮层附近）的γ 功率（30–45 Hz，更细的信息加工），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+105,eeg_occipital_theta_alpha_z_within_subject__mean,脑电,eeg_occipital_theta_alpha_z_within_subject,枕区θ/α 比值（负荷相关常用比值）,mean,任务内平均,z 分数（比值）,枕区（视觉皮层附近）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+106,eeg_occipital_theta_alpha_z_within_subject__std,脑电,eeg_occipital_theta_alpha_z_within_subject,枕区θ/α 比值（负荷相关常用比值）,std,任务内波动,z 分数（比值）,枕区（视觉皮层附近）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+107,eeg_occipital_theta_alpha_z_within_subject__median,脑电,eeg_occipital_theta_alpha_z_within_subject,枕区θ/α 比值（负荷相关常用比值）,median,任务内中位数,z 分数（比值）,枕区（视觉皮层附近）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+108,eeg_occipital_theta_alpha_z_within_subject__slope,脑电,eeg_occipital_theta_alpha_z_within_subject,枕区θ/α 比值（负荷相关常用比值）,slope,任务过程走势,z 分数（比值）,枕区（视觉皮层附近）的θ/α 比值（负荷相关常用比值），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+109,eeg_occipital_beta_alpha_z_within_subject__mean,脑电,eeg_occipital_beta_alpha_z_within_subject,枕区β/α 比值（激活相对放松）,mean,任务内平均,z 分数（比值）,枕区（视觉皮层附近）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+110,eeg_occipital_beta_alpha_z_within_subject__std,脑电,eeg_occipital_beta_alpha_z_within_subject,枕区β/α 比值（激活相对放松）,std,任务内波动,z 分数（比值）,枕区（视觉皮层附近）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+111,eeg_occipital_beta_alpha_z_within_subject__median,脑电,eeg_occipital_beta_alpha_z_within_subject,枕区β/α 比值（激活相对放松）,median,任务内中位数,z 分数（比值）,枕区（视觉皮层附近）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+112,eeg_occipital_beta_alpha_z_within_subject__slope,脑电,eeg_occipital_beta_alpha_z_within_subject,枕区β/α 比值（激活相对放松）,slope,任务过程走势,z 分数（比值）,枕区（视觉皮层附近）的β/α 比值（激活相对放松），已按这个人自己的水平做过标准化。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+113,hr_mean__mean,心率,hr_mean,心率,mean,任务内平均,bpm,这个时间窗内心率的平均值。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+114,hr_mean__std,心率,hr_mean,心率,std,任务内波动,bpm,这个时间窗内心率的平均值。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+115,hr_mean__median,心率,hr_mean,心率,median,任务内中位数,bpm,这个时间窗内心率的平均值。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+116,hr_mean__slope,心率,hr_mean,心率,slope,任务过程走势,bpm,这个时间窗内心率的平均值。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+117,hr_std__mean,心率,hr_std,心率波动,mean,任务内平均,bpm,这个时间窗内心率的标准差。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+118,hr_std__std,心率,hr_std,心率波动,std,任务内波动,bpm,这个时间窗内心率的标准差。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+119,hr_std__median,心率,hr_std,心率波动,median,任务内中位数,bpm,这个时间窗内心率的标准差。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+120,hr_std__slope,心率,hr_std,心率波动,slope,任务过程走势,bpm,这个时间窗内心率的标准差。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+121,hr_min__mean,心率,hr_min,最低心率,mean,任务内平均,bpm,这个时间窗内最低心率。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+122,hr_min__std,心率,hr_min,最低心率,std,任务内波动,bpm,这个时间窗内最低心率。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+123,hr_min__median,心率,hr_min,最低心率,median,任务内中位数,bpm,这个时间窗内最低心率。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+124,hr_min__slope,心率,hr_min,最低心率,slope,任务过程走势,bpm,这个时间窗内最低心率。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+125,hr_max__mean,心率,hr_max,最高心率,mean,任务内平均,bpm,这个时间窗内最高心率。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+126,hr_max__std,心率,hr_max,最高心率,std,任务内波动,bpm,这个时间窗内最高心率。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+127,hr_max__median,心率,hr_max,最高心率,median,任务内中位数,bpm,这个时间窗内最高心率。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+128,hr_max__slope,心率,hr_max,最高心率,slope,任务过程走势,bpm,这个时间窗内最高心率。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+129,hr_slope_bpm_per_min__mean,心率,hr_slope_bpm_per_min,窗内心率走势,mean,任务内平均,bpm/分钟,这个 30 秒窗内心率随时间变快还是变慢。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+130,hr_slope_bpm_per_min__std,心率,hr_slope_bpm_per_min,窗内心率走势,std,任务内波动,bpm/分钟,这个 30 秒窗内心率随时间变快还是变慢。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+131,hr_slope_bpm_per_min__median,心率,hr_slope_bpm_per_min,窗内心率走势,median,任务内中位数,bpm/分钟,这个 30 秒窗内心率随时间变快还是变慢。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+132,hr_slope_bpm_per_min__slope,心率,hr_slope_bpm_per_min,窗内心率走势,slope,任务过程走势,bpm/分钟,这个 30 秒窗内心率随时间变快还是变慢。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+133,eye_pupil_filtered_mean__mean,眼动,eye_pupil_filtered_mean,瞳孔直径均值,mean,任务内平均,mm,Tobii 滤波后的瞳孔直径，窗内平均。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+134,eye_pupil_filtered_mean__std,眼动,eye_pupil_filtered_mean,瞳孔直径均值,std,任务内波动,mm,Tobii 滤波后的瞳孔直径，窗内平均。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+135,eye_pupil_filtered_mean__median,眼动,eye_pupil_filtered_mean,瞳孔直径均值,median,任务内中位数,mm,Tobii 滤波后的瞳孔直径，窗内平均。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+136,eye_pupil_filtered_mean__slope,眼动,eye_pupil_filtered_mean,瞳孔直径均值,slope,任务过程走势,mm,Tobii 滤波后的瞳孔直径，窗内平均。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+137,eye_pupil_filtered_std__mean,眼动,eye_pupil_filtered_std,瞳孔直径波动,mean,任务内平均,mm,窗内瞳孔直径标准差。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+138,eye_pupil_filtered_std__std,眼动,eye_pupil_filtered_std,瞳孔直径波动,std,任务内波动,mm,窗内瞳孔直径标准差。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+139,eye_pupil_filtered_std__median,眼动,eye_pupil_filtered_std,瞳孔直径波动,median,任务内中位数,mm,窗内瞳孔直径标准差。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+140,eye_pupil_filtered_std__slope,眼动,eye_pupil_filtered_std,瞳孔直径波动,slope,任务过程走势,mm,窗内瞳孔直径标准差。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+141,eye_valid_ratio__mean,眼动,eye_valid_ratio,双眼有效比例,mean,任务内平均,0–1,左右眼都有效的采样点占比。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+142,eye_valid_ratio__std,眼动,eye_valid_ratio,双眼有效比例,std,任务内波动,0–1,左右眼都有效的采样点占比。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+143,eye_valid_ratio__median,眼动,eye_valid_ratio,双眼有效比例,median,任务内中位数,0–1,左右眼都有效的采样点占比。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+144,eye_valid_ratio__slope,眼动,eye_valid_ratio,双眼有效比例,slope,任务过程走势,0–1,左右眼都有效的采样点占比。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+145,eye_fixation_ratio__mean,眼动,eye_fixation_ratio,注视时间占比,mean,任务内平均,0–1,眼动类型为 Fixation 的时间比例。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+146,eye_fixation_ratio__std,眼动,eye_fixation_ratio,注视时间占比,std,任务内波动,0–1,眼动类型为 Fixation 的时间比例。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+147,eye_fixation_ratio__median,眼动,eye_fixation_ratio,注视时间占比,median,任务内中位数,0–1,眼动类型为 Fixation 的时间比例。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+148,eye_fixation_ratio__slope,眼动,eye_fixation_ratio,注视时间占比,slope,任务过程走势,0–1,眼动类型为 Fixation 的时间比例。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+149,eye_saccade_ratio__mean,眼动,eye_saccade_ratio,扫视时间占比,mean,任务内平均,0–1,眼动类型为 Saccade 的时间比例。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+150,eye_saccade_ratio__std,眼动,eye_saccade_ratio,扫视时间占比,std,任务内波动,0–1,眼动类型为 Saccade 的时间比例。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+151,eye_saccade_ratio__median,眼动,eye_saccade_ratio,扫视时间占比,median,任务内中位数,0–1,眼动类型为 Saccade 的时间比例。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+152,eye_saccade_ratio__slope,眼动,eye_saccade_ratio,扫视时间占比,slope,任务过程走势,0–1,眼动类型为 Saccade 的时间比例。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+153,eye_eyes_not_found_ratio__mean,眼动,eye_eyes_not_found_ratio,找不到眼睛的比例,mean,任务内平均,0–1,眼动类型为 EyesNotFound 的时间比例（遮挡/眨眼/离屏）。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+154,eye_eyes_not_found_ratio__std,眼动,eye_eyes_not_found_ratio,找不到眼睛的比例,std,任务内波动,0–1,眼动类型为 EyesNotFound 的时间比例（遮挡/眨眼/离屏）。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+155,eye_eyes_not_found_ratio__median,眼动,eye_eyes_not_found_ratio,找不到眼睛的比例,median,任务内中位数,0–1,眼动类型为 EyesNotFound 的时间比例（遮挡/眨眼/离屏）。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+156,eye_eyes_not_found_ratio__slope,眼动,eye_eyes_not_found_ratio,找不到眼睛的比例,slope,任务过程走势,0–1,眼动类型为 EyesNotFound 的时间比例（遮挡/眨眼/离屏）。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+157,eye_aoi_interval_n__mean,眼动-AOI,eye_aoi_interval_n,AOI 区间条数,mean,任务内平均,条,这个窗里碰到了多少条兴趣区（AOI）注视区间。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+158,eye_aoi_interval_n__std,眼动-AOI,eye_aoi_interval_n,AOI 区间条数,std,任务内波动,条,这个窗里碰到了多少条兴趣区（AOI）注视区间。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+159,eye_aoi_interval_n__median,眼动-AOI,eye_aoi_interval_n,AOI 区间条数,median,任务内中位数,条,这个窗里碰到了多少条兴趣区（AOI）注视区间。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+160,eye_aoi_interval_n__slope,眼动-AOI,eye_aoi_interval_n,AOI 区间条数,slope,任务过程走势,条,这个窗里碰到了多少条兴趣区（AOI）注视区间。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+161,eye_aoi_unique_hit_n__mean,眼动-AOI,eye_aoi_unique_hit_n,点到几个不同 AOI,mean,任务内平均,个,这个窗里真正有注视的不同界面区域个数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+162,eye_aoi_unique_hit_n__std,眼动-AOI,eye_aoi_unique_hit_n,点到几个不同 AOI,std,任务内波动,个,这个窗里真正有注视的不同界面区域个数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+163,eye_aoi_unique_hit_n__median,眼动-AOI,eye_aoi_unique_hit_n,点到几个不同 AOI,median,任务内中位数,个,这个窗里真正有注视的不同界面区域个数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+164,eye_aoi_unique_hit_n__slope,眼动-AOI,eye_aoi_unique_hit_n,点到几个不同 AOI,slope,任务过程走势,个,这个窗里真正有注视的不同界面区域个数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+165,eye_aoi_total_fix_ms__mean,眼动-AOI,eye_aoi_total_fix_ms,AOI 上总注视时长,mean,任务内平均,毫秒,落在各兴趣区上的注视时间合计。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+166,eye_aoi_total_fix_ms__std,眼动-AOI,eye_aoi_total_fix_ms,AOI 上总注视时长,std,任务内波动,毫秒,落在各兴趣区上的注视时间合计。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+167,eye_aoi_total_fix_ms__median,眼动-AOI,eye_aoi_total_fix_ms,AOI 上总注视时长,median,任务内中位数,毫秒,落在各兴趣区上的注视时间合计。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+168,eye_aoi_total_fix_ms__slope,眼动-AOI,eye_aoi_total_fix_ms,AOI 上总注视时长,slope,任务过程走势,毫秒,落在各兴趣区上的注视时间合计。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+169,eye_aoi_fixation_n__mean,眼动-AOI,eye_aoi_fixation_n,AOI 注视次数,mean,任务内平均,次,落在兴趣区上的注视次数（按重叠加权）。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+170,eye_aoi_fixation_n__std,眼动-AOI,eye_aoi_fixation_n,AOI 注视次数,std,任务内波动,次,落在兴趣区上的注视次数（按重叠加权）。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+171,eye_aoi_fixation_n__median,眼动-AOI,eye_aoi_fixation_n,AOI 注视次数,median,任务内中位数,次,落在兴趣区上的注视次数（按重叠加权）。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+172,eye_aoi_fixation_n__slope,眼动-AOI,eye_aoi_fixation_n,AOI 注视次数,slope,任务过程走势,次,落在兴趣区上的注视次数（按重叠加权）。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+173,eye_aoi_fixation_density_per_sec__mean,眼动-AOI,eye_aoi_fixation_density_per_sec,每秒 AOI 注视次数,mean,任务内平均,次/秒,窗内 AOI 注视有多密。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+174,eye_aoi_fixation_density_per_sec__std,眼动-AOI,eye_aoi_fixation_density_per_sec,每秒 AOI 注视次数,std,任务内波动,次/秒,窗内 AOI 注视有多密。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+175,eye_aoi_fixation_density_per_sec__median,眼动-AOI,eye_aoi_fixation_density_per_sec,每秒 AOI 注视次数,median,任务内中位数,次/秒,窗内 AOI 注视有多密。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+176,eye_aoi_fixation_density_per_sec__slope,眼动-AOI,eye_aoi_fixation_density_per_sec,每秒 AOI 注视次数,slope,任务过程走势,次/秒,窗内 AOI 注视有多密。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+177,eye_aoi_coverage_ratio__mean,眼动-AOI,eye_aoi_coverage_ratio,AOI 注视覆盖比例,mean,任务内平均,0–1,兴趣区注视总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+178,eye_aoi_coverage_ratio__std,眼动-AOI,eye_aoi_coverage_ratio,AOI 注视覆盖比例,std,任务内波动,0–1,兴趣区注视总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+179,eye_aoi_coverage_ratio__median,眼动-AOI,eye_aoi_coverage_ratio,AOI 注视覆盖比例,median,任务内中位数,0–1,兴趣区注视总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+180,eye_aoi_coverage_ratio__slope,眼动-AOI,eye_aoi_coverage_ratio,AOI 注视覆盖比例,slope,任务过程走势,0–1,兴趣区注视总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+181,eye_aoi_max_share__mean,眼动-AOI,eye_aoi_max_share,最主要 AOI 占比,mean,任务内平均,0–1,注视时间最多的那一个区域占全部 AOI 注视的比例；越大说明看得越集中。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+182,eye_aoi_max_share__std,眼动-AOI,eye_aoi_max_share,最主要 AOI 占比,std,任务内波动,0–1,注视时间最多的那一个区域占全部 AOI 注视的比例；越大说明看得越集中。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+183,eye_aoi_max_share__median,眼动-AOI,eye_aoi_max_share,最主要 AOI 占比,median,任务内中位数,0–1,注视时间最多的那一个区域占全部 AOI 注视的比例；越大说明看得越集中。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+184,eye_aoi_max_share__slope,眼动-AOI,eye_aoi_max_share,最主要 AOI 占比,slope,任务过程走势,0–1,注视时间最多的那一个区域占全部 AOI 注视的比例；越大说明看得越集中。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+185,eye_aoi_entropy__mean,眼动-AOI,eye_aoi_entropy,AOI 注视分散程度,mean,任务内平均,无量纲,各兴趣区注视份额的熵；越大说明在界面上看得越散。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+186,eye_aoi_entropy__std,眼动-AOI,eye_aoi_entropy,AOI 注视分散程度,std,任务内波动,无量纲,各兴趣区注视份额的熵；越大说明在界面上看得越散。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+187,eye_aoi_entropy__median,眼动-AOI,eye_aoi_entropy,AOI 注视分散程度,median,任务内中位数,无量纲,各兴趣区注视份额的熵；越大说明在界面上看得越散。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+188,eye_aoi_entropy__slope,眼动-AOI,eye_aoi_entropy,AOI 注视分散程度,slope,任务过程走势,无量纲,各兴趣区注视份额的熵；越大说明在界面上看得越散。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+189,eye_aoi_pupil_weighted_mean__mean,眼动-AOI,eye_aoi_pupil_weighted_mean,AOI 上的加权瞳孔,mean,任务内平均,mm,只在看兴趣区时，按注视时长加权的瞳孔直径。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+190,eye_aoi_pupil_weighted_mean__std,眼动-AOI,eye_aoi_pupil_weighted_mean,AOI 上的加权瞳孔,std,任务内波动,mm,只在看兴趣区时，按注视时长加权的瞳孔直径。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+191,eye_aoi_pupil_weighted_mean__median,眼动-AOI,eye_aoi_pupil_weighted_mean,AOI 上的加权瞳孔,median,任务内中位数,mm,只在看兴趣区时，按注视时长加权的瞳孔直径。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+192,eye_aoi_pupil_weighted_mean__slope,眼动-AOI,eye_aoi_pupil_weighted_mean,AOI 上的加权瞳孔,slope,任务过程走势,mm,只在看兴趣区时，按注视时长加权的瞳孔直径。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+193,blink_count__mean,眨眼,blink_count,疑似眨眼次数,mean,任务内平均,次,窗内 EyesNotFound 段、时长 50–500 ms，算一次疑似眨眼。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+194,blink_count__std,眨眼,blink_count,疑似眨眼次数,std,任务内波动,次,窗内 EyesNotFound 段、时长 50–500 ms，算一次疑似眨眼。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+195,blink_count__median,眨眼,blink_count,疑似眨眼次数,median,任务内中位数,次,窗内 EyesNotFound 段、时长 50–500 ms，算一次疑似眨眼。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+196,blink_count__slope,眨眼,blink_count,疑似眨眼次数,slope,任务过程走势,次,窗内 EyesNotFound 段、时长 50–500 ms，算一次疑似眨眼。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+197,blink_rate_per_min__mean,眨眼,blink_rate_per_min,眨眼频率,mean,任务内平均,次/分钟,按窗口时长折成每分钟次数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+198,blink_rate_per_min__std,眨眼,blink_rate_per_min,眨眼频率,std,任务内波动,次/分钟,按窗口时长折成每分钟次数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+199,blink_rate_per_min__median,眨眼,blink_rate_per_min,眨眼频率,median,任务内中位数,次/分钟,按窗口时长折成每分钟次数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+200,blink_rate_per_min__slope,眨眼,blink_rate_per_min,眨眼频率,slope,任务过程走势,次/分钟,按窗口时长折成每分钟次数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+201,blink_duration_mean_ms__mean,眨眼,blink_duration_mean_ms,眨眼平均时长,mean,任务内平均,毫秒,疑似眨眼段的平均持续时间。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+202,blink_duration_mean_ms__std,眨眼,blink_duration_mean_ms,眨眼平均时长,std,任务内波动,毫秒,疑似眨眼段的平均持续时间。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+203,blink_duration_mean_ms__median,眨眼,blink_duration_mean_ms,眨眼平均时长,median,任务内中位数,毫秒,疑似眨眼段的平均持续时间。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+204,blink_duration_mean_ms__slope,眨眼,blink_duration_mean_ms,眨眼平均时长,slope,任务过程走势,毫秒,疑似眨眼段的平均持续时间。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+205,blink_duration_std_ms__mean,眨眼,blink_duration_std_ms,眨眼时长波动,mean,任务内平均,毫秒,疑似眨眼段时长的标准差。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+206,blink_duration_std_ms__std,眨眼,blink_duration_std_ms,眨眼时长波动,std,任务内波动,毫秒,疑似眨眼段时长的标准差。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+207,blink_duration_std_ms__median,眨眼,blink_duration_std_ms,眨眼时长波动,median,任务内中位数,毫秒,疑似眨眼段时长的标准差。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+208,blink_duration_std_ms__slope,眨眼,blink_duration_std_ms,眨眼时长波动,slope,任务过程走势,毫秒,疑似眨眼段时长的标准差。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+209,blink_duration_median_ms__mean,眨眼,blink_duration_median_ms,眨眼时长中位数,mean,任务内平均,毫秒,疑似眨眼段时长的中位数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+210,blink_duration_median_ms__std,眨眼,blink_duration_median_ms,眨眼时长中位数,std,任务内波动,毫秒,疑似眨眼段时长的中位数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+211,blink_duration_median_ms__median,眨眼,blink_duration_median_ms,眨眼时长中位数,median,任务内中位数,毫秒,疑似眨眼段时长的中位数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+212,blink_duration_median_ms__slope,眨眼,blink_duration_median_ms,眨眼时长中位数,slope,任务过程走势,毫秒,疑似眨眼段时长的中位数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+213,blink_total_duration_ratio__mean,眨眼,blink_total_duration_ratio,眨眼总时长占比,mean,任务内平均,0–1,疑似眨眼总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+214,blink_total_duration_ratio__std,眨眼,blink_total_duration_ratio,眨眼总时长占比,std,任务内波动,0–1,疑似眨眼总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+215,blink_total_duration_ratio__median,眨眼,blink_total_duration_ratio,眨眼总时长占比,median,任务内中位数,0–1,疑似眨眼总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+216,blink_total_duration_ratio__slope,眨眼,blink_total_duration_ratio,眨眼总时长占比,slope,任务过程走势,0–1,疑似眨眼总时长 / 窗口时长。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+217,log_action_count_win__mean,操作日志,log_action_count_win,操作次数,mean,任务内平均,次,这个 30 秒窗里操作日志条数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+218,log_action_count_win__std,操作日志,log_action_count_win,操作次数,std,任务内波动,次,这个 30 秒窗里操作日志条数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+219,log_action_count_win__median,操作日志,log_action_count_win,操作次数,median,任务内中位数,次,这个 30 秒窗里操作日志条数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+220,log_action_count_win__slope,操作日志,log_action_count_win,操作次数,slope,任务过程走势,次,这个 30 秒窗里操作日志条数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+221,log_unique_device_count_win__mean,操作日志,log_unique_device_count_win,碰到的设备种数,mean,任务内平均,个,窗内操作涉及多少个不同设备。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+222,log_unique_device_count_win__std,操作日志,log_unique_device_count_win,碰到的设备种数,std,任务内波动,个,窗内操作涉及多少个不同设备。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+223,log_unique_device_count_win__median,操作日志,log_unique_device_count_win,碰到的设备种数,median,任务内中位数,个,窗内操作涉及多少个不同设备。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+224,log_unique_device_count_win__slope,操作日志,log_unique_device_count_win,碰到的设备种数,slope,任务过程走势,个,窗内操作涉及多少个不同设备。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+225,log_action_density_win__mean,操作日志,log_action_density_win,操作密度,mean,任务内平均,次/秒,窗内操作次数 / 窗口秒数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+226,log_action_density_win__std,操作日志,log_action_density_win,操作密度,std,任务内波动,次/秒,窗内操作次数 / 窗口秒数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+227,log_action_density_win__median,操作日志,log_action_density_win,操作密度,median,任务内中位数,次/秒,窗内操作次数 / 窗口秒数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+228,log_action_density_win__slope,操作日志,log_action_density_win,操作密度,slope,任务过程走势,次/秒,窗内操作次数 / 窗口秒数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+229,log_correct_action_count_win__mean,操作日志,log_correct_action_count_win,正确操作次数,mean,任务内平均,次,标注为 correct 的条数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+230,log_correct_action_count_win__std,操作日志,log_correct_action_count_win,正确操作次数,std,任务内波动,次,标注为 correct 的条数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+231,log_correct_action_count_win__median,操作日志,log_correct_action_count_win,正确操作次数,median,任务内中位数,次,标注为 correct 的条数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+232,log_correct_action_count_win__slope,操作日志,log_correct_action_count_win,正确操作次数,slope,任务过程走势,次,标注为 correct 的条数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+233,log_error_action_count_win__mean,操作日志,log_error_action_count_win,错误操作次数,mean,任务内平均,次,标注为 error（做错）的条数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+234,log_error_action_count_win__std,操作日志,log_error_action_count_win,错误操作次数,std,任务内波动,次,标注为 error（做错）的条数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+235,log_error_action_count_win__median,操作日志,log_error_action_count_win,错误操作次数,median,任务内中位数,次,标注为 error（做错）的条数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+236,log_error_action_count_win__slope,操作日志,log_error_action_count_win,错误操作次数,slope,任务过程走势,次,标注为 error（做错）的条数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+237,log_duplicate_action_count_win__mean,操作日志,log_duplicate_action_count_win,重复操作次数,mean,任务内平均,次,标注为 duplicate（多做/重复）的条数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+238,log_duplicate_action_count_win__std,操作日志,log_duplicate_action_count_win,重复操作次数,std,任务内波动,次,标注为 duplicate（多做/重复）的条数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+239,log_duplicate_action_count_win__median,操作日志,log_duplicate_action_count_win,重复操作次数,median,任务内中位数,次,标注为 duplicate（多做/重复）的条数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+240,log_duplicate_action_count_win__slope,操作日志,log_duplicate_action_count_win,重复操作次数,slope,任务过程走势,次,标注为 duplicate（多做/重复）的条数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+241,log_extra_action_count_win__mean,操作日志,log_extra_action_count_win,多余操作次数,mean,任务内平均,次,标注为 extra 的条数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+242,log_extra_action_count_win__std,操作日志,log_extra_action_count_win,多余操作次数,std,任务内波动,次,标注为 extra 的条数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+243,log_extra_action_count_win__median,操作日志,log_extra_action_count_win,多余操作次数,median,任务内中位数,次,标注为 extra 的条数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+244,log_extra_action_count_win__slope,操作日志,log_extra_action_count_win,多余操作次数,slope,任务过程走势,次,标注为 extra 的条数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+245,log_disallowed_action_count_win__mean,操作日志,log_disallowed_action_count_win,不合规操作次数,mean,任务内平均,次,error + duplicate + extra 合计。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+246,log_disallowed_action_count_win__std,操作日志,log_disallowed_action_count_win,不合规操作次数,std,任务内波动,次,error + duplicate + extra 合计。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+247,log_disallowed_action_count_win__median,操作日志,log_disallowed_action_count_win,不合规操作次数,median,任务内中位数,次,error + duplicate + extra 合计。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+248,log_disallowed_action_count_win__slope,操作日志,log_disallowed_action_count_win,不合规操作次数,slope,任务过程走势,次,error + duplicate + extra 合计。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+249,log_error_rate_win__mean,操作日志,log_error_rate_win,不合规操作比例,mean,任务内平均,0–1,不合规次数 / 本窗操作次数（列名带 error，实际是三类不合规合计）。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+250,log_error_rate_win__std,操作日志,log_error_rate_win,不合规操作比例,std,任务内波动,0–1,不合规次数 / 本窗操作次数（列名带 error，实际是三类不合规合计）。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+251,log_error_rate_win__median,操作日志,log_error_rate_win,不合规操作比例,median,任务内中位数,0–1,不合规次数 / 本窗操作次数（列名带 error，实际是三类不合规合计）。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+252,log_error_rate_win__slope,操作日志,log_error_rate_win,不合规操作比例,slope,任务过程走势,0–1,不合规次数 / 本窗操作次数（列名带 error，实际是三类不合规合计）。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+253,log_duplicate_rate_win__mean,操作日志,log_duplicate_rate_win,重复操作比例,mean,任务内平均,0–1,重复次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+254,log_duplicate_rate_win__std,操作日志,log_duplicate_rate_win,重复操作比例,std,任务内波动,0–1,重复次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+255,log_duplicate_rate_win__median,操作日志,log_duplicate_rate_win,重复操作比例,median,任务内中位数,0–1,重复次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+256,log_duplicate_rate_win__slope,操作日志,log_duplicate_rate_win,重复操作比例,slope,任务过程走势,0–1,重复次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+257,log_extra_rate_win__mean,操作日志,log_extra_rate_win,多余操作比例,mean,任务内平均,0–1,多余次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+258,log_extra_rate_win__std,操作日志,log_extra_rate_win,多余操作比例,std,任务内波动,0–1,多余次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+259,log_extra_rate_win__median,操作日志,log_extra_rate_win,多余操作比例,median,任务内中位数,0–1,多余次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+260,log_extra_rate_win__slope,操作日志,log_extra_rate_win,多余操作比例,slope,任务过程走势,0–1,多余次数 / 本窗操作次数。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
+261,log_unique_step_count_win__mean,操作日志,log_unique_step_count_win,碰到的步骤种数,mean,任务内平均,个,窗内操作对应多少个不同规程步骤。再在一次任务的所有时间窗上取「任务内平均」：这次任务各时间窗的平均水平。
+262,log_unique_step_count_win__std,操作日志,log_unique_step_count_win,碰到的步骤种数,std,任务内波动,个,窗内操作对应多少个不同规程步骤。再在一次任务的所有时间窗上取「任务内波动」：这次任务各时间窗之间差多大；越大说明过程越不稳。
+263,log_unique_step_count_win__median,操作日志,log_unique_step_count_win,碰到的步骤种数,median,任务内中位数,个,窗内操作对应多少个不同规程步骤。再在一次任务的所有时间窗上取「任务内中位数」：这次任务各时间窗的中间值，不太受极端窗影响。
+264,log_unique_step_count_win__slope,操作日志,log_unique_step_count_win,碰到的步骤种数,slope,任务过程走势,个,窗内操作对应多少个不同规程步骤。再在一次任务的所有时间窗上取「任务过程走势」：按窗口先后做直线斜率：>0 越往后越大，<0 越往后越小。
