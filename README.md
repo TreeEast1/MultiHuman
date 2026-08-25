@@ -43,6 +43,8 @@
 
 明细：`工作目录/03_建模/s_score_from_nasa84/output_from_xgb_nasa/s_from_xgb_nasa.csv`（`S_xgb` 是 0.7/0.3）。
 
+从原始数据到训练评测的完整流程（含算法配置）：[S预测流程.md](工作目录/03_建模/s_score_from_nasa84/S预测流程.md)。
+
 ```bash
 cd 工作目录/03_建模/s_score_from_nasa84
 uv run --with xgboost --with pandas --with numpy --with scikit-learn python compute_s_from_xgb_nasa.py
