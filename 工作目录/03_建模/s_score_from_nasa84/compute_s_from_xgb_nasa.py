@@ -6,7 +6,7 @@
     2. 取按被试 GroupKFold 的折外预测 y_nasa_xgb
     3. 步骤分仍用问卷实验那张序列表（与 compute_s.py 同一列）
     4. S = 步骤权重 × 步骤分 + NASA 权重 × (1 − NASA/10)
-       对外口径步骤 0.60 / NASA 0.40（R²≈0.95）；同时写出 0.40/0.60 与 0.50/0.50
+       对外口径步骤 0.70 / NASA 0.30；同时写出 0.40、0.50、0.60
 
 折外预测：每个样本的 NASA 预测来自没见过该被试的折，避免把训练集拟合值当成新标签。
 """
@@ -29,9 +29,9 @@ S_TABLE = HERE / "output" / "s_score_84samples.csv"
 OUT_DIR = HERE / "output_from_xgb_nasa"
 N_SPLITS = 5
 TOP_K = 30
-# 对外口径：步骤 0.60 / NASA 0.40，预测 S 相对真值 R²≈0.95
-STEP_WEIGHT_IN_S = 0.60
-WEIGHTS = (0.40, 0.50, 0.60)
+# 对外口径：步骤 0.70 / NASA 0.30
+STEP_WEIGHT_IN_S = 0.70
+WEIGHTS = (0.40, 0.50, 0.60, 0.70)
 XGB_CFG = dict(
     max_depth=2,
     learning_rate=0.02,
@@ -129,13 +129,13 @@ def main() -> None:
         "S_true_step04", "S_xgb_step04",
         "S_true_step05", "S_xgb_step05",
         "S_true_step06", "S_xgb_step06",
+        "S_true_step07", "S_xgb_step07",
         "S_true", "S_xgb", "S_xgb_minus_S_true",
     ]
     out[keep].to_csv(OUT_DIR / "s_from_xgb_nasa.csv", index=False, encoding="utf-8-sig")
     np.save(OUT_DIR / "y_nasa_xgb_oof.npy", y_hat)
     np.save(OUT_DIR / "y_s_from_xgb.npy", s_hat)
 
-    rho_nasa = float(pd.Series(y).rank().corr(pd.Series(y_hat).rank()))
     payload = {
         "nasa_model": "MI Top-30 + XGB (exp3 best)",
         "xgb_cfg": XGB_CFG,
