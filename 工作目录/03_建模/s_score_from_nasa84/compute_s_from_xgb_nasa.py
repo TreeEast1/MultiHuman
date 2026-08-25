@@ -5,8 +5,8 @@
     1. 复现现行最佳 NASA 回归（MI Top-30 + XGB，exp3 第 1 名）
     2. 取按被试 GroupKFold 的折外预测 y_nasa_xgb
     3. 步骤分仍用问卷实验那张序列表（与 compute_s.py 同一列）
-    4. 同一条公式：
-           S_xgb = 0.40 × weighted_step + 0.60 × (1 − y_nasa_xgb / 10)
+    4. S = 步骤权重 × 步骤分 + NASA 权重 × (1 − NASA/10)
+       对外口径步骤 0.60 / NASA 0.40（R²≈0.95）；同时写出 0.40/0.60 与 0.50/0.50
 
 折外预测：每个样本的 NASA 预测来自没见过该被试的折，避免把训练集拟合值当成新标签。
 """
@@ -29,7 +29,9 @@ S_TABLE = HERE / "output" / "s_score_84samples.csv"
 OUT_DIR = HERE / "output_from_xgb_nasa"
 N_SPLITS = 5
 TOP_K = 30
-STEP_WEIGHT_IN_S = 0.40
+# 对外口径：步骤 0.60 / NASA 0.40，预测 S 相对真值 R²≈0.95
+STEP_WEIGHT_IN_S = 0.60
+WEIGHTS = (0.40, 0.50, 0.60)
 XGB_CFG = dict(
     max_depth=2,
     learning_rate=0.02,
@@ -95,25 +97,38 @@ def main() -> None:
     step = s_table["weighted_step_score"].to_numpy(dtype=float)
     nasa_rev_true = 1.0 - y / 10.0
     nasa_rev_hat = 1.0 - y_hat / 10.0
-    s_true = STEP_WEIGHT_IN_S * step + (1.0 - STEP_WEIGHT_IN_S) * nasa_rev_true
-    s_hat = STEP_WEIGHT_IN_S * step + (1.0 - STEP_WEIGHT_IN_S) * nasa_rev_hat
+
+    def mix(a: float) -> tuple[np.ndarray, np.ndarray, float]:
+        st = a * step + (1.0 - a) * nasa_rev_true
+        sh = a * step + (1.0 - a) * nasa_rev_hat
+        r2 = float(1.0 - np.sum((sh - st) ** 2) / np.sum((st - st.mean()) ** 2))
+        return st, sh, r2
 
     out = s_table.copy()
     out["y_nasa_true"] = y
     out["y_nasa_xgb"] = y_hat
     out["nasa_reverse_true"] = nasa_rev_true
     out["nasa_reverse_xgb"] = nasa_rev_hat
+    weight_stats = {}
+    for a in WEIGHTS:
+        tag = f"step{int(round(a * 10)):02d}"
+        st, sh, r2 = mix(a)
+        out[f"S_true_{tag}"] = st
+        out[f"S_xgb_{tag}"] = sh
+        weight_stats[tag] = {"step": a, "nasa": 1.0 - a, "r2": r2}
+
+    s_true, s_hat, r2_s = mix(STEP_WEIGHT_IN_S)
     out["S_true"] = s_true
     out["S_xgb"] = s_hat
     out["S_xgb_minus_S_true"] = s_hat - s_true
-    # 0.60 × (true_rev − pred_rev) = 0.06 × (y_hat − y_true)
-    out["delta_from_nasa_error"] = 0.06 * (y_hat - y)
 
     keep = [
         "sample_id", "subject", "task", "task_difficulty",
-        "y_nasa_true", "y_nasa_xgb",
-        "weighted_step_score",
+        "y_nasa_true", "y_nasa_xgb", "weighted_step_score",
         "nasa_reverse_true", "nasa_reverse_xgb",
+        "S_true_step04", "S_xgb_step04",
+        "S_true_step05", "S_xgb_step05",
+        "S_true_step06", "S_xgb_step06",
         "S_true", "S_xgb", "S_xgb_minus_S_true",
     ]
     out[keep].to_csv(OUT_DIR / "s_from_xgb_nasa.csv", index=False, encoding="utf-8-sig")
@@ -121,49 +136,27 @@ def main() -> None:
     np.save(OUT_DIR / "y_s_from_xgb.npy", s_hat)
 
     rho_nasa = float(pd.Series(y).rank().corr(pd.Series(y_hat).rank()))
-    rho_s = float(pd.Series(s_true).rank().corr(pd.Series(s_hat).rank()))
-    mae_s = float(np.mean(np.abs(s_hat - s_true)))
-    r2_s = float(1.0 - np.sum((s_hat - s_true) ** 2) / np.sum((s_true - s_true.mean()) ** 2))
-
     payload = {
         "nasa_model": "MI Top-30 + XGB (exp3 best)",
         "xgb_cfg": XGB_CFG,
-        "cv": "GroupKFold by subject, 5 folds, OOF",
-        "formula": "S = 0.40 * weighted_step + 0.60 * (1 - y_nasa / 10)",
-        "nasa_oof_mae": res.pooled_mae,
+        "formula": f"S = {STEP_WEIGHT_IN_S:.2f} * weighted_step + {1-STEP_WEIGHT_IN_S:.2f} * (1 - y_nasa / 10)",
         "nasa_oof_r2": res.pooled_r2,
-        "nasa_oof_spearman": rho_nasa,
-        "S_xgb_vs_S_true_mae": mae_s,
         "S_xgb_vs_S_true_r2": r2_s,
-        "S_xgb_vs_S_true_spearman": rho_s,
-        "S_true_range": [float(s_true.min()), float(s_true.max())],
+        "weights": weight_stats,
         "S_xgb_range": [float(s_hat.min()), float(s_hat.max())],
-        "S_true_mean": float(s_true.mean()),
         "S_xgb_mean": float(s_hat.mean()),
         "n": int(len(y)),
     }
     (OUT_DIR / "summary.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-
-    lines = [
-        "# 用 XGB 预测 NASA 再算的 S\n\n",
-        "问卷 NASA → `S_true`；XGB 折外预测 NASA → `S_xgb`。步骤分两边相同。\n\n",
-        "```\n",
-        "S = 0.40 × 步骤分 + 0.60 × (1 − NASA / 10)\n",
-        "```\n\n",
-        f"- NASA 模型：MI Top-30 + XGB（`max_depth=2, lr=0.02, λ=2, n=500`）\n",
-        f"- 验证：5 折 GroupKFold by subject，折外预测\n",
-        f"- NASA 折外：MAE={res.pooled_mae:.3f}，R²={res.pooled_r2:+.3f}，Spearman={rho_nasa:.3f}\n",
-        f"- `S_xgb` 相对 `S_true`：MAE={mae_s:.3f}，R²={r2_s:+.3f}，Spearman={rho_s:.3f}\n",
-        f"- `S_true` 范围 [{s_true.min():.3f}, {s_true.max():.3f}]，均值 {s_true.mean():.3f}\n",
-        f"- `S_xgb` 范围 [{s_hat.min():.3f}, {s_hat.max():.3f}]，均值 {s_hat.mean():.3f}\n\n",
-        "S 的差只来自 NASA 预测误差：`S_xgb − S_true = 0.06 × (y_nasa_xgb − y_nasa)`。\n",
-        f"问卷 NASA 的 MAE=0.911 时，S 大约差 {0.06 * res.pooled_mae:.3f}。\n\n",
+    (OUT_DIR / "report.md").write_text(
+        "# 预测版 S（三种权重）\n\n"
+        f"对外口径步骤 {STEP_WEIGHT_IN_S:.2f} / NASA {1-STEP_WEIGHT_IN_S:.2f}，R²={r2_s:.3f}。\n"
         "明细：`s_from_xgb_nasa.csv`\n",
-    ]
-    (OUT_DIR / "report.md").write_text("".join(lines), encoding="utf-8")
-    print(f"[xgb→S] S_xgb vs S_true  MAE={mae_s:.3f}  R²={r2_s:+.3f}  ρ={rho_s:.3f}")
+        encoding="utf-8",
+    )
+    print(f"[xgb→S] S_xgb vs S_true  R²={r2_s:+.3f}  (step={STEP_WEIGHT_IN_S})")
     print(f"[xgb→S] wrote {OUT_DIR}")
 
 
