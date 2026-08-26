@@ -1,0 +1,307 @@
+{
+  "pooled": {
+    "nasa_r2": 0.5531883690291397,
+    "nasa_mae": 0.8251719137978932,
+    "s_r2": 0.9785781611097316,
+    "s_mae": 0.024755157413936798
+  },
+  "y_s": {
+    "min": 0.18,
+    "max": 0.96,
+    "mean": 0.6154940476190477,
+    "std": 0.21666695352000023
+  },
+  "y_nasa": {
+    "min": 1.3333333333333333,
+    "max": 7.8,
+    "mean": 4.97063492063492
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "people": [
+        2,
+        7,
+        12,
+        16,
+        23
+      ],
+      "n": 17,
+      "nasa_r2": 0.7084942613455492,
+      "nasa_mae": 0.626728276645436,
+      "s_r2": 0.9710567696057686,
+      "s_mae": 0.0188018482993631,
+      "features": {
+        "眼动": [
+          "eye_aoi_unique_hit_n__std",
+          "eye_aoi_interval_n__mean",
+          "eye_aoi_coverage_ratio__median",
+          "eye_aoi_interval_n__std",
+          "eye_aoi_max_share__median",
+          "eye_aoi_coverage_ratio__slope"
+        ],
+        "脑电": [
+          "eeg_frontal_alpha_power_z_within_subject__median",
+          "eeg_parietal_theta_alpha_z_within_subject__std",
+          "eeg_frontal_gamma_power_z_within_subject__std",
+          "eeg_central_alpha_power_z_within_subject__mean",
+          "eeg_parietal_theta_power_z_within_subject__median"
+        ],
+        "心率": [
+          "hr_max__slope",
+          "hr_std__slope",
+          "hr_std__std",
+          "hr_mean__slope"
+        ],
+        "行为": [
+          "log_correct_action_count_win__std",
+          "log_unique_step_count_win__mean",
+          "log_extra_action_count_win__slope",
+          "log_action_density_win__median",
+          "log_action_count_win__mean",
+          "log_action_density_win__mean",
+          "log_action_count_win__median",
+          "log_extra_rate_win__slope",
+          "log_correct_action_count_win__mean",
+          "log_unique_device_count_win__mean",
+          "log_extra_rate_win__mean",
+          "log_unique_device_count_win__slope"
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "people": [
+        1,
+        6,
+        11,
+        17,
+        22,
+        26
+      ],
+      "n": 19,
+      "nasa_r2": 0.5787026581623078,
+      "nasa_mae": 0.7492724795090525,
+      "s_r2": 0.9808928219569482,
+      "s_mae": 0.022478174385271582,
+      "features": {
+        "眼动": [
+          "eye_aoi_interval_n__std",
+          "eye_aoi_interval_n__mean",
+          "eye_aoi_interval_n__median",
+          "eye_aoi_fixation_density_per_sec__mean",
+          "eye_pupil_filtered_std__mean",
+          "eye_aoi_unique_hit_n__std"
+        ],
+        "脑电": [
+          "eeg_parietal_gamma_power_z_within_subject__std",
+          "eeg_frontal_theta_power_z_within_subject__mean",
+          "eeg_occipital_gamma_power_z_within_subject__mean",
+          "eeg_central_beta_alpha_z_within_subject__median",
+          "eeg_frontal_theta_alpha_z_within_subject__std"
+        ],
+        "心率": [
+          "hr_std__slope",
+          "hr_max__slope",
+          "hr_std__std",
+          "hr_slope_bpm_per_min__slope"
+        ],
+        "行为": [
+          "log_extra_rate_win__mean",
+          "log_action_density_win__median",
+          "log_action_count_win__median",
+          "log_unique_device_count_win__mean",
+          "log_unique_device_count_win__slope",
+          "log_unique_step_count_win__std",
+          "log_error_action_count_win__std",
+          "log_error_action_count_win__slope",
+          "log_extra_rate_win__std",
+          "log_action_count_win__slope",
+          "log_action_density_win__slope",
+          "log_action_count_win__mean"
+        ]
+      }
+    },
+    {
+      "fold": 3,
+      "people": [
+        5,
+        10,
+        15,
+        21,
+        25
+      ],
+      "n": 16,
+      "nasa_r2": 0.3672159730350816,
+      "nasa_mae": 1.0946059048175811,
+      "s_r2": 0.9705114325217046,
+      "s_mae": 0.032838177144527435,
+      "features": {
+        "眼动": [
+          "eye_aoi_interval_n__median",
+          "eye_aoi_interval_n__mean",
+          "blink_count__mean",
+          "blink_rate_per_min__mean",
+          "eye_aoi_unique_hit_n__std",
+          "eye_aoi_interval_n__std"
+        ],
+        "脑电": [
+          "eeg_occipital_gamma_power_z_within_subject__mean",
+          "eeg_parietal_theta_power_z_within_subject__slope",
+          "eeg_parietal_gamma_power_z_within_subject__std",
+          "eeg_central_theta_power_z_within_subject__slope",
+          "eeg_parietal_theta_power_z_within_subject__mean"
+        ],
+        "心率": [
+          "hr_std__slope",
+          "hr_slope_bpm_per_min__slope",
+          "hr_mean__slope",
+          "hr_mean__median"
+        ],
+        "行为": [
+          "log_correct_action_count_win__std",
+          "log_action_count_win__slope",
+          "log_action_density_win__slope",
+          "log_action_count_win__mean",
+          "log_action_density_win__mean",
+          "log_unique_device_count_win__slope",
+          "log_unique_step_count_win__std",
+          "log_action_density_win__median",
+          "log_action_count_win__median",
+          "log_correct_action_count_win__mean",
+          "log_extra_rate_win__mean",
+          "log_unique_device_count_win__mean"
+        ]
+      }
+    },
+    {
+      "fold": 4,
+      "people": [
+        4,
+        9,
+        14,
+        20,
+        24
+      ],
+      "n": 16,
+      "nasa_r2": 0.5505171894928548,
+      "nasa_mae": 0.9777658631404242,
+      "s_r2": 0.9844570298525827,
+      "s_mae": 0.02933297589421271,
+      "features": {
+        "眼动": [
+          "eye_aoi_interval_n__mean",
+          "eye_aoi_interval_n__std",
+          "eye_aoi_unique_hit_n__std",
+          "eye_aoi_max_share__slope",
+          "eye_aoi_interval_n__median",
+          "eye_pupil_filtered_std__slope"
+        ],
+        "脑电": [
+          "eeg_frontal_theta_power_z_within_subject__mean",
+          "eeg_frontal_theta_power_z_within_subject__median",
+          "eeg_frontal_alpha_power_z_within_subject__median",
+          "eeg_central_theta_alpha_z_within_subject__slope",
+          "eeg_occipital_alpha_power_z_within_subject__std"
+        ],
+        "心率": [
+          "hr_mean__slope",
+          "hr_mean__std",
+          "hr_std__slope",
+          "hr_std__std"
+        ],
+        "行为": [
+          "log_error_action_count_win__std",
+          "log_action_count_win__mean",
+          "log_action_density_win__mean",
+          "log_unique_step_count_win__mean",
+          "log_correct_action_count_win__std",
+          "log_unique_device_count_win__slope",
+          "log_unique_step_count_win__std",
+          "log_action_density_win__median",
+          "log_extra_action_count_win__slope",
+          "log_extra_rate_win__mean",
+          "log_duplicate_action_count_win__std",
+          "log_action_count_win__median"
+        ]
+      }
+    },
+    {
+      "fold": 5,
+      "people": [
+        3,
+        8,
+        13,
+        18,
+        19
+      ],
+      "n": 16,
+      "nasa_r2": 0.5251495696133084,
+      "nasa_mae": 0.7041209161281587,
+      "s_r2": 0.9332577159415905,
+      "s_mae": 0.02112362748384477,
+      "features": {
+        "眼动": [
+          "eye_aoi_interval_n__std",
+          "eye_aoi_interval_n__mean",
+          "eye_aoi_interval_n__median",
+          "eye_aoi_unique_hit_n__std",
+          "eye_aoi_coverage_ratio__median",
+          "eye_aoi_fixation_n__std"
+        ],
+        "脑电": [
+          "eeg_parietal_gamma_power_z_within_subject__std",
+          "eeg_central_alpha_power_z_within_subject__median",
+          "eeg_frontal_theta_power_z_within_subject__mean",
+          "eeg_central_gamma_power_z_within_subject__mean",
+          "eeg_central_alpha_power_z_within_subject__slope"
+        ],
+        "心率": [
+          "hr_std__slope",
+          "hr_slope_bpm_per_min__slope",
+          "hr_min__std",
+          "hr_min__slope"
+        ],
+        "行为": [
+          "log_action_count_win__slope",
+          "log_action_density_win__slope",
+          "log_unique_device_count_win__slope",
+          "log_correct_action_count_win__std",
+          "log_unique_device_count_win__mean",
+          "log_action_count_win__mean",
+          "log_action_density_win__mean",
+          "log_unique_step_count_win__mean",
+          "log_unique_step_count_win__std",
+          "log_extra_action_count_win__slope",
+          "log_extra_rate_win__mean",
+          "log_correct_action_count_win__slope"
+        ]
+      }
+    }
+  ],
+  "stable5": [
+    "eye_aoi_unique_hit_n__std",
+    "eye_aoi_interval_n__mean",
+    "eye_aoi_interval_n__std",
+    "hr_std__slope",
+    "log_action_count_win__mean",
+    "log_extra_rate_win__mean",
+    "log_unique_device_count_win__slope"
+  ],
+  "stable4": [
+    "eye_aoi_unique_hit_n__std",
+    "eye_aoi_interval_n__mean",
+    "eye_aoi_interval_n__std",
+    "hr_std__slope",
+    "log_correct_action_count_win__std",
+    "log_action_density_win__median",
+    "log_action_count_win__mean",
+    "log_action_density_win__mean",
+    "log_action_count_win__median",
+    "log_unique_device_count_win__mean",
+    "log_extra_rate_win__mean",
+    "log_unique_device_count_win__slope",
+    "eye_aoi_interval_n__median",
+    "log_unique_step_count_win__std"
+  ]
+}
