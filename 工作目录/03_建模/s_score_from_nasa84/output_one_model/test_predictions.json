@@ -1,0 +1,154 @@
+[
+  {
+    "sample_id": "subject_03_task_1",
+    "subject": 3,
+    "task": "1",
+    "y_nasa_true": 5.533333333333333,
+    "y_nasa_prior": 5.32,
+    "y_nasa_pred": 5.585536487102509
+  },
+  {
+    "sample_id": "subject_03_task_4",
+    "subject": 3,
+    "task": "4",
+    "y_nasa_true": 5.666666666666667,
+    "y_nasa_prior": 5.3533333333333335,
+    "y_nasa_pred": 4.964149633248647
+  },
+  {
+    "sample_id": "subject_03_task_5_6",
+    "subject": 3,
+    "task": "5_6",
+    "y_nasa_true": 6.0,
+    "y_nasa_prior": 6.402898550724637,
+    "y_nasa_pred": 6.9895455248113985
+  },
+  {
+    "sample_id": "subject_06_task_2",
+    "subject": 6,
+    "task": "2",
+    "y_nasa_true": 5.666666666666667,
+    "y_nasa_prior": 4.916666666666666,
+    "y_nasa_pred": 4.710835839311281
+  },
+  {
+    "sample_id": "subject_06_task_3",
+    "subject": 6,
+    "task": "3",
+    "y_nasa_true": 5.0,
+    "y_nasa_prior": 3.271111111111111,
+    "y_nasa_pred": 3.9969268841213648
+  },
+  {
+    "sample_id": "subject_06_task_5_6",
+    "subject": 6,
+    "task": "5_6",
+    "y_nasa_true": 6.266666666666667,
+    "y_nasa_prior": 6.402898550724637,
+    "y_nasa_pred": 6.264788479303967
+  },
+  {
+    "sample_id": "subject_12_task_2",
+    "subject": 12,
+    "task": "2",
+    "y_nasa_true": 5.333333333333333,
+    "y_nasa_prior": 4.916666666666666,
+    "y_nasa_pred": 5.469457427660624
+  },
+  {
+    "sample_id": "subject_12_task_3",
+    "subject": 12,
+    "task": "3",
+    "y_nasa_true": 4.266666666666667,
+    "y_nasa_prior": 3.271111111111111,
+    "y_nasa_pred": 3.3991048885054056
+  },
+  {
+    "sample_id": "subject_12_task_5_6",
+    "subject": 12,
+    "task": "5_6",
+    "y_nasa_true": 7.666666666666667,
+    "y_nasa_prior": 6.402898550724637,
+    "y_nasa_pred": 6.932360828613889
+  },
+  {
+    "sample_id": "subject_15_task_3",
+    "subject": 15,
+    "task": "3",
+    "y_nasa_true": 2.2666666666666666,
+    "y_nasa_prior": 3.271111111111111,
+    "y_nasa_pred": 3.6273897392219965
+  },
+  {
+    "sample_id": "subject_15_task_5",
+    "subject": 15,
+    "task": "5",
+    "y_nasa_true": 2.6,
+    "y_nasa_prior": 3.5666666666666664,
+    "y_nasa_pred": 2.635497931639353
+  },
+  {
+    "sample_id": "subject_15_task_5_6",
+    "subject": 15,
+    "task": "5_6",
+    "y_nasa_true": 7.333333333333333,
+    "y_nasa_prior": 6.402898550724637,
+    "y_nasa_pred": 6.390579493476104
+  },
+  {
+    "sample_id": "subject_18_task_3",
+    "subject": 18,
+    "task": "3",
+    "y_nasa_true": 3.1333333333333333,
+    "y_nasa_prior": 3.271111111111111,
+    "y_nasa_pred": 3.7064615590042536
+  },
+  {
+    "sample_id": "subject_18_task_5",
+    "subject": 18,
+    "task": "5",
+    "y_nasa_true": 3.8666666666666663,
+    "y_nasa_prior": 3.5666666666666664,
+    "y_nasa_pred": 3.844573293129603
+  },
+  {
+    "sample_id": "subject_18_task_5_6",
+    "subject": 18,
+    "task": "5_6",
+    "y_nasa_true": 6.6,
+    "y_nasa_prior": 6.402898550724637,
+    "y_nasa_pred": 6.406800133867216
+  },
+  {
+    "sample_id": "subject_21_task_3",
+    "subject": 21,
+    "task": "3",
+    "y_nasa_true": 2.3333333333333335,
+    "y_nasa_prior": 3.271111111111111,
+    "y_nasa_pred": 3.0815700394577448
+  },
+  {
+    "sample_id": "subject_21_task_4",
+    "subject": 21,
+    "task": "4",
+    "y_nasa_true": 3.6,
+    "y_nasa_prior": 5.3533333333333335,
+    "y_nasa_pred": 5.102034726937612
+  },
+  {
+    "sample_id": "subject_21_task_5",
+    "subject": 21,
+    "task": "5",
+    "y_nasa_true": 2.6,
+    "y_nasa_prior": 3.5666666666666664,
+    "y_nasa_pred": 3.561802409837643
+  },
+  {
+    "sample_id": "subject_21_task_5_6",
+    "subject": 21,
+    "task": "5_6",
+    "y_nasa_true": 7.133333333333334,
+    "y_nasa_prior": 6.402898550724637,
+    "y_nasa_pred": 6.908254743313443
+  }
+]

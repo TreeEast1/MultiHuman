@@ -1,0 +1,76 @@
+{
+  "task_vocab": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "5_6"
+  ],
+  "note": "任务指示只在训练折统计/编码；考试折只用同名任务列，不见考试人的 NASA。",
+  "rows": [
+    {
+      "name": "fullmodal30_no_task",
+      "nasa_pooled_r2": 0.5119191080126919,
+      "nasa_pooled_mae": 0.8771800060120838,
+      "nasa_fold_r2_mean": 0.5079480186912037,
+      "nasa_fold_r2_std": 0.08779537384444747,
+      "s_composed_r2": 0.9765995567061402,
+      "s_composed_mae": 0.026315400180362523
+    },
+    {
+      "name": "fullmodal30_plus_task_onehot",
+      "nasa_pooled_r2": 0.6767165966616928,
+      "nasa_pooled_mae": 0.687857118863908,
+      "nasa_fold_r2_mean": 0.6734470604827261,
+      "nasa_fold_r2_std": 0.0481953835923147,
+      "s_composed_r2": 0.9845005713768841,
+      "s_composed_mae": 0.020635713565917244
+    },
+    {
+      "name": "fullmodal30_plus_difficulty_onehot",
+      "nasa_pooled_r2": 0.6768502156680049,
+      "nasa_pooled_mae": 0.6973762925655124,
+      "nasa_fold_r2_mean": 0.6645103490014286,
+      "nasa_fold_r2_std": 0.07677326369518889,
+      "s_composed_r2": 0.9845069775772322,
+      "s_composed_mae": 0.02092128877696538
+    },
+    {
+      "name": "fullmodal30_plus_task_and_diff",
+      "nasa_pooled_r2": 0.6680451340270801,
+      "nasa_pooled_mae": 0.7032780838391137,
+      "nasa_fold_r2_mean": 0.6554850038101596,
+      "nasa_fold_r2_std": 0.08100702953835062,
+      "s_composed_r2": 0.9840848286731902,
+      "s_composed_mae": 0.021098342515173413
+    },
+    {
+      "name": "task_mean_only",
+      "nasa_pooled_r2": 0.6714676681427354,
+      "nasa_pooled_mae": 0.7211957119255255,
+      "nasa_fold_r2_mean": 0.6525293957225279,
+      "nasa_fold_r2_std": 0.07924326831066715,
+      "s_composed_r2": 0.9842489178985819,
+      "s_composed_mae": 0.021635871357765762
+    },
+    {
+      "name": "task_mean_plus_fullmodal30_residual",
+      "nasa_pooled_r2": 0.6764717828738457,
+      "nasa_pooled_mae": 0.6896533988756411,
+      "nasa_fold_r2_mean": 0.6582515269969705,
+      "nasa_fold_r2_std": 0.10249693463601006,
+      "s_composed_r2": 0.9844888340783048,
+      "s_composed_mae": 0.020689601966269233
+    },
+    {
+      "name": "freeMI30_plus_task_onehot",
+      "nasa_pooled_r2": 0.6802967695593027,
+      "nasa_pooled_mae": 0.692367412552001,
+      "nasa_fold_r2_mean": 0.674978059188585,
+      "nasa_fold_r2_std": 0.03363759147882535,
+      "s_composed_r2": 0.984672218401482,
+      "s_composed_mae": 0.020771022376560033
+    }
+  ]
+}

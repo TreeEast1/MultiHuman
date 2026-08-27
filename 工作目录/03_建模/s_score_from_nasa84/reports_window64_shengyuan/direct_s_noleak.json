@@ -1,0 +1,138 @@
+{
+  "question": "直接预测 S，不泄露的 R² 有多少？",
+  "answer_for_ziwei": "大约 0.05（按被试五折、XGB 直接预测 S；全模态 MI Top-30 是 0.05，不强制模态是 0.08）",
+  "results": {
+    "window64_subject_all64": {
+      "n_features": 64,
+      "protocol": "GroupKFold by subject, window-level X, target=S",
+      "mae": 0.18569704720141395,
+      "r2": -0.039116580591049166,
+      "folds": [
+        {
+          "fold": 1,
+          "n_train": 10067,
+          "n_test": 2557,
+          "window": {
+            "mae": 0.22217978122619428,
+            "r2": -0.6374855764489515
+          },
+          "n_selected": 64
+        },
+        {
+          "fold": 2,
+          "n_train": 10102,
+          "n_test": 2522,
+          "window": {
+            "mae": 0.25058898732683,
+            "r2": -0.6828969536490714
+          },
+          "n_selected": 64
+        },
+        {
+          "fold": 3,
+          "n_train": 10194,
+          "n_test": 2430,
+          "window": {
+            "mae": 0.23064008807576733,
+            "r2": -0.10113598678313118
+          },
+          "n_selected": 64
+        },
+        {
+          "fold": 4,
+          "n_train": 10179,
+          "n_test": 2445,
+          "window": {
+            "mae": 0.22566585285831,
+            "r2": -0.20692996704165645
+          },
+          "n_selected": 64
+        },
+        {
+          "fold": 5,
+          "n_train": 9954,
+          "n_test": 2670,
+          "window": {
+            "mae": 0.14111881737414367,
+            "r2": -0.040662525992880116
+          },
+          "n_selected": 64
+        }
+      ]
+    },
+    "window64_subject_mi30": {
+      "n_features": 30,
+      "protocol": "GroupKFold by subject, window-level X, target=S",
+      "mae": 0.18346466987047874,
+      "r2": -0.032217400380671224,
+      "folds": [
+        {
+          "fold": 1,
+          "n_train": 10067,
+          "n_test": 2557,
+          "window": {
+            "mae": 0.19641352474302531,
+            "r2": -0.38416786189311125
+          },
+          "n_selected": 30
+        },
+        {
+          "fold": 2,
+          "n_train": 10102,
+          "n_test": 2522,
+          "window": {
+            "mae": 0.24675651717882383,
+            "r2": -0.6447186415935557
+          },
+          "n_selected": 30
+        },
+        {
+          "fold": 3,
+          "n_train": 10194,
+          "n_test": 2430,
+          "window": {
+            "mae": 0.24033423113680671,
+            "r2": -0.21110787679447163
+          },
+          "n_selected": 30
+        },
+        {
+          "fold": 4,
+          "n_train": 10179,
+          "n_test": 2445,
+          "window": {
+            "mae": 0.22226916407485683,
+            "r2": -0.1237197352877124
+          },
+          "n_selected": 30
+        },
+        {
+          "fold": 5,
+          "n_train": 9954,
+          "n_test": 2670,
+          "window": {
+            "mae": 0.15254038005092466,
+            "r2": -0.21518445562388688
+          },
+          "n_selected": 30
+        }
+      ]
+    },
+    "task264_subject_all264": {
+      "n_features": 264,
+      "protocol": "GroupKFold by subject, 84×264, target=S",
+      "mae": 0.14917748470533462,
+      "r2": 0.28858310994731484,
+      "fold_r2_mean": -0.1031154934137771,
+      "fold_r2_std": 0.7616458864008786
+    },
+    "task264_subject_mi30": {
+      "n_features": 30,
+      "protocol": "GroupKFold by subject, 84×264 MI Top-30 vs S, target=S",
+      "mae": 0.16397101963890923,
+      "r2": 0.08239095845232003,
+      "fold_r2_mean": -0.5502578646379156,
+      "fold_r2_std": 1.355102390874881
+    }
+  }
+}
