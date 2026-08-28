@@ -1,0 +1,21 @@
+{
+  "model": "persist_early",
+  "forecast": {},
+  "downstream": {
+    "hat_nasa_r2": 0.12862639001047393,
+    "hat_nasa_mae": 1.1633249058956057,
+    "hat_s_r2": 0.9595396132482861,
+    "hat_s_mae": 0.03489974717686816,
+    "hat_n": 82,
+    "oracle_nasa_r2": 0.5279207150231725,
+    "oracle_nasa_mae": 0.8253855720768131,
+    "oracle_s_r2": 0.9780799989480234,
+    "oracle_s_mae": 0.024761567162304394,
+    "oracle_n": 82,
+    "early_nasa_r2": 0.12862639001047393,
+    "early_nasa_mae": 1.1633249058956057,
+    "early_s_r2": 0.9595396132482861,
+    "early_s_mae": 0.03489974717686816,
+    "early_n": 82
+  }
+}

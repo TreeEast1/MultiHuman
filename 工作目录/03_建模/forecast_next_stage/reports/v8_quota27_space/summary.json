@@ -1,0 +1,90 @@
+{
+  "version": "v8_quota27_space",
+  "title": "只预报下游 XGB 实际使用的 27 列（折内定额）",
+  "models": [
+    {
+      "model": "persist_early",
+      "forecast": {},
+      "downstream": {
+        "hat_nasa_r2": 0.12862639001047393,
+        "hat_nasa_mae": 1.1633249058956057,
+        "hat_s_r2": 0.9595396132482861,
+        "hat_s_mae": 0.03489974717686816,
+        "hat_n": 82,
+        "oracle_nasa_r2": 0.5279207150231725,
+        "oracle_nasa_mae": 0.8253855720768131,
+        "oracle_s_r2": 0.9780799989480234,
+        "oracle_s_mae": 0.024761567162304394,
+        "oracle_n": 82,
+        "early_nasa_r2": 0.12862639001047393,
+        "early_nasa_mae": 1.1633249058956057,
+        "early_s_r2": 0.9595396132482861,
+        "early_s_mae": 0.03489974717686816,
+        "early_n": 82
+      }
+    },
+    {
+      "model": "ridge_scaled",
+      "forecast": {},
+      "downstream": {
+        "hat_nasa_r2": 0.26354708048827646,
+        "hat_nasa_mae": 1.0563687770347285,
+        "hat_s_r2": 0.9658043695536851,
+        "hat_s_mae": 0.03169106331104185,
+        "hat_n": 82,
+        "oracle_nasa_r2": 0.5279207150231725,
+        "oracle_nasa_mae": 0.8253855720768131,
+        "oracle_s_r2": 0.9780799989480234,
+        "oracle_s_mae": 0.024761567162304394,
+        "oracle_n": 82,
+        "early_nasa_r2": 0.12862639001047393,
+        "early_nasa_mae": 1.1633249058956057,
+        "early_s_r2": 0.9595396132482861,
+        "early_s_mae": 0.03489974717686816,
+        "early_n": 82
+      }
+    },
+    {
+      "model": "pls6",
+      "forecast": {},
+      "downstream": {
+        "hat_nasa_r2": 0.11697712942555683,
+        "hat_nasa_mae": 1.1382201123043776,
+        "hat_s_r2": 0.9589987045229886,
+        "hat_s_mae": 0.03414660336913133,
+        "hat_n": 82,
+        "oracle_nasa_r2": 0.5279207150231725,
+        "oracle_nasa_mae": 0.8253855720768131,
+        "oracle_s_r2": 0.9780799989480234,
+        "oracle_s_mae": 0.024761567162304394,
+        "oracle_n": 82,
+        "early_nasa_r2": 0.12862639001047393,
+        "early_nasa_mae": 1.1633249058956057,
+        "early_s_r2": 0.9595396132482861,
+        "early_s_mae": 0.03489974717686816,
+        "early_n": 82
+      }
+    },
+    {
+      "model": "extra_trees",
+      "forecast": {},
+      "downstream": {
+        "hat_nasa_r2": 0.01764132973314636,
+        "hat_nasa_mae": 1.2288763311820303,
+        "hat_s_r2": 0.9543862572010025,
+        "hat_s_mae": 0.03686628993546091,
+        "hat_n": 82,
+        "oracle_nasa_r2": 0.5279207150231725,
+        "oracle_nasa_mae": 0.8253855720768131,
+        "oracle_s_r2": 0.9780799989480234,
+        "oracle_s_mae": 0.024761567162304394,
+        "oracle_n": 82,
+        "early_nasa_r2": 0.12862639001047393,
+        "early_nasa_mae": 1.1633249058956057,
+        "early_s_r2": 0.9595396132482861,
+        "early_s_mae": 0.03489974717686816,
+        "early_n": 82
+      }
+    }
+  ]
+}

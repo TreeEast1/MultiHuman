@@ -1,0 +1,6 @@
+{
+  "version": "v5_ar_rollout_hop1_overlap",
+  "title": "窗级自回归滚动，hop=1（重叠5s）",
+  "hop": 1,
+  "n_eval": 82
+}

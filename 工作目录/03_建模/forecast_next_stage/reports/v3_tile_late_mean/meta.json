@@ -1,0 +1,10 @@
+{
+  "version": "v3_tile_late_mean",
+  "title": "前段264→后段66维均值，铺窗后再聚合",
+  "ratio": 0.5,
+  "n_eval": 82,
+  "dropped": [
+    "subject_13_task_3",
+    "subject_21_task_3"
+  ]
+}

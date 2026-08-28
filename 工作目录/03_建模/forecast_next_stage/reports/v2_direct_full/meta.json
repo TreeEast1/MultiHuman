@@ -1,0 +1,10 @@
+{
+  "version": "v2_direct_full",
+  "title": "前段264→直接预报全任务264",
+  "ratio": 0.5,
+  "n_eval": 82,
+  "dropped": [
+    "subject_13_task_3",
+    "subject_21_task_3"
+  ]
+}

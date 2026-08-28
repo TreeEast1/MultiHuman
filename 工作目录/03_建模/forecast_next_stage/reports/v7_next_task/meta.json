@@ -1,0 +1,297 @@
+{
+  "version": "v7_next_task",
+  "title": "跨任务：本任务264 → 同一被试下一任务264",
+  "n_pairs": 58,
+  "pairs": [
+    {
+      "from": "subject_01_task_2",
+      "to": "subject_01_task_3",
+      "subject": 1
+    },
+    {
+      "from": "subject_01_task_3",
+      "to": "subject_01_task_5_6",
+      "subject": 1
+    },
+    {
+      "from": "subject_02_task_1",
+      "to": "subject_02_task_3",
+      "subject": 2
+    },
+    {
+      "from": "subject_02_task_3",
+      "to": "subject_02_task_5_6",
+      "subject": 2
+    },
+    {
+      "from": "subject_03_task_1",
+      "to": "subject_03_task_4",
+      "subject": 3
+    },
+    {
+      "from": "subject_03_task_4",
+      "to": "subject_03_task_5_6",
+      "subject": 3
+    },
+    {
+      "from": "subject_04_task_2",
+      "to": "subject_04_task_4",
+      "subject": 4
+    },
+    {
+      "from": "subject_04_task_4",
+      "to": "subject_04_task_5_6",
+      "subject": 4
+    },
+    {
+      "from": "subject_05_task_1",
+      "to": "subject_05_task_4",
+      "subject": 5
+    },
+    {
+      "from": "subject_05_task_4",
+      "to": "subject_05_task_5_6",
+      "subject": 5
+    },
+    {
+      "from": "subject_06_task_2",
+      "to": "subject_06_task_3",
+      "subject": 6
+    },
+    {
+      "from": "subject_06_task_3",
+      "to": "subject_06_task_5_6",
+      "subject": 6
+    },
+    {
+      "from": "subject_07_task_2",
+      "to": "subject_07_task_3",
+      "subject": 7
+    },
+    {
+      "from": "subject_07_task_3",
+      "to": "subject_07_task_5_6",
+      "subject": 7
+    },
+    {
+      "from": "subject_08_task_1",
+      "to": "subject_08_task_4",
+      "subject": 8
+    },
+    {
+      "from": "subject_08_task_4",
+      "to": "subject_08_task_5_6",
+      "subject": 8
+    },
+    {
+      "from": "subject_09_task_1",
+      "to": "subject_09_task_4",
+      "subject": 9
+    },
+    {
+      "from": "subject_09_task_4",
+      "to": "subject_09_task_5_6",
+      "subject": 9
+    },
+    {
+      "from": "subject_10_task_2",
+      "to": "subject_10_task_3",
+      "subject": 10
+    },
+    {
+      "from": "subject_10_task_3",
+      "to": "subject_10_task_5_6",
+      "subject": 10
+    },
+    {
+      "from": "subject_11_task_1",
+      "to": "subject_11_task_3",
+      "subject": 11
+    },
+    {
+      "from": "subject_11_task_3",
+      "to": "subject_11_task_5_6",
+      "subject": 11
+    },
+    {
+      "from": "subject_12_task_2",
+      "to": "subject_12_task_3",
+      "subject": 12
+    },
+    {
+      "from": "subject_12_task_3",
+      "to": "subject_12_task_5_6",
+      "subject": 12
+    },
+    {
+      "from": "subject_13_task_3",
+      "to": "subject_13_task_5",
+      "subject": 13
+    },
+    {
+      "from": "subject_13_task_5",
+      "to": "subject_13_task_5_6",
+      "subject": 13
+    },
+    {
+      "from": "subject_14_task_3",
+      "to": "subject_14_task_5",
+      "subject": 14
+    },
+    {
+      "from": "subject_14_task_5",
+      "to": "subject_14_task_5_6",
+      "subject": 14
+    },
+    {
+      "from": "subject_15_task_3",
+      "to": "subject_15_task_5",
+      "subject": 15
+    },
+    {
+      "from": "subject_15_task_5",
+      "to": "subject_15_task_5_6",
+      "subject": 15
+    },
+    {
+      "from": "subject_16_task_3",
+      "to": "subject_16_task_5",
+      "subject": 16
+    },
+    {
+      "from": "subject_16_task_5",
+      "to": "subject_16_task_5_6",
+      "subject": 16
+    },
+    {
+      "from": "subject_16_task_5_6",
+      "to": "subject_16_task_5_6_repeat_1",
+      "subject": 16
+    },
+    {
+      "from": "subject_17_task_4",
+      "to": "subject_17_task_5",
+      "subject": 17
+    },
+    {
+      "from": "subject_17_task_5",
+      "to": "subject_17_task_5_6",
+      "subject": 17
+    },
+    {
+      "from": "subject_18_task_3",
+      "to": "subject_18_task_5",
+      "subject": 18
+    },
+    {
+      "from": "subject_18_task_5",
+      "to": "subject_18_task_5_6",
+      "subject": 18
+    },
+    {
+      "from": "subject_19_task_3",
+      "to": "subject_19_task_5",
+      "subject": 19
+    },
+    {
+      "from": "subject_19_task_5",
+      "to": "subject_19_task_5_repeat_1",
+      "subject": 19
+    },
+    {
+      "from": "subject_19_task_5_repeat_1",
+      "to": "subject_19_task_5_6",
+      "subject": 19
+    },
+    {
+      "from": "subject_20_task_3",
+      "to": "subject_20_task_4",
+      "subject": 20
+    },
+    {
+      "from": "subject_20_task_4",
+      "to": "subject_20_task_5_6_repeat_1",
+      "subject": 20
+    },
+    {
+      "from": "subject_20_task_5_6_repeat_1",
+      "to": "subject_20_task_5_6_repeat_2",
+      "subject": 20
+    },
+    {
+      "from": "subject_21_task_3",
+      "to": "subject_21_task_4",
+      "subject": 21
+    },
+    {
+      "from": "subject_21_task_4",
+      "to": "subject_21_task_5",
+      "subject": 21
+    },
+    {
+      "from": "subject_21_task_5",
+      "to": "subject_21_task_5_6",
+      "subject": 21
+    },
+    {
+      "from": "subject_22_task_3",
+      "to": "subject_22_task_4",
+      "subject": 22
+    },
+    {
+      "from": "subject_22_task_4",
+      "to": "subject_22_task_5",
+      "subject": 22
+    },
+    {
+      "from": "subject_22_task_5",
+      "to": "subject_22_task_5_6",
+      "subject": 22
+    },
+    {
+      "from": "subject_23_task_3",
+      "to": "subject_23_task_5",
+      "subject": 23
+    },
+    {
+      "from": "subject_23_task_5",
+      "to": "subject_23_task_5_6",
+      "subject": 23
+    },
+    {
+      "from": "subject_23_task_5_6",
+      "to": "subject_23_task_5_6_repeat_1",
+      "subject": 23
+    },
+    {
+      "from": "subject_24_task_3",
+      "to": "subject_24_task_4",
+      "subject": 24
+    },
+    {
+      "from": "subject_24_task_4",
+      "to": "subject_24_task_5_6",
+      "subject": 24
+    },
+    {
+      "from": "subject_25_task_3",
+      "to": "subject_25_task_4",
+      "subject": 25
+    },
+    {
+      "from": "subject_25_task_4",
+      "to": "subject_25_task_5_6",
+      "subject": 25
+    },
+    {
+      "from": "subject_26_task_3",
+      "to": "subject_26_task_4",
+      "subject": 26
+    },
+    {
+      "from": "subject_26_task_4",
+      "to": "subject_26_task_5_6",
+      "subject": 26
+    }
+  ]
+}

@@ -8,6 +8,18 @@
 
 ---
 
+## 📅 2026-08-29：先预报下一阶段人因指标，再走定额 XGB 合成 S
+
+新工作目录：[forecast_next_stage](工作目录/03_建模/forecast_next_stage/)。协议、八条对照路径和验收解读：
+
+- [PROTOCOL.md](工作目录/03_建模/forecast_next_stage/PROTOCOL.md) — 阶段定义、泄漏、冻结 XGB
+- [RESULTS.md](工作目录/03_建模/forecast_next_stage/reports/RESULTS.md) — 结果与选用
+- [COMPARISON.md](工作目录/03_建模/forecast_next_stage/reports/COMPARISON.md) — 全量对照表
+
+任务做到一半时，用前段指标预报下游 XGB 真正用到的 27 列（Ridge），NASA pooled R² = **0.264**（Early-only 0.129，完整观测 Oracle 0.528）。合成 S R² = 0.966，其中 70% 仍是真实步骤。看到约 2/3 任务后不应再预报，直接用已观察聚合更好（NASA R² 0.36–0.40）。窗级滚动、铺均值、跨任务「下一场」对照均无效，路径都保留在 `reports/`。
+
+---
+
 ## 📅 2026-08-26：全模态 27 维五折预测 NASA，合成 S（正式口径）
 
 正式实验报告：[实验报告_S绩效预测_全模态27维.md](工作目录/03_建模/s_score_from_nasa84/实验报告_S绩效预测_全模态27维.md)

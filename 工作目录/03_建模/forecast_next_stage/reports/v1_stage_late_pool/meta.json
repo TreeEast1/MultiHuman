@@ -1,0 +1,10 @@
+{
+  "version": "v1_stage_late_pool",
+  "title": "前段264→后段264，矩合并还原全任务264",
+  "ratio": 0.5,
+  "n_eval": 82,
+  "dropped": [
+    "subject_13_task_3",
+    "subject_21_task_3"
+  ]
+}

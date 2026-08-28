@@ -1,0 +1,6 @@
+{
+  "version": "v4_horizon_windows",
+  "title": "前段264+末窗66+时间→后段每个窗66维，再聚合",
+  "n_window_rows": 6329,
+  "n_eval": 82
+}

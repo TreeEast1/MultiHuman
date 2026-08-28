@@ -1,0 +1,117 @@
+{
+  "n_samples": 84,
+  "n_subjects": 26,
+  "n_windows_total": 12624,
+  "n_windows": {
+    "min": 3,
+    "p10": 42.900000000000006,
+    "median": 116.0,
+    "mean": 150.28571428571428,
+    "p90": 308.50000000000006,
+    "max": 463,
+    "n_lt_8": 2,
+    "n_lt_16": 2,
+    "n_lt_20": 3
+  },
+  "reconstruct_264_vs_X_task": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "ok": true
+  },
+  "ratio_coverage": {
+    "0.25": {
+      "n_ok": 82,
+      "n_drop": 2,
+      "dropped": [
+        "subject_13_task_3",
+        "subject_21_task_3"
+      ],
+      "n_win_ok_min": 17,
+      "n_win_ok_median": 122.5
+    },
+    "0.33": {
+      "n_ok": 82,
+      "n_drop": 2,
+      "dropped": [
+        "subject_13_task_3",
+        "subject_21_task_3"
+      ],
+      "n_win_ok_min": 17,
+      "n_win_ok_median": 122.5
+    },
+    "0.5": {
+      "n_ok": 82,
+      "n_drop": 2,
+      "dropped": [
+        "subject_13_task_3",
+        "subject_21_task_3"
+      ],
+      "n_win_ok_min": 17,
+      "n_win_ok_median": 122.5
+    },
+    "0.67": {
+      "n_ok": 82,
+      "n_drop": 2,
+      "dropped": [
+        "subject_13_task_3",
+        "subject_21_task_3"
+      ],
+      "n_win_ok_min": 17,
+      "n_win_ok_median": 122.5
+    },
+    "0.75": {
+      "n_ok": 82,
+      "n_drop": 2,
+      "dropped": [
+        "subject_13_task_3",
+        "subject_21_task_3"
+      ],
+      "n_win_ok_min": 17,
+      "n_win_ok_median": 122.5
+    }
+  },
+  "next_task_pairs": 58,
+  "s_components": {
+    "S_mean": 0.6154940476190477,
+    "S_std": 0.21666695352000023,
+    "step_mean": 0.663732993197279,
+    "nasa_mean": 4.97063492063492,
+    "corr_S_step": 0.9766749107837868,
+    "corr_S_nasa": -0.4017807219438654,
+    "corr_S_nasa_rev": 0.4017807219438654,
+    "var_S": 0.04694456874763794,
+    "note": "S 的 70% 来自真实步骤分；预报人因指标主要影响 30% 的 NASA 反向分。"
+  },
+  "stage_early_late_mean_r2_by_modality": {
+    "心率": {
+      "mean_r2": -0.776591567751575,
+      "median_pearson": 0.9622153683101695
+    },
+    "眼动": {
+      "mean_r2": 0.3161546335446312,
+      "median_pearson": 0.7308455597171412
+    },
+    "脑电": {
+      "mean_r2": 0.1579140098794462,
+      "median_pearson": 0.6217026840671648
+    },
+    "行为": {
+      "mean_r2": -0.927878833801021,
+      "median_pearson": 0.12180122717359233
+    }
+  },
+  "lag_median_r_by_modality": {
+    "1": {
+      "心率": 0.9005743297047782,
+      "眼动": 0.8924119129135273,
+      "脑电": 0.8448835367046992,
+      "行为": 0.8668936165298038
+    },
+    "6": {
+      "心率": 0.31646962657642697,
+      "眼动": 0.17376424271450214,
+      "脑电": 0.14780792280472757,
+      "行为": 0.009268944347544841
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": "v5_ar_rollout_hop6_30s",
+  "title": "窗级自回归滚动，hop=6（约30s不重叠）",
+  "hop": 6,
+  "n_eval": 82
+}
