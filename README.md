@@ -8,15 +8,11 @@
 
 ---
 
-## 📅 2026-08-29：先预报下一阶段人因指标，再走定额 XGB 合成 S
+## 📅 2026-08-29：趋势预测——跨被试预报未来阶段人因，再走定额 XGB 合成 S
 
-新工作目录：[forecast_next_stage](工作目录/03_建模/forecast_next_stage/)。协议、八条对照路径和验收解读：
+正式 Word：[趋势预测_跨被试未来阶段人因与S_实验报告.docx](工作目录/03_建模/forecast_next_stage/趋势预测_跨被试未来阶段人因与S_实验报告.docx)（与《全模态27维绩效S预测实验报告》同一体例）
 
-- [PROTOCOL.md](工作目录/03_建模/forecast_next_stage/PROTOCOL.md) — 阶段定义、泄漏、冻结 XGB
-- [RESULTS.md](工作目录/03_建模/forecast_next_stage/reports/RESULTS.md) — 结果与选用
-- [COMPARISON.md](工作目录/03_建模/forecast_next_stage/reports/COMPARISON.md) — 全量对照表
-
-任务做到一半时，用前段指标预报下游 XGB 真正用到的 27 列（Ridge），NASA pooled R² = **0.264**（Early-only 0.129，完整观测 Oracle 0.528）。合成 S R² = 0.966，其中 70% 仍是真实步骤。看到约 2/3 任务后不应再预报，直接用已观察聚合更好（NASA R² 0.36–0.40）。窗级滚动、铺均值、跨任务「下一场」对照均无效，路径都保留在 `reports/`。
+用已有被试的完整任务阶段数据训练，对未见过的新被试，依据其本场已观察阶段的四模态人因，预报本场未来阶段对应的 27 维指标，再送入与正式口径相同的定额浅树 XGB 估计负荷分量，按步骤 0.70 / 负荷反向 0.30 合成 S。验证组为 5 名新被试、17 条任务。合成 **S 的 R² = 0.948，MAE = 0.025**。
 
 ---
 

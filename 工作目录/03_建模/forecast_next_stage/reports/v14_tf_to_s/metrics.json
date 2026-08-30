@@ -1,0 +1,337 @@
+{
+  "fold_quota_raw": [
+    [
+      "eye_aoi_unique_hit_n",
+      "eye_aoi_interval_n",
+      "eye_aoi_coverage_ratio",
+      "eye_aoi_max_share",
+      "eeg_frontal_alpha_power_z_within_subject",
+      "eeg_parietal_theta_alpha_z_within_subject",
+      "eeg_frontal_gamma_power_z_within_subject",
+      "eeg_central_alpha_power_z_within_subject",
+      "eeg_parietal_theta_power_z_within_subject",
+      "hr_max",
+      "hr_std",
+      "hr_mean",
+      "log_correct_action_count_win",
+      "log_unique_step_count_win",
+      "log_extra_action_count_win",
+      "log_action_density_win",
+      "log_action_count_win",
+      "log_extra_rate_win",
+      "log_unique_device_count_win"
+    ],
+    [
+      "eye_aoi_interval_n",
+      "eye_aoi_fixation_density_per_sec",
+      "eye_pupil_filtered_std",
+      "eye_aoi_unique_hit_n",
+      "eeg_parietal_gamma_power_z_within_subject",
+      "eeg_frontal_theta_power_z_within_subject",
+      "eeg_occipital_gamma_power_z_within_subject",
+      "eeg_central_beta_alpha_z_within_subject",
+      "eeg_frontal_theta_alpha_z_within_subject",
+      "hr_std",
+      "hr_max",
+      "hr_slope_bpm_per_min",
+      "log_extra_rate_win",
+      "log_action_density_win",
+      "log_action_count_win",
+      "log_unique_device_count_win",
+      "log_unique_step_count_win",
+      "log_error_action_count_win"
+    ],
+    [
+      "eye_aoi_interval_n",
+      "blink_count",
+      "blink_rate_per_min",
+      "eye_aoi_unique_hit_n",
+      "eeg_occipital_gamma_power_z_within_subject",
+      "eeg_parietal_theta_power_z_within_subject",
+      "eeg_parietal_gamma_power_z_within_subject",
+      "eeg_central_theta_power_z_within_subject",
+      "hr_std",
+      "hr_slope_bpm_per_min",
+      "hr_mean",
+      "log_correct_action_count_win",
+      "log_action_count_win",
+      "log_action_density_win",
+      "log_unique_device_count_win",
+      "log_unique_step_count_win",
+      "log_extra_rate_win"
+    ],
+    [
+      "eye_aoi_interval_n",
+      "eye_aoi_unique_hit_n",
+      "eye_aoi_max_share",
+      "eye_pupil_filtered_std",
+      "eeg_frontal_theta_power_z_within_subject",
+      "eeg_frontal_alpha_power_z_within_subject",
+      "eeg_central_theta_alpha_z_within_subject",
+      "eeg_occipital_alpha_power_z_within_subject",
+      "hr_mean",
+      "hr_std",
+      "log_error_action_count_win",
+      "log_action_count_win",
+      "log_action_density_win",
+      "log_unique_step_count_win",
+      "log_correct_action_count_win",
+      "log_unique_device_count_win",
+      "log_extra_action_count_win",
+      "log_extra_rate_win",
+      "log_duplicate_action_count_win"
+    ],
+    [
+      "eye_aoi_interval_n",
+      "eye_aoi_unique_hit_n",
+      "eye_aoi_coverage_ratio",
+      "eye_aoi_fixation_n",
+      "eeg_parietal_gamma_power_z_within_subject",
+      "eeg_central_alpha_power_z_within_subject",
+      "eeg_frontal_theta_power_z_within_subject",
+      "eeg_central_gamma_power_z_within_subject",
+      "hr_std",
+      "hr_slope_bpm_per_min",
+      "hr_min",
+      "log_action_count_win",
+      "log_action_density_win",
+      "log_unique_device_count_win",
+      "log_correct_action_count_win",
+      "log_unique_step_count_win",
+      "log_extra_action_count_win",
+      "log_extra_rate_win"
+    ]
+  ],
+  "models": [
+    {
+      "model": "early_only",
+      "nasa_r2": 0.14024922434356712,
+      "s_r2": 0.960079294926589,
+      "s_mae": 0.03460200258871404,
+      "fold1_nasa_r2": 0.0714961234177266,
+      "fold1_s_r2": 0.9078100426224753,
+      "fold1_s_mae": 0.03388368494370405,
+      "folds": [
+        {
+          "fold": 0,
+          "n": 17,
+          "nasa_r2": 0.0714961234177266,
+          "s_r2": 0.9078100426224753,
+          "s_mae": 0.03388368494370405
+        },
+        {
+          "fold": 1,
+          "n": 19,
+          "nasa_r2": 0.3386596388384182,
+          "s_r2": 0.9700061054915491,
+          "s_mae": 0.030317649176246235
+        },
+        {
+          "fold": 2,
+          "n": 15,
+          "nasa_r2": -0.3100769847973297,
+          "s_r2": 0.9378643581580622,
+          "s_mae": 0.04668139578501384
+        },
+        {
+          "fold": 3,
+          "n": 16,
+          "nasa_r2": 0.08471904954060883,
+          "s_r2": 0.9683498808921327,
+          "s_mae": 0.042007540196180346
+        },
+        {
+          "fold": 4,
+          "n": 15,
+          "nasa_r2": 0.547562247816813,
+          "s_r2": 0.94588635692492,
+          "s_mae": 0.02086431026458742
+        }
+      ]
+    },
+    {
+      "model": "win_mean_revert",
+      "nasa_r2": -0.49670062601781195,
+      "s_r2": 0.9305038786050213,
+      "s_mae": 0.04649378909134284,
+      "fold1_nasa_r2": -1.341113553986982,
+      "fold1_s_r2": 0.7675538420448577,
+      "fold1_s_mae": 0.051313464248881634,
+      "folds": [
+        {
+          "fold": 0,
+          "n": 17,
+          "nasa_r2": -1.341113553986982,
+          "s_r2": 0.7675538420448577,
+          "s_mae": 0.051313464248881634
+        },
+        {
+          "fold": 1,
+          "n": 19,
+          "nasa_r2": -0.47576817609121314,
+          "s_r2": 0.9330692067321231,
+          "s_mae": 0.046617225546585886
+        },
+        {
+          "fold": 2,
+          "n": 15,
+          "nasa_r2": -0.20524388434550778,
+          "s_r2": 0.9428364873218014,
+          "s_mae": 0.046753768380482986
+        },
+        {
+          "fold": 3,
+          "n": 16,
+          "nasa_r2": -0.8202965246859528,
+          "s_r2": 0.9370547351728115,
+          "s_mae": 0.06279169085621834
+        },
+        {
+          "fold": 4,
+          "n": 15,
+          "nasa_r2": 0.4920699645803991,
+          "s_r2": 0.939249223763537,
+          "s_mae": 0.02323072989781699
+        }
+      ]
+    },
+    {
+      "model": "tf_resid",
+      "nasa_r2": -0.48873853823074187,
+      "s_r2": 0.9308735812762093,
+      "s_mae": 0.047045417931021724,
+      "fold1_nasa_r2": -1.292762694546902,
+      "fold1_s_r2": 0.7723545367790091,
+      "fold1_s_mae": 0.05093863445169785,
+      "folds": [
+        {
+          "fold": 0,
+          "n": 17,
+          "nasa_r2": -1.292762694546902,
+          "s_r2": 0.7723545367790091,
+          "s_mae": 0.05093863445169785
+        },
+        {
+          "fold": 1,
+          "n": 19,
+          "nasa_r2": -0.4466895993083859,
+          "s_r2": 0.934388012925878,
+          "s_mae": 0.04585186878003572
+        },
+        {
+          "fold": 2,
+          "n": 15,
+          "nasa_r2": -0.14622224704786246,
+          "s_r2": 0.9456358245810683,
+          "s_mae": 0.04533554499944052
+        },
+        {
+          "fold": 3,
+          "n": 16,
+          "nasa_r2": -0.7314343365598519,
+          "s_r2": 0.9401275608849222,
+          "s_mae": 0.061918021917343136
+        },
+        {
+          "fold": 4,
+          "n": 15,
+          "nasa_r2": 0.16425007943356973,
+          "s_r2": 0.9000404526737038,
+          "s_mae": 0.029990696811676064
+        }
+      ]
+    },
+    {
+      "model": "v8_ridge27",
+      "nasa_r2": 0.26354708048827646,
+      "s_r2": 0.9658043695536851,
+      "s_mae": 0.03169106331104185,
+      "fold1_nasa_r2": 0.4759836777218158,
+      "fold1_s_r2": 0.947971092383832,
+      "fold1_s_mae": 0.025077012847451594,
+      "folds": [
+        {
+          "fold": 0,
+          "n": 17,
+          "nasa_r2": 0.4759836777218158,
+          "s_r2": 0.947971092383832,
+          "s_mae": 0.025077012847451594
+        },
+        {
+          "fold": 1,
+          "n": 19,
+          "nasa_r2": 0.3723177100753662,
+          "s_r2": 0.9715326063636051,
+          "s_mae": 0.02887829680191844
+        },
+        {
+          "fold": 2,
+          "n": 15,
+          "nasa_r2": 0.06268940019074298,
+          "s_r2": 0.9555442951824623,
+          "s_mae": 0.036369377613067626
+        },
+        {
+          "fold": 3,
+          "n": 16,
+          "nasa_r2": 0.1749558665813854,
+          "s_r2": 0.971470240827322,
+          "s_mae": 0.04071773901581764
+        },
+        {
+          "fold": 4,
+          "n": 15,
+          "nasa_r2": 0.14951520638201898,
+          "s_r2": 0.8982780938581085,
+          "s_mae": 0.02844305636088055
+        }
+      ]
+    },
+    {
+      "model": "oracle",
+      "nasa_r2": 0.5279207150231725,
+      "s_r2": 0.9780799989480234,
+      "s_mae": 0.024761567162304394,
+      "fold1_nasa_r2": 0.7084942613455492,
+      "fold1_s_r2": 0.9710567696057686,
+      "fold1_s_mae": 0.0188018482993631,
+      "folds": [
+        {
+          "fold": 0,
+          "n": 17,
+          "nasa_r2": 0.7084942613455492,
+          "s_r2": 0.9710567696057686,
+          "s_mae": 0.0188018482993631
+        },
+        {
+          "fold": 1,
+          "n": 19,
+          "nasa_r2": 0.5787026581623078,
+          "s_r2": 0.9808928219569482,
+          "s_mae": 0.022478174385271582
+        },
+        {
+          "fold": 2,
+          "n": 15,
+          "nasa_r2": 0.3038793764549641,
+          "s_r2": 0.9669836946642704,
+          "s_mae": 0.0326756888071696
+        },
+        {
+          "fold": 3,
+          "n": 16,
+          "nasa_r2": 0.5505171894928548,
+          "s_r2": 0.9844570298525827,
+          "s_mae": 0.02933297589421271
+        },
+        {
+          "fold": 4,
+          "n": 15,
+          "nasa_r2": 0.42518755331264246,
+          "s_r2": 0.9312497787263363,
+          "s_mae": 0.021617921765645358
+        }
+      ]
+    }
+  ]
+}
