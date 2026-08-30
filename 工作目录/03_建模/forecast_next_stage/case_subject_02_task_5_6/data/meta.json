@@ -1,0 +1,147 @@
+{
+  "sample_id": "subject_02_task_5_6",
+  "subject": 2,
+  "task": "5_6",
+  "n_win": 131,
+  "cut": 65,
+  "t_now_min": 5.333333333333333,
+  "t_late_min": 5.500000000000001,
+  "S_true": 0.6619999999999999,
+  "S_ridge": 0.6788943535089492,
+  "S_threshold": 0.51,
+  "status": "正常",
+  "features": [
+    {
+      "file": "01_hr_mean.png",
+      "feature": "hr_mean",
+      "label": "心率均值",
+      "unit": "bpm"
+    },
+    {
+      "file": "02_hr_std.png",
+      "feature": "hr_std",
+      "label": "心率波动",
+      "unit": "bpm"
+    },
+    {
+      "file": "03_eye_pupil_filtered_mean.png",
+      "feature": "eye_pupil_filtered_mean",
+      "label": "瞳孔直径",
+      "unit": "mm"
+    },
+    {
+      "file": "04_eye_aoi_coverage_ratio.png",
+      "feature": "eye_aoi_coverage_ratio",
+      "label": "AOI覆盖比例",
+      "unit": "比例"
+    },
+    {
+      "file": "05_log_action_density_win.png",
+      "feature": "log_action_density_win",
+      "label": "操作密度",
+      "unit": "密度"
+    },
+    {
+      "file": "06_log_action_count_win.png",
+      "feature": "log_action_count_win",
+      "label": "操作次数",
+      "unit": "次"
+    },
+    {
+      "file": "07_eeg_frontal_theta_alpha_z_within_subject.png",
+      "feature": "eeg_frontal_theta_alpha_z_within_subject",
+      "label": "额区θ/α",
+      "unit": "z"
+    },
+    {
+      "file": "08_blink_rate_per_min.png",
+      "feature": "blink_rate_per_min",
+      "label": "眨眼频率",
+      "unit": "次/分"
+    },
+    {
+      "file": "09_eye_aoi_unique_hit_n.png",
+      "feature": "eye_aoi_unique_hit_n",
+      "label": "点到不同AOI数",
+      "unit": "个"
+    },
+    {
+      "file": "10_eye_aoi_interval_n.png",
+      "feature": "eye_aoi_interval_n",
+      "label": "AOI区间条数",
+      "unit": "条"
+    },
+    {
+      "file": "11_eye_aoi_max_share.png",
+      "feature": "eye_aoi_max_share",
+      "label": "最主要AOI占比",
+      "unit": "比例"
+    },
+    {
+      "file": "12_eeg_frontal_alpha_power_z_within_subject.png",
+      "feature": "eeg_frontal_alpha_power_z_within_subject",
+      "label": "额区α功率",
+      "unit": "z"
+    },
+    {
+      "file": "13_eeg_parietal_theta_alpha_z_within_subject.png",
+      "feature": "eeg_parietal_theta_alpha_z_within_subject",
+      "label": "顶区θ/α",
+      "unit": "z"
+    },
+    {
+      "file": "14_eeg_frontal_gamma_power_z_within_subject.png",
+      "feature": "eeg_frontal_gamma_power_z_within_subject",
+      "label": "额区γ功率",
+      "unit": "z"
+    },
+    {
+      "file": "15_eeg_central_alpha_power_z_within_subject.png",
+      "feature": "eeg_central_alpha_power_z_within_subject",
+      "label": "中央区α功率",
+      "unit": "z"
+    },
+    {
+      "file": "16_eeg_parietal_theta_power_z_within_subject.png",
+      "feature": "eeg_parietal_theta_power_z_within_subject",
+      "label": "顶区θ功率",
+      "unit": "z"
+    },
+    {
+      "file": "17_hr_max.png",
+      "feature": "hr_max",
+      "label": "最高心率",
+      "unit": "bpm"
+    },
+    {
+      "file": "18_log_correct_action_count_win.png",
+      "feature": "log_correct_action_count_win",
+      "label": "正确操作次数",
+      "unit": "次"
+    },
+    {
+      "file": "19_log_unique_step_count_win.png",
+      "feature": "log_unique_step_count_win",
+      "label": "步骤种数",
+      "unit": "种"
+    },
+    {
+      "file": "20_log_extra_action_count_win.png",
+      "feature": "log_extra_action_count_win",
+      "label": "多余操作次数",
+      "unit": "次"
+    },
+    {
+      "file": "21_log_extra_rate_win.png",
+      "feature": "log_extra_rate_win",
+      "label": "多余操作比例",
+      "unit": "比例"
+    },
+    {
+      "file": "22_log_unique_device_count_win.png",
+      "feature": "log_unique_device_count_win",
+      "label": "设备种数",
+      "unit": "种"
+    }
+  ]
+}

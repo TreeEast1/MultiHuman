@@ -1,0 +1,39 @@
+{
+  "module": "趋势预测与预警",
+  "mode": "static",
+  "sample_id": "subject_02_task_5_6",
+  "subject": 2,
+  "task": "5_6",
+  "default_tab": "hr_mean",
+  "default_image": "主图/01_hr_mean.png",
+  "right_panel": {
+    "status": "正常",
+    "S_pred": 0.679,
+    "S_threshold": 0.51,
+    "changes_when_tab_changes": false
+  },
+  "tabs": [
+    {"id": "hr_mean", "label": "心率均值", "group": "心率", "file": "主图/01_hr_mean.png", "default": true},
+    {"id": "hr_std", "label": "心率波动", "group": "心率", "file": "主图/02_hr_std.png"},
+    {"id": "hr_max", "label": "最高心率", "group": "心率", "file": "主图/17_hr_max.png"},
+    {"id": "pupil", "label": "瞳孔直径", "group": "眼动", "file": "主图/03_eye_pupil_filtered_mean.png"},
+    {"id": "aoi_coverage", "label": "AOI覆盖比例", "group": "眼动", "file": "主图/04_eye_aoi_coverage_ratio.png"},
+    {"id": "aoi_unique", "label": "点到不同AOI数", "group": "眼动", "file": "主图/09_eye_aoi_unique_hit_n.png"},
+    {"id": "aoi_interval", "label": "AOI区间条数", "group": "眼动", "file": "主图/10_eye_aoi_interval_n.png"},
+    {"id": "aoi_max_share", "label": "最主要AOI占比", "group": "眼动", "file": "主图/11_eye_aoi_max_share.png"},
+    {"id": "blink", "label": "眨眼频率", "group": "眼动", "file": "主图/08_blink_rate_per_min.png"},
+    {"id": "action_density", "label": "操作密度", "group": "行为", "file": "主图/05_log_action_density_win.png"},
+    {"id": "action_count", "label": "操作次数", "group": "行为", "file": "主图/06_log_action_count_win.png"},
+    {"id": "correct_count", "label": "正确操作次数", "group": "行为", "file": "主图/18_log_correct_action_count_win.png"},
+    {"id": "extra_count", "label": "多余操作次数", "group": "行为", "file": "主图/20_log_extra_action_count_win.png"},
+    {"id": "extra_rate", "label": "多余操作比例", "group": "行为", "file": "主图/21_log_extra_rate_win.png"},
+    {"id": "step_n", "label": "步骤种数", "group": "行为", "file": "主图/19_log_unique_step_count_win.png"},
+    {"id": "device_n", "label": "设备种数", "group": "行为", "file": "主图/22_log_unique_device_count_win.png"},
+    {"id": "eeg_fta", "label": "额区θ/α", "group": "脑电", "file": "主图/07_eeg_frontal_theta_alpha_z_within_subject.png"},
+    {"id": "eeg_fa", "label": "额区α功率", "group": "脑电", "file": "主图/12_eeg_frontal_alpha_power_z_within_subject.png"},
+    {"id": "eeg_fg", "label": "额区γ功率", "group": "脑电", "file": "主图/14_eeg_frontal_gamma_power_z_within_subject.png"},
+    {"id": "eeg_ca", "label": "中央区α功率", "group": "脑电", "file": "主图/15_eeg_central_alpha_power_z_within_subject.png"},
+    {"id": "eeg_pta", "label": "顶区θ/α", "group": "脑电", "file": "主图/13_eeg_parietal_theta_alpha_z_within_subject.png"},
+    {"id": "eeg_pt", "label": "顶区θ功率", "group": "脑电", "file": "主图/16_eeg_parietal_theta_power_z_within_subject.png"}
+  ]
+}

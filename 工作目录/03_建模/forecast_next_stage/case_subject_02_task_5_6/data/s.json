@@ -1,0 +1,12 @@
+{
+  "sample_id": "subject_02_task_5_6",
+  "status": "正常",
+  "S_true": 0.6619999999999999,
+  "S_pred": 0.6788943535089492,
+  "S_threshold": 0.51,
+  "step_true": 0.8,
+  "NASA_true": 6.6,
+  "NASA_pred": 6.036855220794678,
+  "formula": "S = 0.70*step + 0.30*(1-NASA/10)",
+  "note": "界面右侧写预测 S 与正常；真值 S 仅报告对照。"
+}

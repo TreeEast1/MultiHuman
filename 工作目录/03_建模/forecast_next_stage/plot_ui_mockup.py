@@ -24,6 +24,17 @@ from matplotlib.patches import FancyBboxPatch
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+from common_stage import (  # noqa: E402
+    N_SPLITS,
+    build_mod_idx,
+    eligible_mask,
+    load_feature_names,
+    load_samples,
+    load_task_arrays,
+    select_quota,
+    split_index,
+)
+
 FIG = HERE / "figures"
 DEMO = HERE / "reports" / "v16_tf_anchor" / "selected_demo.npz"
 RATIO = 0.50
@@ -45,6 +56,7 @@ BG = "#F2F3F5"
 CARD = "#FFFFFF"
 LINE = "#2F6FED"
 DASH = "#E86B2A"
+RIDGE = "#1F4E79"
 NOW = "#8A8F99"
 INK = "#1A1D23"
 MUTED = "#6B7280"
@@ -114,7 +126,71 @@ def mean_revert(early: np.ndarray, n_late: int, rho=0.90):
     return hat, sigma
 
 
-def plot_curve(ax, t, y, cut, hat=None, color=LINE, band=False):
+def load_ridge_slopes(sample_id: str, feat_names: list[str]) -> dict[str, float]:
+    """官方折 Ridge：预报整场 27 里带 __slope 的列，折成窗级整体走势。"""
+    from sklearn.impute import SimpleImputer
+    from sklearn.linear_model import Ridge
+    from sklearn.model_selection import GroupKFold
+    from sklearn.pipeline import Pipeline
+    from sklearn.preprocessing import StandardScaler
+
+    names_264, raw = load_feature_names()
+    samples = load_samples(raw)
+    task = load_task_arrays()
+    by_id = {s.sample_id: s for s in samples}
+    samples = [by_id[sid] for sid in task["samples"]]
+    mask = eligible_mask(samples, RATIO, 4)
+    from common_stage import aggregate_windows
+    from exp_trend_shape import fill_nan
+
+    filled = [np.column_stack([fill_nan(s.W[:, j]) for j in range(s.W.shape[1])]) for s in samples]
+    X_true, y, groups = task["X"], task["y"], task["groups"]
+    X_early = np.zeros_like(X_true)
+    for i, W in enumerate(filled):
+        X_early[i] = aggregate_windows(W[: split_index(len(W), RATIO)] if mask[i] else W)
+
+    official = {2, 7, 12, 16, 23}
+    fold_of = np.full(len(samples), -1)
+    gkf = GroupKFold(n_splits=N_SPLITS)
+    for f, (_, te) in enumerate(gkf.split(X_true, y, groups)):
+        fold_of[te] = f
+    official_idx = [i for i in range(len(samples)) if int(groups[i]) in official and mask[i]]
+    f_off = int(fold_of[official_idx[0]])
+    tr = np.array([i for i in range(len(samples)) if fold_of[i] != f_off])
+    te = np.array(official_idx)
+    imp = SimpleImputer(strategy="median")
+    Xtr = imp.fit_transform(X_true[tr])
+    Xtr_e = imp.fit_transform(X_early[tr])
+    Xte_e = imp.transform(X_early[te])
+    top = select_quota(Xtr, y[tr], build_mod_idx(names_264))
+    ridge = Pipeline([("sc", StandardScaler()), ("ridge", Ridge(alpha=10.0))])
+    ridge.fit(Xtr_e[:, top], Xtr[:, top])
+    hat27 = ridge.predict(Xte_e[:, top])
+    te_ids = [task["samples"][i] for i in te]
+    row = te_ids.index(sample_id)
+    out: dict[str, float] = {}
+    for j, col in enumerate(top):
+        name = names_264[int(col)]
+        if name.endswith("__slope"):
+            base = name[: -len("__slope")]
+            if base in feat_names:
+                out[base] = float(hat27[row, j])
+    return out
+
+
+def ridge_overall(early: np.ndarray, n_late: int, slope: float | None):
+    """Ridge 只有汇总：用已观察均值当整体位置，有斜率列再用预报斜率轻轻带一下。"""
+    y = _fill_nan(early)
+    mu, last = float(y.mean()), float(y[-1])
+    if n_late < 1:
+        return np.array([])
+    k = np.arange(1, n_late + 1, dtype=np.float64)
+    if slope is None or not np.isfinite(slope):
+        return np.full(n_late, mu)
+    return last + float(slope) * k
+
+
+def plot_curve(ax, t, y, cut, hat=None, color=LINE, band=False, ridge=None, legend=True):
     early = y[:cut]
     n_late = len(y) - cut
     if hat is None:
@@ -138,9 +214,20 @@ def plot_curve(ax, t, y, cut, hat=None, color=LINE, band=False):
         color=DASH,
         lw=1.85,
         ls=(0, (4.5, 2.6)),
-        label="预测（Transformer 轨迹）",
+        label="Transformer 细节",
         zorder=2,
     )
+    if ridge is not None and len(ridge):
+        y_r = np.concatenate([[last], np.asarray(ridge, dtype=np.float64)])
+        ax.plot(
+            t_f,
+            y_r,
+            color=RIDGE,
+            lw=2.15,
+            ls=(0, (1.2, 1.6)),
+            label="Ridge 整体走势",
+            zorder=3,
+        )
     ax.axvline(t[cut - 1], color=NOW, lw=0.8, ls="--", zorder=1)
     ax.axvspan(t[cut - 1], t[-1], color="#FFF4EC", alpha=0.45, zorder=0)
     ax.set_xlim(t[0], t[-1])
@@ -185,7 +272,7 @@ def main() -> None:
         0.055,
         0.922,
         f"被试 {int(subj)}  ·  任务 {task}  ·  已观察 "
-        f"{t_now:.1f} 分钟  ·  Transformer 轨迹（末值锚定）",
+        f"{t_now:.1f} 分钟  ·  橙虚线=细节  ·  蓝点线=Ridge 整体  ·  右侧 S",
         fontsize=9,
         color=MUTED,
     )
@@ -218,8 +305,13 @@ def main() -> None:
         )
         x0 += tw + 0.008
 
+    feat_names = [str(x) for x in demo["feat_names"]] if "feat_names" in demo.files else []
+    slopes = load_ridge_slopes(sid, feat_names) if feat_names else {}
+    n_late = len(y_all) - cut
+    ridge_main = ridge_overall(y_all[:cut, MAIN[0]], n_late, slopes.get(feat_names[MAIN[0]] if feat_names else None))
+
     ax = fig.add_subplot(gs[0, 0])
-    plot_curve(ax, t, y_all[:, MAIN[0]], cut, hat=yhat[:, MAIN[0]], band=True)
+    plot_curve(ax, t, y_all[:, MAIN[0]], cut, hat=yhat[:, MAIN[0]], band=True, ridge=ridge_main)
     ax.set_title(f"{MAIN[1]}（{MAIN[2]}）", loc="left", fontsize=11, color=INK, pad=8)
     ax.set_xlabel("任务时间（分钟）", fontsize=8.5, color=MUTED)
     ax.set_ylabel(MAIN[2], fontsize=8.5, color=MUTED)
@@ -284,7 +376,7 @@ def main() -> None:
     fig.text(
         0.055,
         0.035,
-        f"点选缩略图切换主图  ·  {sid}  ·  虚线=Transformer 窗级轨迹，不是 S；S 由 Ridge 27 给出",
+        f"点选缩略图切换主图  ·  {sid}  ·  橙虚线=Transformer 瞬时细节；蓝点线=Ridge 整体走势；S 由 Ridge 27→XGB",
         fontsize=8,
         color=MUTED,
     )
