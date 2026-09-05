@@ -224,10 +224,10 @@ def configure_styles(doc: Document):
     for sec in doc.sections:
         sec.page_width = Cm(21.0)
         sec.page_height = Cm(29.7)
-        sec.top_margin = Cm(2.54)
-        sec.bottom_margin = Cm(2.54)
-        sec.left_margin = Cm(3.17)
-        sec.right_margin = Cm(3.17)
+        sec.top_margin = Cm(2.5)
+        sec.bottom_margin = Cm(2.5)
+        sec.left_margin = Cm(2.5)
+        sec.right_margin = Cm(2.5)
         sec.header_distance = Cm(1.5)
         sec.footer_distance = Cm(1.5)
 
